@@ -1,5 +1,3 @@
-# Introduction
-
 This documentation describes the Lua configuration for syntax.Syntax.
 
 Some values are typed. Specify types with built-in unary functions which take the value to be typed. For example, to place a dog in field animal, write `dog { name = "fido" }`. Types are indicated in the documentation as a word in parentheses.
