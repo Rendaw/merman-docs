@@ -32,7 +32,7 @@ x1 = 4
 y1 = 17
 x2 = 33
 y2 = 47
-h = ((x1 - x2) ** 2 + (y1 - y2) ** 2) ** 0.5
+h = ((x1 - x2) ^ 2 + (y1 - y2) ^ 2) ^ 0.5
 " This is h
 h
 ```
@@ -56,9 +56,8 @@ All of these are binary operators which are surrounded by expressions.  An expre
 - exponent
 - number
 - recall
-- statement_bind
-- statement_expression
-- statement_label
+- bind
+- label
 
 # Building the interpreter
 
@@ -91,34 +90,37 @@ Our basic execution strategy will be to loop through the root statements and dep
 ```python
 names = {}
 
+
+def evaluate(expression):
+    pass
+
+
 for statement in ast:
-    if statement.type == 'statement_bind':
+    if statement.type == 'bind':
         names[statement.value['name']] = evaluate(statement.value['value'])
-    elif statement.type == 'statement_expression':
-        print(evaluate(statement.value['expression']))
-    elif statement.type == 'statement_label':
+    elif statement.type == 'label':
         print(statement.value['text'])
     else:
-        raise RuntimeError('Unknown statement type {}!'.format(statement.type))
+        print(evaluate(statement))
 ```
 
 `evaluate` is the key here - it's a function that takes an expression and turns it into a value.  Because each operator expression can contain more operator expressions, using a recursive function solves this cleanly.  The definition for `evaluate` is
 
 ```python
 def evaluate(expression):
-    if expression.type == 'add`:
+    if expression.type == 'add':
         return evaluate(expression.value['left']) + evaluate(expression.value['right'])
-    if expression.type == 'subtract`:
+    if expression.type == 'subtract':
         return evaluate(expression.value['left']) - evaluate(expression.value['right'])
-    if expression.type == 'multiply`:
+    if expression.type == 'multiply':
         return evaluate(expression.value['left']) * evaluate(expression.value['right'])
-    if expression.type == 'divide`:
+    if expression.type == 'divide':
         return evaluate(expression.value['left']) / evaluate(expression.value['right'])
-    if expression.type == 'exponent`:
+    if expression.type == 'exponent':
         return evaluate(expression.value['left']) ** evaluate(expression.value['right'])
-    if expression.type == 'number`:
+    if expression.type == 'number':
         return float(expression.value)
-    if expression.type == 'recall`:
+    if expression.type == 'recall':
         return names[expression.value]
     raise RuntimeError('Unknown expression type {}!'.format(expression.type))
 ```
@@ -145,7 +147,7 @@ The returned table has a number of sections, but the only ones we'll bother with
 
 ## A brief terminology overview
 
-In merman, the nodes in the AST are referred to as `atoms`.  Remember this, since it will be used a lot from here on.  Screen layout is done on the `visuals` of the displayed atoms, which are composed of `bricks`.  The `bricks` are placed in `courses` and the courses in a `wall`.  A `gap` is an incomplete atom.
+In merman, the nodes in the AST are referred to as `atoms`.  Remember this, since it will be used a lot from here on.  A `gap` is an incomplete atom.  Screen layout is done on the `visuals` of the displayed atoms, which are composed of `bricks`.  The `bricks` are placed in `courses` and the courses in a `wall`.
 
 ## Sections
 
@@ -159,11 +161,11 @@ When nesting atoms within other atoms you need to specify the type of the atoms 
 
 ### root
 
-`root` is another type that only exists at the root of the source file.  This atom is effectively outside the document - it cannot be deleted or replaced.  It also has a few special properties compared to normal atom types - for instance, its type id is always `root`.
+`root` is another atom type that only exists at the root of the source file.  This atom is effectively outside the document - it cannot be deleted or replaced.  It also has a few special properties compared to normal atom types - for instance, its type id is always `root`.
 
 ### styles
 
-Rules around how to display and layout bricks are listed in `styles`.  When a brick is styled, each style is tested against it.  If the brick has all the tags required (and none forbidden), the style is applied to the brick.  The specified values of subsequent styles that match override values from previous styles.
+Rules regarding how to display and layout bricks are listed in `styles`.  When a brick is styled, each style listed in this section is tested against it in turn.  If the brick has all the tags that are required (and none that are forbidden), the style is applied to the brick.  The specified values of subsequent styles that match override values from previous styles.
 
 ### pretty_save
 
@@ -183,6 +185,8 @@ local syntax = {
     },
     styles = {
     },
+    modules = {
+    },
     pretty_save = true,
 }
 
@@ -193,26 +197,28 @@ return syntax
 
 # Creating an atom
 
-To start with, let's define the syntax for serializing and deserializing `add`.  If you recall the example source code, the `add` atom is written as a type, `(add)`, followed by a record `{}`, and within the record two keys ,`left` and `right`, which both contain expressions.  This is how we define `back` to produce that serialization.  Create an empty table within `types` and add to it
+To start with, let's define the syntax for serializing and deserializing `add`.  If you recall the example source code, when serialized the `add` atom is written as a typed (`(add)`) record `{}`, and within the record two keys ,`left` and `right`, which both contain expressions.  This is how we define `back` to produce that serialization.  Create an empty table within `types` and add to it
 
 ```
 back = {
-    type 'add',
-    record {
-        left = atom 'left',
-        right = atom 'right',
+    type {
+        type = 'add',
+        value = record {
+            left = data_atom 'left',
+            right = data_atom 'right',
+        },
     },
 },
 ```
 
-`record` and `atom` in the above are built-in helper functions that add the types `record` and `atom` respectively to their argument.  As an aside, since there are a lot of type helper functions, it may make sense to prefix variables you use (if you use any) with a `_` to make sure they don't overlap.
+The words `type`, `record` and `atom` in the above are built-in helper functions that add the types `record` and `atom` respectively to their argument.  As an aside, since there are a lot of type helper functions, it may make sense to prefix variables you use (if you use any) with a `_` to make sure they don't overlap.
 
 The `atom`s mean that the keys `left` and `right` contain nested atoms.  The `'left'` following `atom` is the name of the `middle` part which describes what can be nested.  Define that next.
 
 ```
 middle = {
     left = atom 'expression',
-    right = atom 'expression,
+    right = atom 'expression',
 }
 ```
 
@@ -228,7 +234,7 @@ front = {
 }
 ```
 
-Again, `left` and `right` refer to the corresponding `middle` parts.  The `+` fixed text that will be displayed between the two.  It's automatically used to disambiguate this operator from the others if you type it after typing the left expression.  The `tags` elements will become `free` tags on the symbol's brick.
+Again, `left` and `right` refer to the corresponding `middle` parts.  The `+` is fixed text brick that will be inserted between the two.  It will be automatically used to disambiguate this operator from the others if you type it after typing the left expression.  The `tags` elements become `free` tags on the symbol's brick.
 
 To change the color of the operators, add this table to `styles`
 
@@ -246,15 +252,17 @@ To finish the type, give it the type `id` `add` and `name` `Add Operator`.
     id = 'add',
     name = 'Add Operator',
     back = {
-        type 'add',
-        record {
-            left = atom 'left',
-            right = atom 'right',
+        type {
+            type = 'add',
+            value = record {
+                left = data_atom 'left',
+                right = data_atom 'right',
+            },
         },
     },
     middle = {
         left = atom 'expression',
-        right = atom 'expression,
+        right = atom 'expression',
     },
     front = {
         atom 'left',
@@ -266,7 +274,7 @@ To finish the type, give it the type `id` `add` and `name` `Add Operator`.
 
 # Putting it all together
 
-The above needs to be repeated and adjusted for the remaining operators.  We'll style all the operators red, `number` and `recall` green, and the statements `blue`.  Since `number`, `recall` are slightly different let's address them individually.  The other types are relatively straightforward so you should be able to do those on your own.
+The above needs to be repeated and adjusted for the remaining operators.  We'll style all the operators red, `number` and `recall` green, and the statements blue.  Since `number` and `recall` are slightly different let's address them individually.  The other atom type are relatively straightforward so you should be able to do those on your own.
 
 
 ```
@@ -274,12 +282,14 @@ The above needs to be repeated and adjusted for the remaining operators.  We'll 
     id = 'number',
     name = 'Number',
     back = {
-        type 'number',
-        data_primitive 'value',
+        type {
+            type = 'number',
+            value = data_primitive 'value',
+        },
     },
     middle = {
         value = primitive {
-            format = rep1 { union { digits {}, class '.' } },
+            pattern = rep1 { pattern = union { digits {}, string '.' } },
         },
     },
     front = {
@@ -288,19 +298,21 @@ The above needs to be repeated and adjusted for the remaining operators.  We'll 
 }
 ```
 
-A `primitive` is any free text value.  We specified a `format` (essentially a regex) to help merman distinguish it from `recall` (which also takes free text) when you're writing a program:
+A `primitive` is any free text value.  We specified a `pattern` (essentially a regex) to help merman distinguish it from `recall` (which also takes free text) when you're writing a program:
 
 ```
 {
     id = 'recall',
     name = 'Recall',
     back = {
-        type 'recall',
-        data_primitive 'name',
+        type {
+            type = 'recall',
+            value = data_primitive 'name',
+        },
     },
     middle = {
         name = primitive {
-            format = seq { letters {}, any {} },
+            pattern = rep1 { pattern = letters {} },
         },
     },
     front = {
@@ -309,14 +321,14 @@ A `primitive` is any free text value.  We specified a `format` (essentially a re
 }
 ```
 
-For a short explanation of `format`:
+For a short explanation of `pattern`:
 
-- `rep1` means repeat the nested format at least once
-- `seq` is a list of nested formats that must match in sequence
-- `union` is a list of nested formats of which one must match
+- `rep0`, `rep1` match the nested pattern multiple times; at least once for `rep1`, any number of times for `rep0`
+- `seq` is a list of nested patterns that must match in sequence
+- `union` is a list of nested patterns of which one must match
 - `class` is a union of the characters in the string
 - `any` matches any character
-- `letters`, `digits` match letters and digits respectively
+- `letters`, `digits` match a single letter and digit, respectively
 
 Add the style
 
@@ -327,7 +339,7 @@ Add the style
 }
 ```
 
-That's all the types, now let's make the groups for expression atoms and statement atoms.
+That's all the types, now make the groups for expression atoms and statement atoms:
 
 ```
 groups = {
@@ -341,21 +353,21 @@ groups = {
         'recall',
     },
     statement = {
-        'statement_bind',
-        'statement_expression',
-        'statement_label',
+        'bind',
+        'expression',
+        'label',
     }
 },
 ```
 
-With that we have everything we need to define the root atom.  To make statements appear on separate lines we need to style the root atom - the `space` front part is there to act as a line break.
+With that we have everything we need to define the root atom.  To make statements appear on separate lines we need add a `space` front part to act as a line break and style it as such.
 
 ```
 root = {
     back = { root_data_array 'data' },
     middle = {
         data = array {
-            type = 'value'
+            type = 'statement'
         }
     },
     front = {
@@ -369,22 +381,20 @@ root = {
 },
 ```
 
-`root_data_array` is a special back type that can only be used in the root.  It means roughly "de/serialize this like an array but without the begin and end []'s".
+`root_data_array` is a special back type that can only be used in the root.  It means roughly "de/serialize this like an array but without the []'s".
 
-Lastly, we add the style to break the line at the space.
+Add the style
 
 ```
-styles = {
-    {
-        with = { type 'root', part 'space' },
-        split = true,
-    },
-}
+{
+    with = { type 'root', part 'space' },
+    split = true,
+},
 ```
 
 The `type` and `part` tags are automatically generated, but you could also add your own `free` tags to the front element if you wanted to reuse this style.
 
-[Here](#syntax)'s the assembled syntax.
+[Here](#appendix-1-syntax-source)'s the assembled syntax.
 
 # Creating a source file with your syntax
 
@@ -435,3 +445,8 @@ In the next episode we'll reproduce C++, all in 30 minutes.  Look forward to it!
 # Appendix 2: Interpreter source
 
 # Appendix 3: Example source
+```luxem
+(bind) { name: x, value: (number) 4 },
+(expression) { expression: (add) { left: (recall) x, right: (number) 7 } },
+(label) "All done",
+```
