@@ -374,7 +374,7 @@ commit, but hold off on that for now. If we type a bit more, merman will
 figure out what we wanted on its own. By the way, the hotkeys are
 defined in ``~/.config/merman/syntaxes/hotkeys.lua`` and the list of
 hotkeyable actions are
-`here <https://github.com/Rendaw/merman/wiki/Actions-Reference>`.
+`here <https://github.com/Rendaw/merman/wiki/Actions-Reference>`__.
 
 Type ``=``
 
