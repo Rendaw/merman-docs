@@ -5,13 +5,10 @@ import os.path
 
 for source in glob.glob('./**/*.rst.src', recursive=True):
     dirname = os.path.dirname(source)
-    dest = re.sub('\\.src', '', source)
-    with open(source, 'r') as sourcef:
-        text = sourcef.read()
 
     def literalinclude(match):
-        with open(match.group('filename'), 'r') as includef:
-            body = includef.read()
+        with open(os.path.join(dirname, match.group('filename')), 'r') as f:
+            body = f.read()
 
         out = '.. code-block::'
         if match.group('language'):
@@ -31,16 +28,20 @@ for source in glob.glob('./**/*.rst.src', recursive=True):
 
         return out
 
-    re.sub(
+    dest = re.sub('\\.src', '', source)
+    with open(source, 'r') as f:
+        text = f.read()
+    text = re.sub(
         '^\\.\\. literalinclude:: (?P<filename>.*)$'
-        '(?:^'
-        '(?:    :language: (?P<language>.*))'
-        '(?:    (?P<linenos>:linenos:))'
-        '(?:    :lines: (?P<start>.*) (?P<end>.*))'
-        '$)*',
+        '(?:\\s^(?:'
+        '(?:    :language: (?P<language>.*))|'
+        '(?:    (?P<linenos>:linenos:))|'
+        '(?:    :lines: (?P<start>.*)-(?P<end>.*))'
+        ')$)*',
         literalinclude,
         text,
-        re.M,
+        flags=re.M,
     )
-    with open(dest, 'w') as destf:
-        destf.write(text)
+    with open(dest, 'w') as f:
+        f.write(text)
+        pass
