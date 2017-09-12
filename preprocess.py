@@ -46,4 +46,3 @@ for source in glob.glob('./**/*.rst.src', recursive=True):
     )
     with open(dest, 'w') as f:
         f.write(text)
-        pass

@@ -361,11 +361,11 @@ It's time to fire up merman. We'll make a source file called
 merman with ``java -jar merman.java example.calclang``. You'll be
 greeted with this:
 
-IMAGE BLANK
+.. image:: Create-a-language-in-10-minutes/shot_blank.jpg
 
 We're currently in a gap in the root array. Type ``x``:
 
-IMAGE AMBIG
+.. image:: Create-a-language-in-10-minutes/shot_ambiguous.jpg
 
 We're still in a gap - merman doesn't know if we're starting a bind
 statement or an expression statement that starts by recalling ``x``. You
@@ -378,26 +378,25 @@ hotkeys we're using.
 
 Type ``=``
 
-IMAGE STATEMENT
+.. image:: Create-a-language-in-10-minutes/shot_statement.jpg
 
 The color changed! The gap was filled with a bind statement. Now we're
 in a gap *within* the bind statement. Type ``4``
 
-IMAGE DONE
+.. image:: Create-a-language-in-10-minutes/shot_statement_done.jpg
 
 That also changed color, so we're done with that statement. Whew,
 alright, 3 keypresses done! I had to press several hundred though. Let's
 move on - press escape twice until we've highlighted the statement in
-the array, and press ``a`` to add a statement after the current one. If
-you accidentally went up the tree too far, press enter to go back down.
+the array, and press ``a`` to add a statement after the current one.
 
-IMAGE NEW STATEMENT
+.. image:: Create-a-language-in-10-minutes/shot_statement_2_start.jpg
 
 Rinse and repeat with the remaining lines. Note: we didn't include text
 symbols with spaces in any of our types so if you add a space to the gap
 it won't match anything.
 
-IMAGE DONE
+.. image:: Create-a-language-in-10-minutes/shot_done.jpg
 
 And we're done! Save it and let's run.
 
