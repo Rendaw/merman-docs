@@ -1,7 +1,7 @@
 import sys
 import luxem
 
-with open(sys.args[1], 'rb') as source:
+with open(sys.argv[1], 'rb') as source:
     ast = luxem.load(source)
 
 names = {}
@@ -12,9 +12,9 @@ def evaluate(expression):
 
 
 for statement in ast:
-    if statement.type == 'statement_bind':
-        names[statement.value['name']] = evaluate(statement.value['value'])
-    elif statement.type == 'statement_label':
-        print(statement.value['text'])
+    if statement.name == 'bind':
+        names[statement.value['name']] = evaluate(statement.value['expression'])
+    elif statement.name == 'label':
+        print(statement.value)
     else:
         print(evaluate(statement))

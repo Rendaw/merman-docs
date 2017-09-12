@@ -1,34 +1,34 @@
 import sys
 import luxem
 
-with open(sys.args[1], 'rb') as source:
+with open(sys.argv[1], 'rb') as source:
     ast = luxem.load(source)
 
 names = {}
 
 
 def evaluate(expression):
-    if expression.type == 'add':
+    if expression.name == 'add':
         return evaluate(expression.value['left']) + evaluate(expression.value['right'])
-    if expression.type == 'subtract':
+    if expression.name == 'subtract':
         return evaluate(expression.value['left']) - evaluate(expression.value['right'])
-    if expression.type == 'multiply':
+    if expression.name == 'multiply':
         return evaluate(expression.value['left']) * evaluate(expression.value['right'])
-    if expression.type == 'divide':
+    if expression.name == 'divide':
         return evaluate(expression.value['left']) / evaluate(expression.value['right'])
-    if expression.type == 'exponent':
+    if expression.name == 'exponent':
         return evaluate(expression.value['left']) ** evaluate(expression.value['right'])
-    if expression.type == 'number':
+    if expression.name == 'number':
         return float(expression.value)
-    if expression.type == 'recall':
+    if expression.name == 'recall':
         return names[expression.value]
-    raise RuntimeError('Unknown expression type {}!'.format(expression.type))
+    raise RuntimeError('Unknown expression type {}!'.format(expression.name))
 
 
 for statement in ast:
-    if statement.type == 'statement_bind':
-        names[statement.value['name']] = evaluate(statement.value['value'])
-    elif statement.type == 'statement_label':
-        print(statement.value['text'])
+    if statement.name == 'bind':
+        names[statement.value['name']] = evaluate(statement.value['expression'])
+    elif statement.name == 'label':
+        print(statement.value)
     else:
         print(evaluate(statement))
