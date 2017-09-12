@@ -1,0 +1,9 @@
+(bind) {
+    expression: (number) 4,
+    name: x,
+},
+(add) {
+    left: (recall) x,
+    right: (number) 7,
+},
+(label) "All done!",
