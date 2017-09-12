@@ -95,6 +95,7 @@ To start our interpreter, ``calclang.py``, deserialize the source file
 
 .. code-block:: python
 
+    import sys
     import luxem
     
     with open(sys.args[1], 'rb') as source:
@@ -145,6 +146,7 @@ cleanly. The definition for ``evaluate`` is
 
 .. code-block:: python
 
+    def evaluate(expression):
         if expression.type == 'add':
             return evaluate(expression.value['left']) + evaluate(expression.value['right'])
         if expression.type == 'subtract':
@@ -290,14 +292,15 @@ serialization. Create an empty table within ``types`` and add to it
 
 .. code-block:: lua
 
-                    type {
-                        type = 'add',
-                        value = record {
-                            left = data_atom 'left',
-                            right = data_atom 'right',
-                        },
-                    },
-                },
+    back = {
+        type {
+            type = 'add',
+            value = record {
+                left = data_atom 'left',
+                right = data_atom 'right',
+            },
+        },
+    },
 
 The words ``type``, ``record`` and ``atom`` in the above are built-in
 helper functions that add the types ``record`` and ``atom`` respectively
@@ -311,9 +314,10 @@ part which describes what can be nested. Define that next.
 
 .. code-block:: lua
 
-                    left = atom 'expression',
-                    right = atom 'expression',
-                },
+    middle = {
+        left = atom 'expression',
+        right = atom 'expression',
+    },
 
 The middle part type ``atom`` only has one parameter, the type id of the
 atoms that may be nested. We haven't defined ``expression`` yet, but it
@@ -326,10 +330,11 @@ a color to distinguish them from other parts of the language. Define the
 
 .. code-block:: lua
 
-                    atom 'left',
-                    symbol { type = text '+', tags = { 'operator_color' } },
-                    atom 'right',
-                },
+    front = {
+        atom 'left',
+        symbol { type = text '+', tags = { 'operator_color' } },
+        atom 'right',
+    },
 
 Again, ``left`` and ``right`` refer to the corresponding ``middle``
 parts. The ``+`` is fixed text brick that will be inserted between the
@@ -341,36 +346,38 @@ To change the color of the operators, add this table to ``styles``
 
 .. code-block:: lua
 
-                with = { free 'operator_color' },
-                color = rgb { r = 1, g = 0, b = 0 },
-            },
+    {
+        with = { free 'operator_color' },
+        color = rgb { r = 1, g = 0, b = 0 },
+    },
 
 To finish the type, give it the type ``id`` ``add`` and ``name``
 ``Add Operator``.
 
 .. code-block:: lua
 
-                id = 'add',
-                name = 'Add Operator',
-                back = {
-                    type {
-                        type = 'add',
-                        value = record {
-                            left = data_atom 'left',
-                            right = data_atom 'right',
-                        },
-                    },
-                },
-                middle = {
-                    left = atom 'expression',
-                    right = atom 'expression',
-                },
-                front = {
-                    atom 'left',
-                    symbol { type = text '+', tags = { 'operator_color' } },
-                    atom 'right',
+    {
+        id = 'add',
+        name = 'Add Operator',
+        back = {
+            type {
+                type = 'add',
+                value = record {
+                    left = data_atom 'left',
+                    right = data_atom 'right',
                 },
             },
+        },
+        middle = {
+            left = atom 'expression',
+            right = atom 'expression',
+        },
+        front = {
+            atom 'left',
+            symbol { type = text '+', tags = { 'operator_color' } },
+            atom 'right',
+        },
+    },
 
 Putting it all together
 =======================
@@ -384,23 +391,24 @@ own.
 
 .. code-block:: lua
 
-                id = 'number',
-                name = 'Number',
-                back = {
-                    type {
-                        type = 'number',
-                        value = data_primitive 'value',
-                    },
-                },
-                middle = {
-                    value = primitive {
-                        pattern = rep1 { pattern = union { digits {}, string '.' } },
-                    },
-                },
-                front = {
-                    primitive { middle = 'value', tags = { 'number_recall_color' } },
-                },
+    {
+        id = 'number',
+        name = 'Number',
+        back = {
+            type {
+                type = 'number',
+                value = data_primitive 'value',
             },
+        },
+        middle = {
+            value = primitive {
+                pattern = rep1 { pattern = union { digits {}, string '.' } },
+            },
+        },
+        front = {
+            primitive { middle = 'value', tags = { 'number_recall_color' } },
+        },
+    },
 
 A ``primitive`` is any free text value. We specified a ``pattern``
 (essentially a regex) to help merman distinguish it from ``recall``
@@ -408,23 +416,24 @@ A ``primitive`` is any free text value. We specified a ``pattern``
 
 .. code-block:: lua
 
-                id = 'recall',
-                name = 'Recall',
-                back = {
-                    type {
-                        type = 'recall',
-                        value = data_primitive 'name',
-                    },
-                },
-                middle = {
-                    name = primitive {
-                        pattern = rep1 { pattern = letters {} },
-                    },
-                },
-                front = {
-                    primitive { middle = 'name', tags = { 'number_recall_color' } },
-                },
+    {
+        id = 'recall',
+        name = 'Recall',
+        back = {
+            type {
+                type = 'recall',
+                value = data_primitive 'name',
             },
+        },
+        middle = {
+            name = primitive {
+                pattern = rep1 { pattern = letters {} },
+            },
+        },
+        front = {
+            primitive { middle = 'name', tags = { 'number_recall_color' } },
+        },
+    },
 
 For a short explanation of ``pattern``:
 
@@ -440,30 +449,32 @@ Add the style
 
 .. code-block:: lua
 
-                with = { free 'number_recall_color' },
-                color = rgb { r = 0, g = 1, b = 0 },
-            },
+    {
+        with = { free 'number_recall_color' },
+        color = rgb { r = 0, g = 1, b = 0 },
+    },
 
 That's all the types, now make the groups for expression atoms and
 statement atoms:
 
 .. code-block:: lua
 
-            expression = {
-                'add',
-                'subtract',
-                'multiply',
-                'divide',
-                'exponent',
-                'number',
-                'recall',
-            },
-            statement = {
-                'bind',
-                'expression',
-                'label',
-            },
+    groups = {
+        expression = {
+            'add',
+            'subtract',
+            'multiply',
+            'divide',
+            'exponent',
+            'number',
+            'recall',
         },
+        statement = {
+            'bind',
+            'expression',
+            'label',
+        },
+    },
 
 With that we have everything we need to define the root atom. To make
 statements appear on separate lines we need add a ``space`` front part
@@ -471,21 +482,22 @@ to act as a line break and style it as such.
 
 .. code-block:: lua
 
-            back = { root_data_array 'data' },
-            middle = {
-                data = array {
-                    type = 'statement'
-                }
-            },
-            front = {
-                array {
-                    middle = 'data',
-                    prefix = {
-                        { type = space {} }
-                    },
+    root = {
+        back = { root_data_array 'data' },
+        middle = {
+            data = array {
+                type = 'statement'
+            }
+        },
+        front = {
+            array {
+                middle = 'data',
+                prefix = {
+                    { type = space {} }
                 },
             },
         },
+    },
 
 ``root_data_array`` is a special back type that can only be used in the
 root. It means roughly "de/serialize this like an array but without the
@@ -495,9 +507,10 @@ Add the style
 
 .. code-block:: lua
 
-                with = { type 'root', part 'space' },
-                split = true,
-            },
+    {
+        with = { type 'root', part 'space' },
+        split = true,
+    },
 
 The ``type`` and ``part`` tags are automatically generated, but you
 could also add your own ``free`` tags to the front element if you wanted
@@ -574,7 +587,6 @@ Appendix 1: Syntax source
 =========================
 
 .. code-block:: lua
-    :linenos:
 
     local _hotkeys = require 'hotkeys'
     
@@ -829,7 +841,6 @@ Appendix 2: Interpreter source
 ==============================
 
 .. code-block:: python
-    :linenos:
 
     import sys
     import luxem
@@ -870,7 +881,6 @@ Appendix 3: Example source
 ==========================
 
 .. code-block::
-    :linenos:
 
     (bind) {
         expression: (number) 4,

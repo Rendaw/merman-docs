@@ -15,16 +15,18 @@ for source in glob.glob('./**/*.rst.src', recursive=True):
             out += ' ' + match.group('language')
         out += '\n'
 
-        if match.group('linenos'):
-            out += '    :linenos:\n'
-
         body = body.splitlines()
         start = match.group('start')
         end = match.group('end')
         if start is not None:
-            body = body[int(start):int(end)]
+            body = body[int(start) - 1:int(end)]
+        deindent = None
+        for line in body:
+            line_indent = len(re.search('^( *)', line).group(1))
+            if deindent is None or line_indent < deindent:
+                deindent = line_indent
         out += '\n'
-        out += '\n'.join('    ' + line for line in body)
+        out += '\n'.join('    ' + line[deindent:] for line in body)
 
         return out
 
