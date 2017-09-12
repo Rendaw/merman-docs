@@ -1,7 +1,7 @@
 In this short guide I hope to give you a high level picture of how to
 use merman to build a language, from syntax design to interpreter
 implementation. You'll need merman, of course, but also Python 3 for the
-interpreter. And a computer.
+interpreter.
 
 If you're aiming to complete this in 10 minutes you might want to jump
 to the full source listing at the end and stick to copying it into files
@@ -26,18 +26,17 @@ syntax <#creating-a-source-file-with-your-syntax>`__
 
 `Running the interpreter <#running-the-interpreter>`__
 
--  `Appendix: Syntax source <#appendix-syntax-source>`__
--  `Appendix: Interpreter source <#appendix-interpreter-source>`__
--  `Appendix: Example source <#appendix-example-source>`__
+-  `Appendix: Syntax source <#appendix-1-syntax-source>`__
+-  `Appendix: Interpreter source <#appendix-2-interpreter-source>`__
 
 Language outline
 ================
 
 We'll create a simple calculator language in this guide. In our
-language, ``calclang``, each line either evaluates and displays an
+language, ``calclang``, each line evaluates and displays an
 expression, binds the value of the expression to a name, or displays
 some text - that is, the root element of our source code is a list of
-statements which are defined as one of those three.
+statements and each statement is one of those three.
 
 A sample program looks something like this:
 
@@ -51,7 +50,7 @@ A sample program looks something like this:
     " This is h
     h
 
-The line that starts with ``"`` displays the following text.
+The line that starts with ``"`` displays the text that follows it.
 
 The operators we'll support are
 
@@ -98,22 +97,22 @@ To start our interpreter, ``calclang.py``, deserialize the source file
     import sys
     import luxem
     
-    with open(sys.args[1], 'rb') as source:
+    with open(sys.argv[1], 'rb') as source:
         ast = luxem.load(source)
 
-luxem files are an array at the root level, so we'll make each element
-in the root array a statement. Each statement will be a typed value so
-we can easily identify what type of statement it is. We'll also need a
-``dict`` to keep track of bound values. The source code will look
+luxem files are an array at the root level, so we'll say each element
+in the root array is a statement. Each statement will be a typed value
+so we can easily identify what type of statement it is. We'll also need
+a ``dict`` to keep track of bound values. The source code will look
 roughly like
 
 .. code:: luxem
 
-    (bind) { name: x, value: (number) 4 },
-    (expression) { expression: (add) { left: (recall) x, right: (number) 7 } },
+    (bind) { name: x, expression: (number) 4 },
+    (add) { left: (recall) x, right: (number) 7 },
     (label) "All done!",
 
-Our basic execution strategy will be to loop through the root statements
+Our basic execution strategy is to loop through the root statements
 and depending on the type, bind, display a value, or display some text.
 
 .. code-block:: python
@@ -121,7 +120,7 @@ and depending on the type, bind, display a value, or display some text.
     import sys
     import luxem
     
-    with open(sys.args[1], 'rb') as source:
+    with open(sys.argv[1], 'rb') as source:
         ast = luxem.load(source)
     
     names = {}
@@ -132,10 +131,10 @@ and depending on the type, bind, display a value, or display some text.
     
     
     for statement in ast:
-        if statement.type == 'statement_bind':
-            names[statement.value['name']] = evaluate(statement.value['value'])
-        elif statement.type == 'statement_label':
-            print(statement.value['text'])
+        if statement.name == 'bind':
+            names[statement.value['name']] = evaluate(statement.value['expression'])
+        elif statement.name == 'label':
+            print(statement.value)
         else:
             print(evaluate(statement))
 
@@ -147,21 +146,21 @@ cleanly. The definition for ``evaluate`` is
 .. code-block:: python
 
     def evaluate(expression):
-        if expression.type == 'add':
+        if expression.name == 'add':
             return evaluate(expression.value['left']) + evaluate(expression.value['right'])
-        if expression.type == 'subtract':
+        if expression.name == 'subtract':
             return evaluate(expression.value['left']) - evaluate(expression.value['right'])
-        if expression.type == 'multiply':
+        if expression.name == 'multiply':
             return evaluate(expression.value['left']) * evaluate(expression.value['right'])
-        if expression.type == 'divide':
+        if expression.name == 'divide':
             return evaluate(expression.value['left']) / evaluate(expression.value['right'])
-        if expression.type == 'exponent':
+        if expression.name == 'exponent':
             return evaluate(expression.value['left']) ** evaluate(expression.value['right'])
-        if expression.type == 'number':
+        if expression.name == 'number':
             return float(expression.value)
-        if expression.type == 'recall':
+        if expression.name == 'recall':
             return names[expression.value]
-        raise RuntimeError('Unknown expression type {}!'.format(expression.type))
+        raise RuntimeError('Unknown expression type {}!'.format(expression.name))
 
 More robust error handling left as an exercise for the reader! And we're
 done! You can try it on the example source above - you should get an
@@ -533,13 +532,14 @@ We're currently in a gap in the root array. Type ``x``:
 .. image:: Create-a-language-in-10-minutes/shot_ambiguous.jpg
 
 We're still in a gap - merman doesn't know if we're starting a bind
-statement or an expression statement that starts by recalling ``x``. You
-can see that in the box that pops up below the cursor. You can use
+statement or an expression statement that starts by recalling ``x``.
+That's what's shown in the box that pops up below the cursor. You can use
 ``ctrl + up/down`` to select from the choices and ``ctrl + enter`` to
 commit, but hold off on that for now. If we type a bit more, merman will
-figure out what we wanted on its own. By the way, if you look at
-``~/.config/merman/syntaxes/hotkeys.lua`` there's a full listing of the
-hotkeys we're using.
+figure out what we wanted on its own. By the way, the hotkeys are
+defined in ``~/.config/merman/syntaxes/hotkeys.lua`` and the list of
+hotkeyable actions are
+`here <https://github.com/Rendaw/merman/wiki/Actions-Reference>`.
 
 Type ``=``
 
@@ -558,12 +558,26 @@ the array, and press ``a`` to add a statement after the current one.
 .. image:: Create-a-language-in-10-minutes/shot_statement_2_start.jpg
 
 Rinse and repeat with the remaining lines. Note: we didn't include text
-symbols with spaces in any of our types so if you add a space to the gap
+symbols with spaces in any of our types so if you add a space to a gap
 it won't match anything.
 
 .. image:: Create-a-language-in-10-minutes/shot_done.jpg
 
-And we're done! Save it and let's run.
+And we're done! Save it and check the contents
+
+.. code-block::
+
+    (bind) {
+        expression: (number) 4,
+        name: x,
+    },
+    (add) {
+        left: (recall) x,
+        right: (number) 7,
+    },
+    (label) "All done!",
+
+The final test: running it.
 
 Running the interpreter
 =======================
@@ -574,7 +588,7 @@ You should see
 
 ::
 
-    7
+    11.0
     All done!
 
 You did it!
@@ -844,49 +858,34 @@ Appendix 2: Interpreter source
     import sys
     import luxem
     
-    with open(sys.args[1], 'rb') as source:
+    with open(sys.argv[1], 'rb') as source:
         ast = luxem.load(source)
     
     names = {}
     
     
     def evaluate(expression):
-        if expression.type == 'add':
+        if expression.name == 'add':
             return evaluate(expression.value['left']) + evaluate(expression.value['right'])
-        if expression.type == 'subtract':
+        if expression.name == 'subtract':
             return evaluate(expression.value['left']) - evaluate(expression.value['right'])
-        if expression.type == 'multiply':
+        if expression.name == 'multiply':
             return evaluate(expression.value['left']) * evaluate(expression.value['right'])
-        if expression.type == 'divide':
+        if expression.name == 'divide':
             return evaluate(expression.value['left']) / evaluate(expression.value['right'])
-        if expression.type == 'exponent':
+        if expression.name == 'exponent':
             return evaluate(expression.value['left']) ** evaluate(expression.value['right'])
-        if expression.type == 'number':
+        if expression.name == 'number':
             return float(expression.value)
-        if expression.type == 'recall':
+        if expression.name == 'recall':
             return names[expression.value]
-        raise RuntimeError('Unknown expression type {}!'.format(expression.type))
+        raise RuntimeError('Unknown expression type {}!'.format(expression.name))
     
     
     for statement in ast:
-        if statement.type == 'statement_bind':
-            names[statement.value['name']] = evaluate(statement.value['value'])
-        elif statement.type == 'statement_label':
-            print(statement.value['text'])
+        if statement.name == 'bind':
+            names[statement.value['name']] = evaluate(statement.value['expression'])
+        elif statement.name == 'label':
+            print(statement.value)
         else:
             print(evaluate(statement))
-
-Appendix 3: Example source
-==========================
-
-.. code-block::
-
-    (bind) {
-        expression: (number) 4,
-        name: x,
-    },
-    (add) {
-        left: (recall) x,
-        right: (number) 7,
-    },
-    (label) "All done!",
