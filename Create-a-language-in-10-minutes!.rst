@@ -522,7 +522,7 @@ Creating a source file with your syntax
 
 It's time to fire up merman. We'll make a source file called
 ``example.calclang`` that is the same as the example above, so start
-merman with ``java -jar merman.java example.calclang``. You'll be
+merman with ``java -jar merman.jar example.calclang``. You'll be
 greeted with this:
 
 .. image:: Create-a-language-in-10-minutes/shot_blank.jpg
