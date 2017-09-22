@@ -1,7 +1,7 @@
 .. raw:: html
 
     <h1>Introduction</h1>
-    <p>This documentation describes the Lua configuration for Syntax.</p>
+    <p>This documentation describes the Lua configuration for <code>Syntax</code>.</p>
     <p>Some values are typed. Specify types with built-in unary functions which take the value to be typed. For example, to place a dog in field animal, write <code>dog { name = "fido" }</code>. Types are indicated in the documentation as a word in parentheses.</p>
     <p>Note that types only need to be specified where indicated.</p>
     <p>Also, if a type only has one required field, the field can be filled directly, so:</p>
