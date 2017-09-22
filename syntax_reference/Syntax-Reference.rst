@@ -30,6 +30,7 @@
             </tr>
         </table>
     </div>
+    <br></br>
     <div>
         <a href="#top">top</a>
         <a name="com.zarbosoft.merman.editor.visual.tags.GlobalTag"></a>
@@ -48,6 +49,7 @@
             </tr>
         </table>
     </div>
+    <br></br>
     <div>
         <a href="#top">top</a>
         <a name="com.zarbosoft.merman.editor.visual.tags.PartTag"></a>
@@ -66,6 +68,7 @@
             </tr>
         </table>
     </div>
+    <br></br>
     <div>
         <a href="#top">top</a>
         <a name="com.zarbosoft.merman.editor.visual.tags.StateTag"></a>
@@ -84,6 +87,7 @@
             </tr>
         </table>
     </div>
+    <br></br>
     <div>
         <a href="#top">top</a>
         <a name="com.zarbosoft.merman.editor.visual.tags.TypeTag"></a>
@@ -102,6 +106,7 @@
             </tr>
         </table>
     </div>
+    <br></br>
     <div>
         <a href="#top">top</a>
         <a name="com.zarbosoft.merman.modules.HoverType"></a>
@@ -148,6 +153,7 @@
             </tr>
         </table>
     </div>
+    <br></br>
     <div>
         <a href="#top">top</a>
         <a name="com.zarbosoft.merman.modules.Indicators"></a>
@@ -238,6 +244,7 @@
             </tr>
         </table>
     </div>
+    <br></br>
     <div>
         <a href="#top">top</a>
         <a name="com.zarbosoft.merman.modules.Indicators$Indicator"></a>
@@ -292,6 +299,7 @@
             </tr>
         </table>
     </div>
+    <br></br>
     <div>
         <a href="#top">top</a>
         <a name="com.zarbosoft.merman.modules.LuaActions"></a>
@@ -310,6 +318,7 @@
             </tr>
         </table>
     </div>
+    <br></br>
     <div>
         <a href="#top">top</a>
         <a name="com.zarbosoft.merman.modules.Modes"></a>
@@ -328,6 +337,7 @@
             </tr>
         </table>
     </div>
+    <br></br>
     <div>
         <a href="#top">top</a>
         <a name="com.zarbosoft.merman.modules.SelectionType"></a>
@@ -346,6 +356,7 @@
             </tr>
         </table>
     </div>
+    <br></br>
     <div>
         <a href="#top">top</a>
         <a name="com.zarbosoft.merman.modules.hotkeys.HotkeyRule"></a>
@@ -427,6 +438,7 @@
             </tr>
         </table>
     </div>
+    <br></br>
     <div>
         <a href="#top">top</a>
         <a name="com.zarbosoft.merman.modules.hotkeys.Hotkeys"></a>
@@ -465,6 +477,7 @@
             </tr>
         </table>
     </div>
+    <br></br>
     <div>
         <a href="#top">top</a>
         <a name="com.zarbosoft.merman.modules.hotkeys.Key"></a>
@@ -702,6 +715,7 @@
             <li><code>shortcut</code><span></span></li>
         </ul>
     </div>
+    <br></br>
     <div>
         <a href="#top">top</a>
         <a name="com.zarbosoft.merman.modules.hotkeys.grammar.Sequence"></a>
@@ -725,6 +739,7 @@
             </tr>
         </table>
     </div>
+    <br></br>
     <div>
         <a href="#top">top</a>
         <a name="com.zarbosoft.merman.modules.hotkeys.grammar.Terminal"></a>
@@ -775,6 +790,7 @@
             </tr>
         </table>
     </div>
+    <br></br>
     <div>
         <a href="#top">top</a>
         <a name="com.zarbosoft.merman.modules.hotkeys.grammar.Union"></a>
@@ -798,6 +814,7 @@
             </tr>
         </table>
     </div>
+    <br></br>
     <div>
         <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.FreeAtomType"></a>
@@ -994,6 +1011,7 @@
             </tr>
         </table>
     </div>
+    <br></br>
     <div>
         <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.GapAtomType"></a>
@@ -1036,6 +1054,7 @@
             </tr>
         </table>
     </div>
+    <br></br>
     <div>
         <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.Padding"></a>
@@ -1106,6 +1125,7 @@
             </tr>
         </table>
     </div>
+    <br></br>
     <div>
         <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.PrefixGapAtomType"></a>
@@ -1160,6 +1180,7 @@
             </tr>
         </table>
     </div>
+    <br></br>
     <div>
         <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.RootAtomType"></a>
@@ -1264,6 +1285,7 @@
             </tr>
         </table>
     </div>
+    <br></br>
     <div>
         <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.SuffixGapAtomType"></a>
@@ -1318,6 +1340,7 @@
             </tr>
         </table>
     </div>
+    <br></br>
     <div>
         <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.Syntax"></a>
@@ -1749,6 +1772,7 @@
             </tr>
         </table>
     </div>
+    <br></br>
     <div>
         <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.Syntax$BackType"></a>
@@ -1759,6 +1783,7 @@
             <li><code>json</code><span>Back parts and source files are in JSON format.</span></li>
         </ul>
     </div>
+    <br></br>
     <div>
         <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.Syntax$Direction"></a>
@@ -1771,6 +1796,7 @@
             <li><code>right</code><span></span></li>
         </ul>
     </div>
+    <br></br>
     <div>
         <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.alignments.AbsoluteAlignmentDefinition"></a>
@@ -1789,6 +1815,7 @@
             </tr>
         </table>
     </div>
+    <br></br>
     <div>
         <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.alignments.ConcensusAlignmentDefinition"></a>
@@ -1796,6 +1823,7 @@
         <p></p>
         <p>This type has no fields.</p>
     </div>
+    <br></br>
     <div>
         <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.alignments.RelativeAlignmentDefinition"></a>
@@ -1826,6 +1854,7 @@
             </tr>
         </table>
     </div>
+    <br></br>
     <div>
         <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.back.BackArray"></a>
@@ -1876,6 +1905,7 @@
             </tr>
         </table>
     </div>
+    <br></br>
     <div>
         <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.back.BackDataArray"></a>
@@ -1894,6 +1924,7 @@
             </tr>
         </table>
     </div>
+    <br></br>
     <div>
         <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.back.BackDataAtom"></a>
@@ -1912,6 +1943,7 @@
             </tr>
         </table>
     </div>
+    <br></br>
     <div>
         <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.back.BackDataJSONFloat"></a>
@@ -1930,6 +1962,7 @@
             </tr>
         </table>
     </div>
+    <br></br>
     <div>
         <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.back.BackDataJSONInt"></a>
@@ -1948,6 +1981,7 @@
             </tr>
         </table>
     </div>
+    <br></br>
     <div>
         <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.back.BackDataKey"></a>
@@ -1966,6 +2000,7 @@
             </tr>
         </table>
     </div>
+    <br></br>
     <div>
         <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.back.BackDataPrimitive"></a>
@@ -1984,6 +2019,7 @@
             </tr>
         </table>
     </div>
+    <br></br>
     <div>
         <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.back.BackDataRecord"></a>
@@ -2002,6 +2038,7 @@
             </tr>
         </table>
     </div>
+    <br></br>
     <div>
         <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.back.BackDataRootArray"></a>
@@ -2020,6 +2057,7 @@
             </tr>
         </table>
     </div>
+    <br></br>
     <div>
         <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.back.BackDataType"></a>
@@ -2070,6 +2108,7 @@
             </tr>
         </table>
     </div>
+    <br></br>
     <div>
         <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.back.BackJSONFalse"></a>
@@ -2077,6 +2116,7 @@
         <p></p>
         <p>This type has no fields.</p>
     </div>
+    <br></br>
     <div>
         <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.back.BackJSONFloat"></a>
@@ -2095,6 +2135,7 @@
             </tr>
         </table>
     </div>
+    <br></br>
     <div>
         <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.back.BackJSONInt"></a>
@@ -2113,6 +2154,7 @@
             </tr>
         </table>
     </div>
+    <br></br>
     <div>
         <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.back.BackJSONNull"></a>
@@ -2120,6 +2162,7 @@
         <p></p>
         <p>This type has no fields.</p>
     </div>
+    <br></br>
     <div>
         <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.back.BackJSONTrue"></a>
@@ -2127,6 +2170,7 @@
         <p></p>
         <p>This type has no fields.</p>
     </div>
+    <br></br>
     <div>
         <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.back.BackPrimitive"></a>
@@ -2145,6 +2189,7 @@
             </tr>
         </table>
     </div>
+    <br></br>
     <div>
         <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.back.BackRecord"></a>
@@ -2183,6 +2228,7 @@
             </tr>
         </table>
     </div>
+    <br></br>
     <div>
         <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.back.BackType"></a>
@@ -2233,6 +2279,7 @@
             </tr>
         </table>
     </div>
+    <br></br>
     <div>
         <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.format.Format"></a>
@@ -2255,6 +2302,7 @@
             </tr>
         </table>
     </div>
+    <br></br>
     <div>
         <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.format.Literal"></a>
@@ -2273,6 +2321,7 @@
             </tr>
         </table>
     </div>
+    <br></br>
     <div>
         <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.format.Reference"></a>
@@ -2291,6 +2340,7 @@
             </tr>
         </table>
     </div>
+    <br></br>
     <div>
         <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.front.ConditionNode"></a>
@@ -2329,6 +2379,7 @@
             </tr>
         </table>
     </div>
+    <br></br>
     <div>
         <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.front.ConditionNode$Is"></a>
@@ -2338,6 +2389,7 @@
             <li><code>precedent</code><span>Show if the atom is precedent relative to its parent.</span></li>
         </ul>
     </div>
+    <br></br>
     <div>
         <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.front.ConditionValue"></a>
@@ -2388,6 +2440,7 @@
             </tr>
         </table>
     </div>
+    <br></br>
     <div>
         <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.front.ConditionValue$Is"></a>
@@ -2397,6 +2450,7 @@
             <li><code>empty</code><span>Show if the value is empty.</span></li>
         </ul>
     </div>
+    <br></br>
     <div>
         <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.front.FrontDataArray"></a>
@@ -2520,6 +2574,7 @@
             </tr>
         </table>
     </div>
+    <br></br>
     <div>
         <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.front.FrontDataAtom"></a>
@@ -2584,6 +2639,7 @@
             </tr>
         </table>
     </div>
+    <br></br>
     <div>
         <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.front.FrontDataPrimitive"></a>
@@ -2643,6 +2699,7 @@
             </tr>
         </table>
     </div>
+    <br></br>
     <div>
         <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.front.FrontDataRootArray"></a>
@@ -2754,6 +2811,7 @@
             </tr>
         </table>
     </div>
+    <br></br>
     <div>
         <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.front.FrontSymbol"></a>
@@ -2821,6 +2879,7 @@
             </tr>
         </table>
     </div>
+    <br></br>
     <div>
         <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.middle.MiddleArray"></a>
@@ -2839,6 +2898,7 @@
             </tr>
         </table>
     </div>
+    <br></br>
     <div>
         <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.middle.MiddleAtom"></a>
@@ -2857,6 +2917,7 @@
             </tr>
         </table>
     </div>
+    <br></br>
     <div>
         <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.middle.MiddlePrimitive"></a>
@@ -2886,6 +2947,7 @@
             </tr>
         </table>
     </div>
+    <br></br>
     <div>
         <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.middle.MiddleRecord"></a>
@@ -2904,6 +2966,7 @@
             </tr>
         </table>
     </div>
+    <br></br>
     <div>
         <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.middle.primitive.Any"></a>
@@ -2911,6 +2974,7 @@
         <p></p>
         <p>This type has no fields.</p>
     </div>
+    <br></br>
     <div>
         <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.middle.primitive.Digits"></a>
@@ -2918,6 +2982,7 @@
         <p></p>
         <p>This type has no fields.</p>
     </div>
+    <br></br>
     <div>
         <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.middle.primitive.Letters"></a>
@@ -2925,6 +2990,7 @@
         <p></p>
         <p>This type has no fields.</p>
     </div>
+    <br></br>
     <div>
         <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.middle.primitive.Maybe"></a>
@@ -2954,6 +3020,7 @@
             </tr>
         </table>
     </div>
+    <br></br>
     <div>
         <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.middle.primitive.PatternSequence"></a>
@@ -2983,6 +3050,7 @@
             </tr>
         </table>
     </div>
+    <br></br>
     <div>
         <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.middle.primitive.PatternString"></a>
@@ -3001,6 +3069,7 @@
             </tr>
         </table>
     </div>
+    <br></br>
     <div>
         <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.middle.primitive.PatternUnion"></a>
@@ -3030,6 +3099,7 @@
             </tr>
         </table>
     </div>
+    <br></br>
     <div>
         <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.middle.primitive.Repeat0"></a>
@@ -3059,6 +3129,7 @@
             </tr>
         </table>
     </div>
+    <br></br>
     <div>
         <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.middle.primitive.Repeat1"></a>
@@ -3088,6 +3159,7 @@
             </tr>
         </table>
     </div>
+    <br></br>
     <div>
         <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.style.BoxStyle"></a>
@@ -3242,6 +3314,7 @@
             </tr>
         </table>
     </div>
+    <br></br>
     <div>
         <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.style.ModelColor$RGB"></a>
@@ -3284,6 +3357,7 @@
             </tr>
         </table>
     </div>
+    <br></br>
     <div>
         <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.style.ModelColor$RGBA"></a>
@@ -3338,6 +3412,7 @@
             </tr>
         </table>
     </div>
+    <br></br>
     <div>
         <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.style.ObboxStyle"></a>
@@ -3524,6 +3599,7 @@
             </tr>
         </table>
     </div>
+    <br></br>
     <div>
         <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.style.Style"></a>
@@ -3768,6 +3844,7 @@
             </tr>
         </table>
     </div>
+    <br></br>
     <div>
         <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.symbol.SymbolImage"></a>
@@ -3775,6 +3852,7 @@
         <p></p>
         <p>This type has no fields.</p>
     </div>
+    <br></br>
     <div>
         <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.symbol.SymbolSpace"></a>
@@ -3782,6 +3860,7 @@
         <p></p>
         <p>This type has no fields.</p>
     </div>
+    <br></br>
     <div>
         <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.symbol.SymbolText"></a>
@@ -3800,3 +3879,4 @@
             </tr>
         </table>
     </div>
+    <br></br>
