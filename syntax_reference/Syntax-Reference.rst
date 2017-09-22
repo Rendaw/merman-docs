@@ -1,7 +1,7 @@
 .. raw:: html
 
     <h1>Introduction</h1>
-    <p>This documentation describes the Lua configuration for .</p>
+    <p>This documentation describes the Lua configuration for Syntax.</p>
     <p>Some values are typed. Specify types with built-in unary functions which take the value to be typed. For example, to place a dog in field animal, write <code>dog { name = "fido" }</code>. Types are indicated in the documentation as a word in parentheses.</p>
     <p>Note that types only need to be specified where indicated.</p>
     <p>Also, if a type only has one required field, the field can be filled directly, so:</p>
@@ -13,7 +13,6 @@
     <a href="#com.zarbosoft.merman.syntax.Syntax">Syntax</a>
     <h1>Types</h1>
     <div>
-        <a href="#top">top</a>
         <a name="com.zarbosoft.merman.editor.visual.tags.FreeTag"></a>
         <h2>FreeTag</h2>
         <p>A user specified tag.</p>
@@ -31,8 +30,8 @@
         </table>
     </div>
     <br></br>
+    <br></br>
     <div>
-        <a href="#top">top</a>
         <a name="com.zarbosoft.merman.editor.visual.tags.GlobalTag"></a>
         <h2>GlobalTag</h2>
         <p>A tag that indicates editor state, such as "modified" when the document has unsaved changes.</p>
@@ -50,8 +49,8 @@
         </table>
     </div>
     <br></br>
+    <br></br>
     <div>
-        <a href="#top">top</a>
         <a name="com.zarbosoft.merman.editor.visual.tags.PartTag"></a>
         <h2>PartTag</h2>
         <p>A tag that indicates an atom part type.</p>
@@ -69,8 +68,8 @@
         </table>
     </div>
     <br></br>
+    <br></br>
     <div>
-        <a href="#top">top</a>
         <a name="com.zarbosoft.merman.editor.visual.tags.StateTag"></a>
         <h2>StateTag</h2>
         <p>A tag that indicates an atom state, such as "compact".</p>
@@ -88,8 +87,8 @@
         </table>
     </div>
     <br></br>
+    <br></br>
     <div>
-        <a href="#top">top</a>
         <a name="com.zarbosoft.merman.editor.visual.tags.TypeTag"></a>
         <h2>TypeTag</h2>
         <p>A tag that indicates an atom type id.</p>
@@ -107,8 +106,8 @@
         </table>
     </div>
     <br></br>
+    <br></br>
     <div>
-        <a href="#top">top</a>
         <a name="com.zarbosoft.merman.modules.HoverType"></a>
         <h2>HoverType</h2>
         <p></p>
@@ -154,8 +153,8 @@
         </table>
     </div>
     <br></br>
+    <br></br>
     <div>
-        <a href="#top">top</a>
         <a name="com.zarbosoft.merman.modules.Indicators"></a>
         <h2>Indicators</h2>
         <p></p>
@@ -245,8 +244,8 @@
         </table>
     </div>
     <br></br>
+    <br></br>
     <div>
-        <a href="#top">top</a>
         <a name="com.zarbosoft.merman.modules.Indicators$Indicator"></a>
         <h2>Indicators$Indicator</h2>
         <p></p>
@@ -300,8 +299,8 @@
         </table>
     </div>
     <br></br>
+    <br></br>
     <div>
-        <a href="#top">top</a>
         <a name="com.zarbosoft.merman.modules.LuaActions"></a>
         <h2>LuaActions</h2>
         <p></p>
@@ -319,8 +318,8 @@
         </table>
     </div>
     <br></br>
+    <br></br>
     <div>
-        <a href="#top">top</a>
         <a name="com.zarbosoft.merman.modules.Modes"></a>
         <h2>Modes</h2>
         <p></p>
@@ -338,8 +337,8 @@
         </table>
     </div>
     <br></br>
+    <br></br>
     <div>
-        <a href="#top">top</a>
         <a name="com.zarbosoft.merman.modules.SelectionType"></a>
         <h2>SelectionType</h2>
         <p></p>
@@ -357,8 +356,8 @@
         </table>
     </div>
     <br></br>
+    <br></br>
     <div>
-        <a href="#top">top</a>
         <a name="com.zarbosoft.merman.modules.hotkeys.HotkeyRule"></a>
         <h2>HotkeyRule</h2>
         <p></p>
@@ -439,8 +438,8 @@
         </table>
     </div>
     <br></br>
+    <br></br>
     <div>
-        <a href="#top">top</a>
         <a name="com.zarbosoft.merman.modules.hotkeys.Hotkeys"></a>
         <h2>Hotkeys</h2>
         <p></p>
@@ -478,8 +477,8 @@
         </table>
     </div>
     <br></br>
+    <br></br>
     <div>
-        <a href="#top">top</a>
         <a name="com.zarbosoft.merman.modules.hotkeys.Key"></a>
         <h2>Key</h2>
         <p></p>
@@ -716,8 +715,8 @@
         </ul>
     </div>
     <br></br>
+    <br></br>
     <div>
-        <a href="#top">top</a>
         <a name="com.zarbosoft.merman.modules.hotkeys.grammar.Sequence"></a>
         <h2>Sequence</h2>
         <p></p>
@@ -740,8 +739,8 @@
         </table>
     </div>
     <br></br>
+    <br></br>
     <div>
-        <a href="#top">top</a>
         <a name="com.zarbosoft.merman.modules.hotkeys.grammar.Terminal"></a>
         <h2>Terminal</h2>
         <p></p>
@@ -791,8 +790,8 @@
         </table>
     </div>
     <br></br>
+    <br></br>
     <div>
-        <a href="#top">top</a>
         <a name="com.zarbosoft.merman.modules.hotkeys.grammar.Union"></a>
         <h2>Union</h2>
         <p></p>
@@ -815,8 +814,8 @@
         </table>
     </div>
     <br></br>
+    <br></br>
     <div>
-        <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.FreeAtomType"></a>
         <h2>FreeAtomType</h2>
         <p></p>
@@ -1012,8 +1011,8 @@
         </table>
     </div>
     <br></br>
+    <br></br>
     <div>
-        <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.GapAtomType"></a>
         <h2>GapAtomType</h2>
         <p></p>
@@ -1055,8 +1054,8 @@
         </table>
     </div>
     <br></br>
+    <br></br>
     <div>
-        <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.Padding"></a>
         <h2>Padding</h2>
         <p>Padding around source content (not banner, details, indicators, etc).</p>
@@ -1126,8 +1125,8 @@
         </table>
     </div>
     <br></br>
+    <br></br>
     <div>
-        <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.PrefixGapAtomType"></a>
         <h2>PrefixGapAtomType</h2>
         <p></p>
@@ -1181,8 +1180,8 @@
         </table>
     </div>
     <br></br>
+    <br></br>
     <div>
-        <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.RootAtomType"></a>
         <h2>RootAtomType</h2>
         <p></p>
@@ -1286,8 +1285,8 @@
         </table>
     </div>
     <br></br>
+    <br></br>
     <div>
-        <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.SuffixGapAtomType"></a>
         <h2>SuffixGapAtomType</h2>
         <p></p>
@@ -1341,8 +1340,8 @@
         </table>
     </div>
     <br></br>
+    <br></br>
     <div>
-        <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.Syntax"></a>
         <h2>Syntax</h2>
         <p></p>
@@ -1773,8 +1772,8 @@
         </table>
     </div>
     <br></br>
+    <br></br>
     <div>
-        <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.Syntax$BackType"></a>
         <h2>Syntax$BackType</h2>
         <p></p>
@@ -1784,8 +1783,8 @@
         </ul>
     </div>
     <br></br>
+    <br></br>
     <div>
-        <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.Syntax$Direction"></a>
         <h2>Syntax$Direction</h2>
         <p></p>
@@ -1797,8 +1796,8 @@
         </ul>
     </div>
     <br></br>
+    <br></br>
     <div>
-        <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.alignments.AbsoluteAlignmentDefinition"></a>
         <h2>AbsoluteAlignmentDefinition</h2>
         <p></p>
@@ -1816,16 +1815,16 @@
         </table>
     </div>
     <br></br>
+    <br></br>
     <div>
-        <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.alignments.ConcensusAlignmentDefinition"></a>
         <h2>ConcensusAlignmentDefinition</h2>
         <p></p>
         <p>This type has no fields.</p>
     </div>
     <br></br>
+    <br></br>
     <div>
-        <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.alignments.RelativeAlignmentDefinition"></a>
         <h2>RelativeAlignmentDefinition</h2>
         <p></p>
@@ -1855,8 +1854,8 @@
         </table>
     </div>
     <br></br>
+    <br></br>
     <div>
-        <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.back.BackArray"></a>
         <h2>BackArray</h2>
         <p></p>
@@ -1906,8 +1905,8 @@
         </table>
     </div>
     <br></br>
+    <br></br>
     <div>
-        <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.back.BackDataArray"></a>
         <h2>BackDataArray</h2>
         <p></p>
@@ -1925,8 +1924,8 @@
         </table>
     </div>
     <br></br>
+    <br></br>
     <div>
-        <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.back.BackDataAtom"></a>
         <h2>BackDataAtom</h2>
         <p></p>
@@ -1944,8 +1943,8 @@
         </table>
     </div>
     <br></br>
+    <br></br>
     <div>
-        <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.back.BackDataJSONFloat"></a>
         <h2>BackDataJSONFloat</h2>
         <p></p>
@@ -1963,8 +1962,8 @@
         </table>
     </div>
     <br></br>
+    <br></br>
     <div>
-        <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.back.BackDataJSONInt"></a>
         <h2>BackDataJSONInt</h2>
         <p></p>
@@ -1982,8 +1981,8 @@
         </table>
     </div>
     <br></br>
+    <br></br>
     <div>
-        <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.back.BackDataKey"></a>
         <h2>BackDataKey</h2>
         <p></p>
@@ -2001,8 +2000,8 @@
         </table>
     </div>
     <br></br>
+    <br></br>
     <div>
-        <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.back.BackDataPrimitive"></a>
         <h2>BackDataPrimitive</h2>
         <p></p>
@@ -2020,8 +2019,8 @@
         </table>
     </div>
     <br></br>
+    <br></br>
     <div>
-        <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.back.BackDataRecord"></a>
         <h2>BackDataRecord</h2>
         <p></p>
@@ -2039,8 +2038,8 @@
         </table>
     </div>
     <br></br>
+    <br></br>
     <div>
-        <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.back.BackDataRootArray"></a>
         <h2>BackDataRootArray</h2>
         <p></p>
@@ -2058,8 +2057,8 @@
         </table>
     </div>
     <br></br>
+    <br></br>
     <div>
-        <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.back.BackDataType"></a>
         <h2>BackDataType</h2>
         <p></p>
@@ -2109,16 +2108,16 @@
         </table>
     </div>
     <br></br>
+    <br></br>
     <div>
-        <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.back.BackJSONFalse"></a>
         <h2>BackJSONFalse</h2>
         <p></p>
         <p>This type has no fields.</p>
     </div>
     <br></br>
+    <br></br>
     <div>
-        <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.back.BackJSONFloat"></a>
         <h2>BackJSONFloat</h2>
         <p></p>
@@ -2136,8 +2135,8 @@
         </table>
     </div>
     <br></br>
+    <br></br>
     <div>
-        <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.back.BackJSONInt"></a>
         <h2>BackJSONInt</h2>
         <p></p>
@@ -2155,24 +2154,24 @@
         </table>
     </div>
     <br></br>
+    <br></br>
     <div>
-        <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.back.BackJSONNull"></a>
         <h2>BackJSONNull</h2>
         <p></p>
         <p>This type has no fields.</p>
     </div>
     <br></br>
+    <br></br>
     <div>
-        <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.back.BackJSONTrue"></a>
         <h2>BackJSONTrue</h2>
         <p></p>
         <p>This type has no fields.</p>
     </div>
     <br></br>
+    <br></br>
     <div>
-        <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.back.BackPrimitive"></a>
         <h2>BackPrimitive</h2>
         <p></p>
@@ -2190,8 +2189,8 @@
         </table>
     </div>
     <br></br>
+    <br></br>
     <div>
-        <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.back.BackRecord"></a>
         <h2>BackRecord</h2>
         <p></p>
@@ -2229,8 +2228,8 @@
         </table>
     </div>
     <br></br>
+    <br></br>
     <div>
-        <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.back.BackType"></a>
         <h2>BackType</h2>
         <p></p>
@@ -2280,8 +2279,8 @@
         </table>
     </div>
     <br></br>
+    <br></br>
     <div>
-        <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.format.Format"></a>
         <h2>Format</h2>
         <p></p>
@@ -2303,8 +2302,8 @@
         </table>
     </div>
     <br></br>
+    <br></br>
     <div>
-        <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.format.Literal"></a>
         <h2>Literal</h2>
         <p></p>
@@ -2322,8 +2321,8 @@
         </table>
     </div>
     <br></br>
+    <br></br>
     <div>
-        <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.format.Reference"></a>
         <h2>Reference</h2>
         <p></p>
@@ -2341,8 +2340,8 @@
         </table>
     </div>
     <br></br>
+    <br></br>
     <div>
-        <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.front.ConditionNode"></a>
         <h2>ConditionNode</h2>
         <p></p>
@@ -2380,8 +2379,8 @@
         </table>
     </div>
     <br></br>
+    <br></br>
     <div>
-        <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.front.ConditionNode$Is"></a>
         <h2>ConditionNode$Is</h2>
         <p></p>
@@ -2390,8 +2389,8 @@
         </ul>
     </div>
     <br></br>
+    <br></br>
     <div>
-        <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.front.ConditionValue"></a>
         <h2>ConditionValue</h2>
         <p></p>
@@ -2441,8 +2440,8 @@
         </table>
     </div>
     <br></br>
+    <br></br>
     <div>
-        <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.front.ConditionValue$Is"></a>
         <h2>ConditionValue$Is</h2>
         <p></p>
@@ -2451,8 +2450,8 @@
         </ul>
     </div>
     <br></br>
+    <br></br>
     <div>
-        <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.front.FrontDataArray"></a>
         <h2>FrontDataArray</h2>
         <p></p>
@@ -2575,8 +2574,8 @@
         </table>
     </div>
     <br></br>
+    <br></br>
     <div>
-        <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.front.FrontDataAtom"></a>
         <h2>FrontDataAtom</h2>
         <p></p>
@@ -2640,8 +2639,8 @@
         </table>
     </div>
     <br></br>
+    <br></br>
     <div>
-        <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.front.FrontDataPrimitive"></a>
         <h2>FrontDataPrimitive</h2>
         <p></p>
@@ -2700,8 +2699,8 @@
         </table>
     </div>
     <br></br>
+    <br></br>
     <div>
-        <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.front.FrontDataRootArray"></a>
         <h2>FrontDataRootArray</h2>
         <p></p>
@@ -2812,8 +2811,8 @@
         </table>
     </div>
     <br></br>
+    <br></br>
     <div>
-        <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.front.FrontSymbol"></a>
         <h2>FrontSymbol</h2>
         <p></p>
@@ -2880,8 +2879,8 @@
         </table>
     </div>
     <br></br>
+    <br></br>
     <div>
-        <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.middle.MiddleArray"></a>
         <h2>MiddleArray</h2>
         <p></p>
@@ -2899,8 +2898,8 @@
         </table>
     </div>
     <br></br>
+    <br></br>
     <div>
-        <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.middle.MiddleAtom"></a>
         <h2>MiddleAtom</h2>
         <p></p>
@@ -2918,8 +2917,8 @@
         </table>
     </div>
     <br></br>
+    <br></br>
     <div>
-        <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.middle.MiddlePrimitive"></a>
         <h2>MiddlePrimitive</h2>
         <p></p>
@@ -2948,8 +2947,8 @@
         </table>
     </div>
     <br></br>
+    <br></br>
     <div>
-        <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.middle.MiddleRecord"></a>
         <h2>MiddleRecord</h2>
         <p></p>
@@ -2967,32 +2966,32 @@
         </table>
     </div>
     <br></br>
+    <br></br>
     <div>
-        <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.middle.primitive.Any"></a>
         <h2>Any</h2>
         <p></p>
         <p>This type has no fields.</p>
     </div>
     <br></br>
+    <br></br>
     <div>
-        <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.middle.primitive.Digits"></a>
         <h2>Digits</h2>
         <p></p>
         <p>This type has no fields.</p>
     </div>
     <br></br>
+    <br></br>
     <div>
-        <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.middle.primitive.Letters"></a>
         <h2>Letters</h2>
         <p></p>
         <p>This type has no fields.</p>
     </div>
     <br></br>
+    <br></br>
     <div>
-        <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.middle.primitive.Maybe"></a>
         <h2>Maybe</h2>
         <p></p>
@@ -3021,8 +3020,8 @@
         </table>
     </div>
     <br></br>
+    <br></br>
     <div>
-        <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.middle.primitive.PatternSequence"></a>
         <h2>PatternSequence</h2>
         <p></p>
@@ -3051,8 +3050,8 @@
         </table>
     </div>
     <br></br>
+    <br></br>
     <div>
-        <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.middle.primitive.PatternString"></a>
         <h2>PatternString</h2>
         <p></p>
@@ -3070,8 +3069,8 @@
         </table>
     </div>
     <br></br>
+    <br></br>
     <div>
-        <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.middle.primitive.PatternUnion"></a>
         <h2>PatternUnion</h2>
         <p></p>
@@ -3100,8 +3099,8 @@
         </table>
     </div>
     <br></br>
+    <br></br>
     <div>
-        <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.middle.primitive.Repeat0"></a>
         <h2>Repeat0</h2>
         <p></p>
@@ -3130,8 +3129,8 @@
         </table>
     </div>
     <br></br>
+    <br></br>
     <div>
-        <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.middle.primitive.Repeat1"></a>
         <h2>Repeat1</h2>
         <p></p>
@@ -3160,8 +3159,8 @@
         </table>
     </div>
     <br></br>
+    <br></br>
     <div>
-        <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.style.BoxStyle"></a>
         <h2>BoxStyle</h2>
         <p></p>
@@ -3315,8 +3314,8 @@
         </table>
     </div>
     <br></br>
+    <br></br>
     <div>
-        <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.style.ModelColor$RGB"></a>
         <h2>ModelColor$RGB</h2>
         <p></p>
@@ -3358,8 +3357,8 @@
         </table>
     </div>
     <br></br>
+    <br></br>
     <div>
-        <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.style.ModelColor$RGBA"></a>
         <h2>ModelColor$RGBA</h2>
         <p></p>
@@ -3413,8 +3412,8 @@
         </table>
     </div>
     <br></br>
+    <br></br>
     <div>
-        <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.style.ObboxStyle"></a>
         <h2>ObboxStyle</h2>
         <p></p>
@@ -3600,8 +3599,8 @@
         </table>
     </div>
     <br></br>
+    <br></br>
     <div>
-        <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.style.Style"></a>
         <h2>Style</h2>
         <p></p>
@@ -3845,24 +3844,24 @@
         </table>
     </div>
     <br></br>
+    <br></br>
     <div>
-        <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.symbol.SymbolImage"></a>
         <h2>SymbolImage</h2>
         <p></p>
         <p>This type has no fields.</p>
     </div>
     <br></br>
+    <br></br>
     <div>
-        <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.symbol.SymbolSpace"></a>
         <h2>SymbolSpace</h2>
         <p></p>
         <p>This type has no fields.</p>
     </div>
     <br></br>
+    <br></br>
     <div>
-        <a href="#top">top</a>
         <a name="com.zarbosoft.merman.syntax.symbol.SymbolText"></a>
         <h2>SymbolText</h2>
         <p></p>
@@ -3879,4 +3878,5 @@
             </tr>
         </table>
     </div>
+    <br></br>
     <br></br>

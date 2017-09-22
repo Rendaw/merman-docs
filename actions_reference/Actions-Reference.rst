@@ -17,6 +17,7 @@
         </tr>
     </table>
     <br></br>
+    <br></br>
     <h2>array</h2>
     <table>
         <tr>
@@ -105,6 +106,7 @@
         </tr>
     </table>
     <br></br>
+    <br></br>
     <h2>atom</h2>
     <table>
         <tr>
@@ -152,6 +154,7 @@
             <td></td>
         </tr>
     </table>
+    <br></br>
     <br></br>
     <h2>editor</h2>
     <table>
@@ -201,6 +204,7 @@
         </tr>
     </table>
     <br></br>
+    <br></br>
     <h2>gap</h2>
     <table>
         <tr>
@@ -221,6 +225,7 @@
         </tr>
     </table>
     <br></br>
+    <br></br>
     <h2>lua actions module</h2>
     <table>
         <tr>
@@ -229,6 +234,7 @@
         </tr>
     </table>
     <br></br>
+    <br></br>
     <h2>modes module</h2>
     <table>
         <tr>
@@ -236,6 +242,7 @@
             <td></td>
         </tr>
     </table>
+    <br></br>
     <br></br>
     <h2>primitive</h2>
     <table>
@@ -376,4 +383,5 @@
             <td></td>
         </tr>
     </table>
+    <br></br>
     <br></br>
