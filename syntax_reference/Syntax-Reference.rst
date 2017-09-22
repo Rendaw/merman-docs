@@ -19,7 +19,7 @@
         <p>A user specified tag.</p>
         <h4>field: value</h4>
         <p>The value of the tag.</p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span>Any string</span></td>
@@ -37,7 +37,7 @@
         <p>A tag that indicates editor state, such as "modified" when the document has unsaved changes.</p>
         <h4>field: value</h4>
         <p>The value of the tag.</p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span>Any string</span></td>
@@ -55,7 +55,7 @@
         <p>A tag that indicates an atom part type.</p>
         <h4>field: value</h4>
         <p>The value of the tag.</p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span>Any string</span></td>
@@ -73,7 +73,7 @@
         <p>A tag that indicates an atom state, such as "compact".</p>
         <h4>field: value</h4>
         <p>The value of the tag.</p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span>Any string</span></td>
@@ -91,7 +91,7 @@
         <p>A tag that indicates an atom type id.</p>
         <h4>field: value</h4>
         <p>The value of the tag.</p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span>Any string</span></td>
@@ -109,7 +109,7 @@
         <p></p>
         <h4>field: node</h4>
         <p>Include the type of the atom.</p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td>
@@ -129,7 +129,7 @@
         </table>
         <h4>field: part</h4>
         <p>Include the type of the atom part.</p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td>
@@ -155,7 +155,7 @@
         <p></p>
         <h4>field: converse_padding</h4>
         <p>Separation between the symbol and the converse edge of the screen.</p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span>Any integer</span></td>
@@ -171,7 +171,7 @@
         </table>
         <h4>field: converse_start</h4>
         <p>If true, show the symbol by the near converse edge of the screen. Otherwise, the far.</p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td>
@@ -191,7 +191,7 @@
         </table>
         <h4>field: indicators</h4>
         <p>Show a floating indicator symbol based on the current global and selection tags.</p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span><p>List of:</p><a href="#com.zarbosoft.merman.modules.Indicators$Indicator"></a></span></td>
@@ -203,7 +203,7 @@
         </table>
         <h4>field: transverse_padding</h4>
         <p>Separation between the symbol and the transverse edge of the screen.</p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span>Any integer</span></td>
@@ -219,7 +219,7 @@
         </table>
         <h4>field: transverse_start</h4>
         <p>If true, show the symbols at the start of the gutter. Otherwise, the end.</p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td>
@@ -245,7 +245,7 @@
         <p></p>
         <h4>field: id</h4>
         <p>The symbol will have this type tag when shown.</p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span>Any string</span></td>
@@ -257,14 +257,14 @@
         </table>
         <h4>field: symbol</h4>
         <p>The symbol to show.</p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span><p>Any of (specify type):</p>
                         <ul>
                             <li><span>(image) </span><a href="#com.zarbosoft.merman.syntax.symbol.SymbolImage"></a></li>
-                            <li><span>(text) </span><a href="#com.zarbosoft.merman.syntax.symbol.SymbolText"></a></li>
                             <li><span>(space) </span><a href="#com.zarbosoft.merman.syntax.symbol.SymbolSpace"></a></li>
+                            <li><span>(text) </span><a href="#com.zarbosoft.merman.syntax.symbol.SymbolText"></a></li>
                         </ul></span></td>
             </tr>
             <tr>
@@ -274,16 +274,16 @@
         </table>
         <h4>field: tags</h4>
         <p>Show the symbol when these tags are present.</p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span><p>Set of:</p><span><p>Any of (specify type):</p>
                             <ul>
-                                <li><span>(global) </span><a href="#com.zarbosoft.merman.editor.visual.tags.GlobalTag"></a></li>
                                 <li><span>(free) </span><a href="#com.zarbosoft.merman.editor.visual.tags.FreeTag"></a></li>
+                                <li><span>(global) </span><a href="#com.zarbosoft.merman.editor.visual.tags.GlobalTag"></a></li>
                                 <li><span>(part) </span><a href="#com.zarbosoft.merman.editor.visual.tags.PartTag"></a></li>
-                                <li><span>(type) </span><a href="#com.zarbosoft.merman.editor.visual.tags.TypeTag"></a></li>
                                 <li><span>(state) </span><a href="#com.zarbosoft.merman.editor.visual.tags.StateTag"></a></li>
+                                <li><span>(type) </span><a href="#com.zarbosoft.merman.editor.visual.tags.TypeTag"></a></li>
                             </ul></span></span></td>
             </tr>
             <tr>
@@ -299,7 +299,7 @@
         <p></p>
         <h4>field: actions</h4>
         <p>A mapping of action names to Lua functions. Each function takes a single <pre>context</pre> argument and returns a boolean, true if the action modified the application state. <pre>context</pre> is an object with the following functions: <pre>act</pre>. <pre>act</pre> takes a string, the name of another action, and runs it, and returns true if the action modified the application state.</p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span><p>Nested:</p><span></span></span></td>
@@ -317,7 +317,7 @@
         <p></p>
         <h4>field: states</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span><p>List of:</p><span>Any string</span></span></td>
@@ -335,7 +335,7 @@
         <p></p>
         <h4>field: format</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><a href="#com.zarbosoft.merman.syntax.format.Format"></a></td>
@@ -353,7 +353,7 @@
         <p></p>
         <h4>field: free_typing</h4>
         <p>Text keys that don't match a hotkey are passed to the selected primitive.</p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td>
@@ -373,13 +373,13 @@
         </table>
         <h4>field: hotkeys</h4>
         <p>Hotkeys to use when the tags match.</p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span><p>Nested:</p><span><p>List of:</p><span><p>Any of (specify type):</p>
                                 <ul>
-                                    <li><span>(key) </span><a href="#com.zarbosoft.merman.modules.hotkeys.grammar.Terminal"></a></li>
                                     <li><span>(seq) </span><a href="#com.zarbosoft.merman.modules.hotkeys.grammar.Sequence"></a></li>
+                                    <li><span>(key) </span><a href="#com.zarbosoft.merman.modules.hotkeys.grammar.Terminal"></a></li>
                                     <li><span>(or) </span><a href="#com.zarbosoft.merman.modules.hotkeys.grammar.Union"></a></li>
                                 </ul></span></span></span></td>
             </tr>
@@ -390,16 +390,16 @@
         </table>
         <h4>field: with</h4>
         <p>These tags must be present.</p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span><p>Set of:</p><span><p>Any of (specify type):</p>
                             <ul>
-                                <li><span>(global) </span><a href="#com.zarbosoft.merman.editor.visual.tags.GlobalTag"></a></li>
                                 <li><span>(free) </span><a href="#com.zarbosoft.merman.editor.visual.tags.FreeTag"></a></li>
+                                <li><span>(global) </span><a href="#com.zarbosoft.merman.editor.visual.tags.GlobalTag"></a></li>
                                 <li><span>(part) </span><a href="#com.zarbosoft.merman.editor.visual.tags.PartTag"></a></li>
-                                <li><span>(type) </span><a href="#com.zarbosoft.merman.editor.visual.tags.TypeTag"></a></li>
                                 <li><span>(state) </span><a href="#com.zarbosoft.merman.editor.visual.tags.StateTag"></a></li>
+                                <li><span>(type) </span><a href="#com.zarbosoft.merman.editor.visual.tags.TypeTag"></a></li>
                             </ul></span></span></td>
             </tr>
             <tr>
@@ -409,16 +409,16 @@
         </table>
         <h4>field: without</h4>
         <p>These tags must be absent.</p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span><p>Set of:</p><span><p>Any of (specify type):</p>
                             <ul>
-                                <li><span>(global) </span><a href="#com.zarbosoft.merman.editor.visual.tags.GlobalTag"></a></li>
                                 <li><span>(free) </span><a href="#com.zarbosoft.merman.editor.visual.tags.FreeTag"></a></li>
+                                <li><span>(global) </span><a href="#com.zarbosoft.merman.editor.visual.tags.GlobalTag"></a></li>
                                 <li><span>(part) </span><a href="#com.zarbosoft.merman.editor.visual.tags.PartTag"></a></li>
-                                <li><span>(type) </span><a href="#com.zarbosoft.merman.editor.visual.tags.TypeTag"></a></li>
                                 <li><span>(state) </span><a href="#com.zarbosoft.merman.editor.visual.tags.StateTag"></a></li>
+                                <li><span>(type) </span><a href="#com.zarbosoft.merman.editor.visual.tags.TypeTag"></a></li>
                             </ul></span></span></td>
             </tr>
             <tr>
@@ -434,7 +434,7 @@
         <p></p>
         <h4>field: rules</h4>
         <p>A list of hotkey rules.</p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span><p>List of:</p><a href="#com.zarbosoft.merman.modules.hotkeys.HotkeyRule"></a></span></td>
@@ -446,7 +446,7 @@
         </table>
         <h4>field: show_details</h4>
         <p>Show the current input sequence and possible actions when an input is received in an incomplete sequence.</p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td>
@@ -709,13 +709,13 @@
         <p></p>
         <h4>field: nodes</h4>
         <p>The list of rules to match in sequence.</p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span><p>List of:</p><span><p>Any of (specify type):</p>
                             <ul>
-                                <li><span>(key) </span><a href="#com.zarbosoft.merman.modules.hotkeys.grammar.Terminal"></a></li>
                                 <li><span>(seq) </span><a href="#com.zarbosoft.merman.modules.hotkeys.grammar.Sequence"></a></li>
+                                <li><span>(key) </span><a href="#com.zarbosoft.merman.modules.hotkeys.grammar.Terminal"></a></li>
                                 <li><span>(or) </span><a href="#com.zarbosoft.merman.modules.hotkeys.grammar.Union"></a></li>
                             </ul></span></span></td>
             </tr>
@@ -732,7 +732,7 @@
         <p></p>
         <h4>field: key</h4>
         <p>The input that is being pressed or released.</p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><a href="#com.zarbosoft.merman.modules.hotkeys.Key"></a></td>
@@ -744,7 +744,7 @@
         </table>
         <h4>field: modifiers</h4>
         <p>Inputs that must be active for this rule to match.</p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span><p>Set of:</p><a href="#com.zarbosoft.merman.modules.hotkeys.Key"></a></span></td>
@@ -756,7 +756,7 @@
         </table>
         <h4>field: press</h4>
         <p>True if the input is pressed, false if the input is released.</p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td>
@@ -782,13 +782,13 @@
         <p></p>
         <h4>field: nodes</h4>
         <p>All rules that may match.</p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span><p>List of:</p><span><p>Any of (specify type):</p>
                             <ul>
-                                <li><span>(key) </span><a href="#com.zarbosoft.merman.modules.hotkeys.grammar.Terminal"></a></li>
                                 <li><span>(seq) </span><a href="#com.zarbosoft.merman.modules.hotkeys.grammar.Sequence"></a></li>
+                                <li><span>(key) </span><a href="#com.zarbosoft.merman.modules.hotkeys.grammar.Terminal"></a></li>
                                 <li><span>(or) </span><a href="#com.zarbosoft.merman.modules.hotkeys.grammar.Union"></a></li>
                             </ul></span></span></td>
             </tr>
@@ -805,13 +805,13 @@
         <p></p>
         <h4>field: alignments</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span><p>Nested:</p><span><p>Any of (specify type):</p>
                             <ul>
-                                <li><span>(concensus) </span><a href="#com.zarbosoft.merman.syntax.alignments.ConcensusAlignmentDefinition"></a></li>
                                 <li><span>(absolute) </span><a href="#com.zarbosoft.merman.syntax.alignments.AbsoluteAlignmentDefinition"></a></li>
+                                <li><span>(concensus) </span><a href="#com.zarbosoft.merman.syntax.alignments.ConcensusAlignmentDefinition"></a></li>
                                 <li><span>(relative) </span><a href="#com.zarbosoft.merman.syntax.alignments.RelativeAlignmentDefinition"></a></li>
                             </ul></span></span></td>
             </tr>
@@ -822,7 +822,7 @@
         </table>
         <h4>field: associate_forward</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td>
@@ -842,7 +842,7 @@
         </table>
         <h4>field: auto_choose_ambiguity</h4>
         <p>If this type is a suggestion and there are less than this many choices, auto-choose this type.</p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span>Any integer</span></td>
@@ -858,29 +858,29 @@
         </table>
         <h4>field: back</h4>
         <p>This describes the format of the data on disk. Modifiable back parts must have a corresponding middle part.</p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span><p>List of:</p><span><p>Any of (specify type):</p>
                             <ul>
-                                <li><span>(data_atom) </span><a href="#com.zarbosoft.merman.syntax.back.BackDataAtom"></a></li>
-                                <li><span>(json_float) </span><a href="#com.zarbosoft.merman.syntax.back.BackJSONFloat"></a></li>
-                                <li><span>(root_data_array) </span><a href="#com.zarbosoft.merman.syntax.back.BackDataRootArray"></a></li>
                                 <li><span>(array) </span><a href="#com.zarbosoft.merman.syntax.back.BackArray"></a></li>
-                                <li><span>(data_key) </span><a href="#com.zarbosoft.merman.syntax.back.BackDataKey"></a></li>
-                                <li><span>(json_false) </span><a href="#com.zarbosoft.merman.syntax.back.BackJSONFalse"></a></li>
                                 <li><span>(data_array) </span><a href="#com.zarbosoft.merman.syntax.back.BackDataArray"></a></li>
-                                <li><span>(type) </span><a href="#com.zarbosoft.merman.syntax.back.BackType"></a></li>
-                                <li><span>(data_primitive) </span><a href="#com.zarbosoft.merman.syntax.back.BackDataPrimitive"></a></li>
-                                <li><span>(record) </span><a href="#com.zarbosoft.merman.syntax.back.BackRecord"></a></li>
-                                <li><span>(json_int) </span><a href="#com.zarbosoft.merman.syntax.back.BackJSONInt"></a></li>
+                                <li><span>(data_atom) </span><a href="#com.zarbosoft.merman.syntax.back.BackDataAtom"></a></li>
                                 <li><span>(json_data_float) </span><a href="#com.zarbosoft.merman.syntax.back.BackDataJSONFloat"></a></li>
-                                <li><span>(json_null) </span><a href="#com.zarbosoft.merman.syntax.back.BackJSONNull"></a></li>
-                                <li><span>(data_record) </span><a href="#com.zarbosoft.merman.syntax.back.BackDataRecord"></a></li>
                                 <li><span>(json_data_int) </span><a href="#com.zarbosoft.merman.syntax.back.BackDataJSONInt"></a></li>
-                                <li><span>(primitive) </span><a href="#com.zarbosoft.merman.syntax.back.BackPrimitive"></a></li>
-                                <li><span>(json_true) </span><a href="#com.zarbosoft.merman.syntax.back.BackJSONTrue"></a></li>
+                                <li><span>(data_key) </span><a href="#com.zarbosoft.merman.syntax.back.BackDataKey"></a></li>
+                                <li><span>(data_primitive) </span><a href="#com.zarbosoft.merman.syntax.back.BackDataPrimitive"></a></li>
+                                <li><span>(data_record) </span><a href="#com.zarbosoft.merman.syntax.back.BackDataRecord"></a></li>
+                                <li><span>(root_data_array) </span><a href="#com.zarbosoft.merman.syntax.back.BackDataRootArray"></a></li>
                                 <li><span>(data_type) </span><a href="#com.zarbosoft.merman.syntax.back.BackDataType"></a></li>
+                                <li><span>(json_false) </span><a href="#com.zarbosoft.merman.syntax.back.BackJSONFalse"></a></li>
+                                <li><span>(json_float) </span><a href="#com.zarbosoft.merman.syntax.back.BackJSONFloat"></a></li>
+                                <li><span>(json_int) </span><a href="#com.zarbosoft.merman.syntax.back.BackJSONInt"></a></li>
+                                <li><span>(json_null) </span><a href="#com.zarbosoft.merman.syntax.back.BackJSONNull"></a></li>
+                                <li><span>(json_true) </span><a href="#com.zarbosoft.merman.syntax.back.BackJSONTrue"></a></li>
+                                <li><span>(primitive) </span><a href="#com.zarbosoft.merman.syntax.back.BackPrimitive"></a></li>
+                                <li><span>(record) </span><a href="#com.zarbosoft.merman.syntax.back.BackRecord"></a></li>
+                                <li><span>(type) </span><a href="#com.zarbosoft.merman.syntax.back.BackType"></a></li>
                             </ul></span></span></td>
             </tr>
             <tr>
@@ -890,7 +890,7 @@
         </table>
         <h4>field: depth_score</h4>
         <p>When calculating depth for windowing, this is the value the atom increases the depth score by.</p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span>Any integer</span></td>
@@ -906,16 +906,16 @@
         </table>
         <h4>field: front</h4>
         <p>This describes how the atom is represented in the editor. Modifiable must have a corresponding middle part.</p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span><p>List of:</p><span><p>Any of (specify type):</p>
                             <ul>
-                                <li><span>(atom) </span><a href="#com.zarbosoft.merman.syntax.front.FrontDataAtom"></a></li>
-                                <li><span>(com.zarbosoft.merman.syntax.front.FrontDataRootArray) </span><a href="#com.zarbosoft.merman.syntax.front.FrontDataRootArray"></a></li>
                                 <li><span>(array) </span><a href="#com.zarbosoft.merman.syntax.front.FrontDataArray"></a></li>
-                                <li><span>(symbol) </span><a href="#com.zarbosoft.merman.syntax.front.FrontSymbol"></a></li>
+                                <li><span>(atom) </span><a href="#com.zarbosoft.merman.syntax.front.FrontDataAtom"></a></li>
                                 <li><span>(primitive) </span><a href="#com.zarbosoft.merman.syntax.front.FrontDataPrimitive"></a></li>
+                                <li><span>(com.zarbosoft.merman.syntax.front.FrontDataRootArray) </span><a href="#com.zarbosoft.merman.syntax.front.FrontDataRootArray"></a></li>
+                                <li><span>(symbol) </span><a href="#com.zarbosoft.merman.syntax.front.FrontSymbol"></a></li>
                             </ul></span></span></td>
             </tr>
             <tr>
@@ -925,7 +925,7 @@
         </table>
         <h4>field: id</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span>Any string</span></td>
@@ -937,14 +937,14 @@
         </table>
         <h4>field: middle</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span><p>Nested:</p><span><p>Any of (specify type):</p>
                             <ul>
+                                <li><span>(array) </span><a href="#com.zarbosoft.merman.syntax.middle.MiddleArray"></a></li>
                                 <li><span>(atom) </span><a href="#com.zarbosoft.merman.syntax.middle.MiddleAtom"></a></li>
                                 <li><span>(primitive) </span><a href="#com.zarbosoft.merman.syntax.middle.MiddlePrimitive"></a></li>
-                                <li><span>(array) </span><a href="#com.zarbosoft.merman.syntax.middle.MiddleArray"></a></li>
                                 <li><span>(record) </span><a href="#com.zarbosoft.merman.syntax.middle.MiddleRecord"></a></li>
                             </ul></span></span></td>
             </tr>
@@ -955,7 +955,7 @@
         </table>
         <h4>field: name</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span>Any string</span></td>
@@ -967,7 +967,7 @@
         </table>
         <h4>field: precedence</h4>
         <p>When filling a suffix or prefix gap, the resultant atom will be raised up the tree</p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span>Any integer</span></td>
@@ -983,7 +983,7 @@
         </table>
         <h4>field: tags</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span><p>Set of:</p><span>Any string</span></span></td>
@@ -1001,7 +1001,7 @@
         <p></p>
         <h4>field: prefix</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span><p>List of:</p><a href="#com.zarbosoft.merman.syntax.front.FrontSymbol"></a></span></td>
@@ -1013,7 +1013,7 @@
         </table>
         <h4>field: suffix</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span><p>List of:</p><a href="#com.zarbosoft.merman.syntax.front.FrontSymbol"></a></span></td>
@@ -1025,7 +1025,7 @@
         </table>
         <h4>field: tags</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span><p>Set of:</p><span>Any string</span></span></td>
@@ -1043,7 +1043,7 @@
         <p>Padding around source content (not banner, details, indicators, etc).</p>
         <h4>field: converse_end</h4>
         <p>Pad the converse end by this many pixels.</p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span>Any integer</span></td>
@@ -1059,7 +1059,7 @@
         </table>
         <h4>field: converse_start</h4>
         <p>Pad the converse start by this many pixels.</p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span>Any integer</span></td>
@@ -1075,7 +1075,7 @@
         </table>
         <h4>field: transverse_end</h4>
         <p>Pad the transverse end by this many pixels.</p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span>Any integer</span></td>
@@ -1091,7 +1091,7 @@
         </table>
         <h4>field: transverse_start</h4>
         <p>Pad the transverse start by this many pixels.</p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span>Any integer</span></td>
@@ -1113,7 +1113,7 @@
         <p></p>
         <h4>field: infix</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span><p>List of:</p><a href="#com.zarbosoft.merman.syntax.front.FrontSymbol"></a></span></td>
@@ -1125,7 +1125,7 @@
         </table>
         <h4>field: prefix</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span><p>List of:</p><a href="#com.zarbosoft.merman.syntax.front.FrontSymbol"></a></span></td>
@@ -1137,7 +1137,7 @@
         </table>
         <h4>field: suffix</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span><p>List of:</p><a href="#com.zarbosoft.merman.syntax.front.FrontSymbol"></a></span></td>
@@ -1149,7 +1149,7 @@
         </table>
         <h4>field: tags</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span><p>Set of:</p><span>Any string</span></span></td>
@@ -1167,13 +1167,13 @@
         <p></p>
         <h4>field: alignments</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span><p>Nested:</p><span><p>Any of (specify type):</p>
                             <ul>
-                                <li><span>(concensus) </span><a href="#com.zarbosoft.merman.syntax.alignments.ConcensusAlignmentDefinition"></a></li>
                                 <li><span>(absolute) </span><a href="#com.zarbosoft.merman.syntax.alignments.AbsoluteAlignmentDefinition"></a></li>
+                                <li><span>(concensus) </span><a href="#com.zarbosoft.merman.syntax.alignments.ConcensusAlignmentDefinition"></a></li>
                                 <li><span>(relative) </span><a href="#com.zarbosoft.merman.syntax.alignments.RelativeAlignmentDefinition"></a></li>
                             </ul></span></span></td>
             </tr>
@@ -1184,29 +1184,29 @@
         </table>
         <h4>field: back</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span><p>List of:</p><span><p>Any of (specify type):</p>
                             <ul>
-                                <li><span>(data_atom) </span><a href="#com.zarbosoft.merman.syntax.back.BackDataAtom"></a></li>
-                                <li><span>(json_float) </span><a href="#com.zarbosoft.merman.syntax.back.BackJSONFloat"></a></li>
-                                <li><span>(root_data_array) </span><a href="#com.zarbosoft.merman.syntax.back.BackDataRootArray"></a></li>
                                 <li><span>(array) </span><a href="#com.zarbosoft.merman.syntax.back.BackArray"></a></li>
-                                <li><span>(data_key) </span><a href="#com.zarbosoft.merman.syntax.back.BackDataKey"></a></li>
-                                <li><span>(json_false) </span><a href="#com.zarbosoft.merman.syntax.back.BackJSONFalse"></a></li>
                                 <li><span>(data_array) </span><a href="#com.zarbosoft.merman.syntax.back.BackDataArray"></a></li>
-                                <li><span>(type) </span><a href="#com.zarbosoft.merman.syntax.back.BackType"></a></li>
-                                <li><span>(data_primitive) </span><a href="#com.zarbosoft.merman.syntax.back.BackDataPrimitive"></a></li>
-                                <li><span>(record) </span><a href="#com.zarbosoft.merman.syntax.back.BackRecord"></a></li>
-                                <li><span>(json_int) </span><a href="#com.zarbosoft.merman.syntax.back.BackJSONInt"></a></li>
+                                <li><span>(data_atom) </span><a href="#com.zarbosoft.merman.syntax.back.BackDataAtom"></a></li>
                                 <li><span>(json_data_float) </span><a href="#com.zarbosoft.merman.syntax.back.BackDataJSONFloat"></a></li>
-                                <li><span>(json_null) </span><a href="#com.zarbosoft.merman.syntax.back.BackJSONNull"></a></li>
-                                <li><span>(data_record) </span><a href="#com.zarbosoft.merman.syntax.back.BackDataRecord"></a></li>
                                 <li><span>(json_data_int) </span><a href="#com.zarbosoft.merman.syntax.back.BackDataJSONInt"></a></li>
-                                <li><span>(primitive) </span><a href="#com.zarbosoft.merman.syntax.back.BackPrimitive"></a></li>
-                                <li><span>(json_true) </span><a href="#com.zarbosoft.merman.syntax.back.BackJSONTrue"></a></li>
+                                <li><span>(data_key) </span><a href="#com.zarbosoft.merman.syntax.back.BackDataKey"></a></li>
+                                <li><span>(data_primitive) </span><a href="#com.zarbosoft.merman.syntax.back.BackDataPrimitive"></a></li>
+                                <li><span>(data_record) </span><a href="#com.zarbosoft.merman.syntax.back.BackDataRecord"></a></li>
+                                <li><span>(root_data_array) </span><a href="#com.zarbosoft.merman.syntax.back.BackDataRootArray"></a></li>
                                 <li><span>(data_type) </span><a href="#com.zarbosoft.merman.syntax.back.BackDataType"></a></li>
+                                <li><span>(json_false) </span><a href="#com.zarbosoft.merman.syntax.back.BackJSONFalse"></a></li>
+                                <li><span>(json_float) </span><a href="#com.zarbosoft.merman.syntax.back.BackJSONFloat"></a></li>
+                                <li><span>(json_int) </span><a href="#com.zarbosoft.merman.syntax.back.BackJSONInt"></a></li>
+                                <li><span>(json_null) </span><a href="#com.zarbosoft.merman.syntax.back.BackJSONNull"></a></li>
+                                <li><span>(json_true) </span><a href="#com.zarbosoft.merman.syntax.back.BackJSONTrue"></a></li>
+                                <li><span>(primitive) </span><a href="#com.zarbosoft.merman.syntax.back.BackPrimitive"></a></li>
+                                <li><span>(record) </span><a href="#com.zarbosoft.merman.syntax.back.BackRecord"></a></li>
+                                <li><span>(type) </span><a href="#com.zarbosoft.merman.syntax.back.BackType"></a></li>
                             </ul></span></span></td>
             </tr>
             <tr>
@@ -1216,16 +1216,16 @@
         </table>
         <h4>field: front</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span><p>List of:</p><span><p>Any of (specify type):</p>
                             <ul>
-                                <li><span>(atom) </span><a href="#com.zarbosoft.merman.syntax.front.FrontDataAtom"></a></li>
-                                <li><span>(com.zarbosoft.merman.syntax.front.FrontDataRootArray) </span><a href="#com.zarbosoft.merman.syntax.front.FrontDataRootArray"></a></li>
                                 <li><span>(array) </span><a href="#com.zarbosoft.merman.syntax.front.FrontDataArray"></a></li>
-                                <li><span>(symbol) </span><a href="#com.zarbosoft.merman.syntax.front.FrontSymbol"></a></li>
+                                <li><span>(atom) </span><a href="#com.zarbosoft.merman.syntax.front.FrontDataAtom"></a></li>
                                 <li><span>(primitive) </span><a href="#com.zarbosoft.merman.syntax.front.FrontDataPrimitive"></a></li>
+                                <li><span>(com.zarbosoft.merman.syntax.front.FrontDataRootArray) </span><a href="#com.zarbosoft.merman.syntax.front.FrontDataRootArray"></a></li>
+                                <li><span>(symbol) </span><a href="#com.zarbosoft.merman.syntax.front.FrontSymbol"></a></li>
                             </ul></span></span></td>
             </tr>
             <tr>
@@ -1235,14 +1235,14 @@
         </table>
         <h4>field: middle</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span><p>Nested:</p><span><p>Any of (specify type):</p>
                             <ul>
+                                <li><span>(array) </span><a href="#com.zarbosoft.merman.syntax.middle.MiddleArray"></a></li>
                                 <li><span>(atom) </span><a href="#com.zarbosoft.merman.syntax.middle.MiddleAtom"></a></li>
                                 <li><span>(primitive) </span><a href="#com.zarbosoft.merman.syntax.middle.MiddlePrimitive"></a></li>
-                                <li><span>(array) </span><a href="#com.zarbosoft.merman.syntax.middle.MiddleArray"></a></li>
                                 <li><span>(record) </span><a href="#com.zarbosoft.merman.syntax.middle.MiddleRecord"></a></li>
                             </ul></span></span></td>
             </tr>
@@ -1253,7 +1253,7 @@
         </table>
         <h4>field: tags</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span><p>Set of:</p><span>Any string</span></span></td>
@@ -1271,7 +1271,7 @@
         <p></p>
         <h4>field: infix</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span><p>List of:</p><a href="#com.zarbosoft.merman.syntax.front.FrontSymbol"></a></span></td>
@@ -1283,7 +1283,7 @@
         </table>
         <h4>field: prefix</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span><p>List of:</p><a href="#com.zarbosoft.merman.syntax.front.FrontSymbol"></a></span></td>
@@ -1295,7 +1295,7 @@
         </table>
         <h4>field: suffix</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span><p>List of:</p><a href="#com.zarbosoft.merman.syntax.front.FrontSymbol"></a></span></td>
@@ -1307,7 +1307,7 @@
         </table>
         <h4>field: tags</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span><p>Set of:</p><span>Any string</span></span></td>
@@ -1325,7 +1325,7 @@
         <p></p>
         <h4>field: animate_course_placement</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td>
@@ -1345,7 +1345,7 @@
         </table>
         <h4>field: animate_details</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td>
@@ -1365,13 +1365,13 @@
         </table>
         <h4>field: background</h4>
         <p>The background color of the document.</p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span><p>Any of (specify type):</p>
                         <ul>
-                            <li><span>(rgba) </span><a href="#com.zarbosoft.merman.syntax.style.ModelColor$RGBA"></a></li>
                             <li><span>(rgb) </span><a href="#com.zarbosoft.merman.syntax.style.ModelColor$RGB"></a></li>
+                            <li><span>(rgba) </span><a href="#com.zarbosoft.merman.syntax.style.ModelColor$RGBA"></a></li>
                         </ul></span></td>
             </tr>
             <tr>
@@ -1381,7 +1381,7 @@
         </table>
         <h4>field: banner_pad</h4>
         <p>Pad the banner pane.</p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><a href="#com.zarbosoft.merman.syntax.Padding"></a></td>
@@ -1393,7 +1393,7 @@
         </table>
         <h4>field: converse_direction</h4>
         <p>The direction of text flow in a line. For English, this will be RIGHT. Note that values other than RIGHT may not work, since JavaFX has limited text direction support.</p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><a href="#com.zarbosoft.merman.syntax.Syntax$Direction"></a></td>
@@ -1409,7 +1409,7 @@
         </table>
         <h4>field: detail_pad</h4>
         <p>Pad the detail pane.</p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><a href="#com.zarbosoft.merman.syntax.Padding"></a></td>
@@ -1421,7 +1421,7 @@
         </table>
         <h4>field: detail_span</h4>
         <p>The max transverse span for details panes, excluding padding.</p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span>Any integer</span></td>
@@ -1437,7 +1437,7 @@
         </table>
         <h4>field: ellipsize_threshold</h4>
         <p>Limit the window to this depth span.</p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span>Any integer</span></td>
@@ -1453,7 +1453,7 @@
         </table>
         <h4>field: gap</h4>
         <p>The gap type is used when editing the document, for new data whose type is not yet known.</p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><a href="#com.zarbosoft.merman.syntax.GapAtomType"></a></td>
@@ -1465,7 +1465,7 @@
         </table>
         <h4>field: gap_choice_style</h4>
         <p>Style of the gap choice selection box.</p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><a href="#com.zarbosoft.merman.syntax.style.BoxStyle"></a></td>
@@ -1477,14 +1477,14 @@
         </table>
         <h4>field: gap_placeholder</h4>
         <p>Placeholder for text in gap choice previews.</p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span><p>Any of (specify type):</p>
                         <ul>
                             <li><span>(image) </span><a href="#com.zarbosoft.merman.syntax.symbol.SymbolImage"></a></li>
-                            <li><span>(text) </span><a href="#com.zarbosoft.merman.syntax.symbol.SymbolText"></a></li>
                             <li><span>(space) </span><a href="#com.zarbosoft.merman.syntax.symbol.SymbolSpace"></a></li>
+                            <li><span>(text) </span><a href="#com.zarbosoft.merman.syntax.symbol.SymbolText"></a></li>
                         </ul></span></td>
             </tr>
             <tr>
@@ -1494,7 +1494,7 @@
         </table>
         <h4>field: groups</h4>
         <p>Pseudo-types representing groups of types. Group ids can be used anywhere a type id is required.</p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span><p>Nested:</p><span><p>List of:</p><span>Any string</span></span></span></td>
@@ -1506,7 +1506,7 @@
         </table>
         <h4>field: lay_brick_batch_size</h4>
         <p>Generate bricks in this batch size when jumping, scrolling, and editing.</p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span>Any integer</span></td>
@@ -1522,17 +1522,17 @@
         </table>
         <h4>field: modules</h4>
         <p>A list of modules to activate. Listed are modules bundled with this distribution, but addional modules may be installed and used.</p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span><p>List of:</p><span><p>Any of (specify type):</p>
                             <ul>
-                                <li><span>(selection_type) </span><a href="#com.zarbosoft.merman.modules.SelectionType"></a></li>
-                                <li><span>(hotkeys) </span><a href="#com.zarbosoft.merman.modules.hotkeys.Hotkeys"></a></li>
                                 <li><span>(hover_type) </span><a href="#com.zarbosoft.merman.modules.HoverType"></a></li>
-                                <li><span>(modes) </span><a href="#com.zarbosoft.merman.modules.Modes"></a></li>
                                 <li><span>(indicators) </span><a href="#com.zarbosoft.merman.modules.Indicators"></a></li>
                                 <li><span>(lua_actions) </span><a href="#com.zarbosoft.merman.modules.LuaActions"></a></li>
+                                <li><span>(modes) </span><a href="#com.zarbosoft.merman.modules.Modes"></a></li>
+                                <li><span>(selection_type) </span><a href="#com.zarbosoft.merman.modules.SelectionType"></a></li>
+                                <li><span>(hotkeys) </span><a href="#com.zarbosoft.merman.modules.hotkeys.Hotkeys"></a></li>
                             </ul></span></span></td>
             </tr>
             <tr>
@@ -1542,7 +1542,7 @@
         </table>
         <h4>field: pad</h4>
         <p>Pad the document.</p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><a href="#com.zarbosoft.merman.syntax.Padding"></a></td>
@@ -1554,7 +1554,7 @@
         </table>
         <h4>field: placeholder</h4>
         <p>Character to substitute for non-printing characters in primitives.</p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span>Any string</span></td>
@@ -1570,7 +1570,7 @@
         </table>
         <h4>field: prefix_gap</h4>
         <p>The prefix gap type is similar to the gap type, but is used when enclosing an existing atom in a new atom, where the new atom visually precedes the existing atom.</p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><a href="#com.zarbosoft.merman.syntax.PrefixGapAtomType"></a></td>
@@ -1582,7 +1582,7 @@
         </table>
         <h4>field: pretty_save</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td>
@@ -1602,7 +1602,7 @@
         </table>
         <h4>field: retry_expand_factor</h4>
         <p>Retry course expansion when converse deficit has increased by this factor.</p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span>Any decimal value</span></td>
@@ -1618,7 +1618,7 @@
         </table>
         <h4>field: root</h4>
         <p>The type of the root array in a document. This is not used when pasting code; in that case the context is used to determine the paste's potential root type.</p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><a href="#com.zarbosoft.merman.syntax.RootAtomType"></a></td>
@@ -1630,7 +1630,7 @@
         </table>
         <h4>field: scroll_alot_factor</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span>Any decimal value</span></td>
@@ -1646,7 +1646,7 @@
         </table>
         <h4>field: scroll_factor</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span>Any decimal value</span></td>
@@ -1662,7 +1662,7 @@
         </table>
         <h4>field: start_windowed</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td>
@@ -1682,7 +1682,7 @@
         </table>
         <h4>field: styles</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span><p>List of:</p><a href="#com.zarbosoft.merman.syntax.style.Style"></a></span></td>
@@ -1694,7 +1694,7 @@
         </table>
         <h4>field: suffix_gap</h4>
         <p>The suffix gap type is similar to the gap type, but is used when enclosing an existing atom in a new atom, where the new atom visually succeeds the existing atom.</p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><a href="#com.zarbosoft.merman.syntax.SuffixGapAtomType"></a></td>
@@ -1706,7 +1706,7 @@
         </table>
         <h4>field: transverse_direction</h4>
         <p>The direction of successive lines. For English, this will be DOWN.</p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><a href="#com.zarbosoft.merman.syntax.Syntax$Direction"></a></td>
@@ -1722,7 +1722,7 @@
         </table>
         <h4>field: type</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><a href="#com.zarbosoft.merman.syntax.Syntax$BackType"></a></td>
@@ -1738,7 +1738,7 @@
         </table>
         <h4>field: types</h4>
         <p>The definitions of all distinct element types in a document.<br>A type with the id '__gap' and a single middle primitive element named 'value' must exist. This will be used as a placeholder when entering text before it is distinguishable as any other defined element.</p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span><p>List of:</p><a href="#com.zarbosoft.merman.syntax.FreeAtomType"></a></span></td>
@@ -1778,7 +1778,7 @@
         <p></p>
         <h4>field: offset</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span>Any integer</span></td>
@@ -1803,7 +1803,7 @@
         <p></p>
         <h4>field: base</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span>Any string</span></td>
@@ -1815,7 +1815,7 @@
         </table>
         <h4>field: offset</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span>Any integer</span></td>
@@ -1833,29 +1833,29 @@
         <p></p>
         <h4>field: elements</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span><p>List of:</p><span><p>Any of (specify type):</p>
                             <ul>
-                                <li><span>(data_atom) </span><a href="#com.zarbosoft.merman.syntax.back.BackDataAtom"></a></li>
-                                <li><span>(json_float) </span><a href="#com.zarbosoft.merman.syntax.back.BackJSONFloat"></a></li>
-                                <li><span>(root_data_array) </span><a href="#com.zarbosoft.merman.syntax.back.BackDataRootArray"></a></li>
                                 <li><span>(array) </span><a href="#com.zarbosoft.merman.syntax.back.BackArray"></a></li>
-                                <li><span>(data_key) </span><a href="#com.zarbosoft.merman.syntax.back.BackDataKey"></a></li>
-                                <li><span>(json_false) </span><a href="#com.zarbosoft.merman.syntax.back.BackJSONFalse"></a></li>
                                 <li><span>(data_array) </span><a href="#com.zarbosoft.merman.syntax.back.BackDataArray"></a></li>
-                                <li><span>(type) </span><a href="#com.zarbosoft.merman.syntax.back.BackType"></a></li>
-                                <li><span>(data_primitive) </span><a href="#com.zarbosoft.merman.syntax.back.BackDataPrimitive"></a></li>
-                                <li><span>(record) </span><a href="#com.zarbosoft.merman.syntax.back.BackRecord"></a></li>
-                                <li><span>(json_int) </span><a href="#com.zarbosoft.merman.syntax.back.BackJSONInt"></a></li>
+                                <li><span>(data_atom) </span><a href="#com.zarbosoft.merman.syntax.back.BackDataAtom"></a></li>
                                 <li><span>(json_data_float) </span><a href="#com.zarbosoft.merman.syntax.back.BackDataJSONFloat"></a></li>
-                                <li><span>(json_null) </span><a href="#com.zarbosoft.merman.syntax.back.BackJSONNull"></a></li>
-                                <li><span>(data_record) </span><a href="#com.zarbosoft.merman.syntax.back.BackDataRecord"></a></li>
                                 <li><span>(json_data_int) </span><a href="#com.zarbosoft.merman.syntax.back.BackDataJSONInt"></a></li>
-                                <li><span>(primitive) </span><a href="#com.zarbosoft.merman.syntax.back.BackPrimitive"></a></li>
-                                <li><span>(json_true) </span><a href="#com.zarbosoft.merman.syntax.back.BackJSONTrue"></a></li>
+                                <li><span>(data_key) </span><a href="#com.zarbosoft.merman.syntax.back.BackDataKey"></a></li>
+                                <li><span>(data_primitive) </span><a href="#com.zarbosoft.merman.syntax.back.BackDataPrimitive"></a></li>
+                                <li><span>(data_record) </span><a href="#com.zarbosoft.merman.syntax.back.BackDataRecord"></a></li>
+                                <li><span>(root_data_array) </span><a href="#com.zarbosoft.merman.syntax.back.BackDataRootArray"></a></li>
                                 <li><span>(data_type) </span><a href="#com.zarbosoft.merman.syntax.back.BackDataType"></a></li>
+                                <li><span>(json_false) </span><a href="#com.zarbosoft.merman.syntax.back.BackJSONFalse"></a></li>
+                                <li><span>(json_float) </span><a href="#com.zarbosoft.merman.syntax.back.BackJSONFloat"></a></li>
+                                <li><span>(json_int) </span><a href="#com.zarbosoft.merman.syntax.back.BackJSONInt"></a></li>
+                                <li><span>(json_null) </span><a href="#com.zarbosoft.merman.syntax.back.BackJSONNull"></a></li>
+                                <li><span>(json_true) </span><a href="#com.zarbosoft.merman.syntax.back.BackJSONTrue"></a></li>
+                                <li><span>(primitive) </span><a href="#com.zarbosoft.merman.syntax.back.BackPrimitive"></a></li>
+                                <li><span>(record) </span><a href="#com.zarbosoft.merman.syntax.back.BackRecord"></a></li>
+                                <li><span>(type) </span><a href="#com.zarbosoft.merman.syntax.back.BackType"></a></li>
                             </ul></span></span></td>
             </tr>
             <tr>
@@ -1865,7 +1865,7 @@
         </table>
         <h4>field: name</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span>Any string</span></td>
@@ -1883,7 +1883,7 @@
         <p></p>
         <h4>field: middle</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span>Any string</span></td>
@@ -1901,7 +1901,7 @@
         <p></p>
         <h4>field: middle</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span>Any string</span></td>
@@ -1919,7 +1919,7 @@
         <p></p>
         <h4>field: middle</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span>Any string</span></td>
@@ -1937,7 +1937,7 @@
         <p></p>
         <h4>field: middle</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span>Any string</span></td>
@@ -1955,7 +1955,7 @@
         <p></p>
         <h4>field: middle</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span>Any string</span></td>
@@ -1973,7 +1973,7 @@
         <p></p>
         <h4>field: middle</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span>Any string</span></td>
@@ -1991,7 +1991,7 @@
         <p></p>
         <h4>field: middle</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span>Any string</span></td>
@@ -2009,7 +2009,7 @@
         <p></p>
         <h4>field: middle</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span>Any string</span></td>
@@ -2027,7 +2027,7 @@
         <p></p>
         <h4>field: type</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span>Any string</span></td>
@@ -2039,29 +2039,29 @@
         </table>
         <h4>field: value</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span><p>Any of (specify type):</p>
                         <ul>
-                            <li><span>(data_atom) </span><a href="#com.zarbosoft.merman.syntax.back.BackDataAtom"></a></li>
-                            <li><span>(json_float) </span><a href="#com.zarbosoft.merman.syntax.back.BackJSONFloat"></a></li>
-                            <li><span>(root_data_array) </span><a href="#com.zarbosoft.merman.syntax.back.BackDataRootArray"></a></li>
                             <li><span>(array) </span><a href="#com.zarbosoft.merman.syntax.back.BackArray"></a></li>
-                            <li><span>(data_key) </span><a href="#com.zarbosoft.merman.syntax.back.BackDataKey"></a></li>
-                            <li><span>(json_false) </span><a href="#com.zarbosoft.merman.syntax.back.BackJSONFalse"></a></li>
                             <li><span>(data_array) </span><a href="#com.zarbosoft.merman.syntax.back.BackDataArray"></a></li>
-                            <li><span>(type) </span><a href="#com.zarbosoft.merman.syntax.back.BackType"></a></li>
-                            <li><span>(data_primitive) </span><a href="#com.zarbosoft.merman.syntax.back.BackDataPrimitive"></a></li>
-                            <li><span>(record) </span><a href="#com.zarbosoft.merman.syntax.back.BackRecord"></a></li>
-                            <li><span>(json_int) </span><a href="#com.zarbosoft.merman.syntax.back.BackJSONInt"></a></li>
+                            <li><span>(data_atom) </span><a href="#com.zarbosoft.merman.syntax.back.BackDataAtom"></a></li>
                             <li><span>(json_data_float) </span><a href="#com.zarbosoft.merman.syntax.back.BackDataJSONFloat"></a></li>
-                            <li><span>(json_null) </span><a href="#com.zarbosoft.merman.syntax.back.BackJSONNull"></a></li>
-                            <li><span>(data_record) </span><a href="#com.zarbosoft.merman.syntax.back.BackDataRecord"></a></li>
                             <li><span>(json_data_int) </span><a href="#com.zarbosoft.merman.syntax.back.BackDataJSONInt"></a></li>
-                            <li><span>(primitive) </span><a href="#com.zarbosoft.merman.syntax.back.BackPrimitive"></a></li>
-                            <li><span>(json_true) </span><a href="#com.zarbosoft.merman.syntax.back.BackJSONTrue"></a></li>
+                            <li><span>(data_key) </span><a href="#com.zarbosoft.merman.syntax.back.BackDataKey"></a></li>
+                            <li><span>(data_primitive) </span><a href="#com.zarbosoft.merman.syntax.back.BackDataPrimitive"></a></li>
+                            <li><span>(data_record) </span><a href="#com.zarbosoft.merman.syntax.back.BackDataRecord"></a></li>
+                            <li><span>(root_data_array) </span><a href="#com.zarbosoft.merman.syntax.back.BackDataRootArray"></a></li>
                             <li><span>(data_type) </span><a href="#com.zarbosoft.merman.syntax.back.BackDataType"></a></li>
+                            <li><span>(json_false) </span><a href="#com.zarbosoft.merman.syntax.back.BackJSONFalse"></a></li>
+                            <li><span>(json_float) </span><a href="#com.zarbosoft.merman.syntax.back.BackJSONFloat"></a></li>
+                            <li><span>(json_int) </span><a href="#com.zarbosoft.merman.syntax.back.BackJSONInt"></a></li>
+                            <li><span>(json_null) </span><a href="#com.zarbosoft.merman.syntax.back.BackJSONNull"></a></li>
+                            <li><span>(json_true) </span><a href="#com.zarbosoft.merman.syntax.back.BackJSONTrue"></a></li>
+                            <li><span>(primitive) </span><a href="#com.zarbosoft.merman.syntax.back.BackPrimitive"></a></li>
+                            <li><span>(record) </span><a href="#com.zarbosoft.merman.syntax.back.BackRecord"></a></li>
+                            <li><span>(type) </span><a href="#com.zarbosoft.merman.syntax.back.BackType"></a></li>
                         </ul></span></td>
             </tr>
             <tr>
@@ -2084,7 +2084,7 @@
         <p></p>
         <h4>field: value</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span>Any string</span></td>
@@ -2102,7 +2102,7 @@
         <p></p>
         <h4>field: value</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span>Any string</span></td>
@@ -2134,7 +2134,7 @@
         <p></p>
         <h4>field: value</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span>Any string</span></td>
@@ -2152,29 +2152,29 @@
         <p></p>
         <h4>field: pairs</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span><p>Nested:</p><span><p>Any of (specify type):</p>
                             <ul>
-                                <li><span>(data_atom) </span><a href="#com.zarbosoft.merman.syntax.back.BackDataAtom"></a></li>
-                                <li><span>(json_float) </span><a href="#com.zarbosoft.merman.syntax.back.BackJSONFloat"></a></li>
-                                <li><span>(root_data_array) </span><a href="#com.zarbosoft.merman.syntax.back.BackDataRootArray"></a></li>
                                 <li><span>(array) </span><a href="#com.zarbosoft.merman.syntax.back.BackArray"></a></li>
-                                <li><span>(data_key) </span><a href="#com.zarbosoft.merman.syntax.back.BackDataKey"></a></li>
-                                <li><span>(json_false) </span><a href="#com.zarbosoft.merman.syntax.back.BackJSONFalse"></a></li>
                                 <li><span>(data_array) </span><a href="#com.zarbosoft.merman.syntax.back.BackDataArray"></a></li>
-                                <li><span>(type) </span><a href="#com.zarbosoft.merman.syntax.back.BackType"></a></li>
-                                <li><span>(data_primitive) </span><a href="#com.zarbosoft.merman.syntax.back.BackDataPrimitive"></a></li>
-                                <li><span>(record) </span><a href="#com.zarbosoft.merman.syntax.back.BackRecord"></a></li>
-                                <li><span>(json_int) </span><a href="#com.zarbosoft.merman.syntax.back.BackJSONInt"></a></li>
+                                <li><span>(data_atom) </span><a href="#com.zarbosoft.merman.syntax.back.BackDataAtom"></a></li>
                                 <li><span>(json_data_float) </span><a href="#com.zarbosoft.merman.syntax.back.BackDataJSONFloat"></a></li>
-                                <li><span>(json_null) </span><a href="#com.zarbosoft.merman.syntax.back.BackJSONNull"></a></li>
-                                <li><span>(data_record) </span><a href="#com.zarbosoft.merman.syntax.back.BackDataRecord"></a></li>
                                 <li><span>(json_data_int) </span><a href="#com.zarbosoft.merman.syntax.back.BackDataJSONInt"></a></li>
-                                <li><span>(primitive) </span><a href="#com.zarbosoft.merman.syntax.back.BackPrimitive"></a></li>
-                                <li><span>(json_true) </span><a href="#com.zarbosoft.merman.syntax.back.BackJSONTrue"></a></li>
+                                <li><span>(data_key) </span><a href="#com.zarbosoft.merman.syntax.back.BackDataKey"></a></li>
+                                <li><span>(data_primitive) </span><a href="#com.zarbosoft.merman.syntax.back.BackDataPrimitive"></a></li>
+                                <li><span>(data_record) </span><a href="#com.zarbosoft.merman.syntax.back.BackDataRecord"></a></li>
+                                <li><span>(root_data_array) </span><a href="#com.zarbosoft.merman.syntax.back.BackDataRootArray"></a></li>
                                 <li><span>(data_type) </span><a href="#com.zarbosoft.merman.syntax.back.BackDataType"></a></li>
+                                <li><span>(json_false) </span><a href="#com.zarbosoft.merman.syntax.back.BackJSONFalse"></a></li>
+                                <li><span>(json_float) </span><a href="#com.zarbosoft.merman.syntax.back.BackJSONFloat"></a></li>
+                                <li><span>(json_int) </span><a href="#com.zarbosoft.merman.syntax.back.BackJSONInt"></a></li>
+                                <li><span>(json_null) </span><a href="#com.zarbosoft.merman.syntax.back.BackJSONNull"></a></li>
+                                <li><span>(json_true) </span><a href="#com.zarbosoft.merman.syntax.back.BackJSONTrue"></a></li>
+                                <li><span>(primitive) </span><a href="#com.zarbosoft.merman.syntax.back.BackPrimitive"></a></li>
+                                <li><span>(record) </span><a href="#com.zarbosoft.merman.syntax.back.BackRecord"></a></li>
+                                <li><span>(type) </span><a href="#com.zarbosoft.merman.syntax.back.BackType"></a></li>
                             </ul></span></span></td>
             </tr>
             <tr>
@@ -2190,7 +2190,7 @@
         <p></p>
         <h4>field: type</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span>Any string</span></td>
@@ -2202,29 +2202,29 @@
         </table>
         <h4>field: value</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span><p>Any of (specify type):</p>
                         <ul>
-                            <li><span>(data_atom) </span><a href="#com.zarbosoft.merman.syntax.back.BackDataAtom"></a></li>
-                            <li><span>(json_float) </span><a href="#com.zarbosoft.merman.syntax.back.BackJSONFloat"></a></li>
-                            <li><span>(root_data_array) </span><a href="#com.zarbosoft.merman.syntax.back.BackDataRootArray"></a></li>
                             <li><span>(array) </span><a href="#com.zarbosoft.merman.syntax.back.BackArray"></a></li>
-                            <li><span>(data_key) </span><a href="#com.zarbosoft.merman.syntax.back.BackDataKey"></a></li>
-                            <li><span>(json_false) </span><a href="#com.zarbosoft.merman.syntax.back.BackJSONFalse"></a></li>
                             <li><span>(data_array) </span><a href="#com.zarbosoft.merman.syntax.back.BackDataArray"></a></li>
-                            <li><span>(type) </span><a href="#com.zarbosoft.merman.syntax.back.BackType"></a></li>
-                            <li><span>(data_primitive) </span><a href="#com.zarbosoft.merman.syntax.back.BackDataPrimitive"></a></li>
-                            <li><span>(record) </span><a href="#com.zarbosoft.merman.syntax.back.BackRecord"></a></li>
-                            <li><span>(json_int) </span><a href="#com.zarbosoft.merman.syntax.back.BackJSONInt"></a></li>
+                            <li><span>(data_atom) </span><a href="#com.zarbosoft.merman.syntax.back.BackDataAtom"></a></li>
                             <li><span>(json_data_float) </span><a href="#com.zarbosoft.merman.syntax.back.BackDataJSONFloat"></a></li>
-                            <li><span>(json_null) </span><a href="#com.zarbosoft.merman.syntax.back.BackJSONNull"></a></li>
-                            <li><span>(data_record) </span><a href="#com.zarbosoft.merman.syntax.back.BackDataRecord"></a></li>
                             <li><span>(json_data_int) </span><a href="#com.zarbosoft.merman.syntax.back.BackDataJSONInt"></a></li>
-                            <li><span>(primitive) </span><a href="#com.zarbosoft.merman.syntax.back.BackPrimitive"></a></li>
-                            <li><span>(json_true) </span><a href="#com.zarbosoft.merman.syntax.back.BackJSONTrue"></a></li>
+                            <li><span>(data_key) </span><a href="#com.zarbosoft.merman.syntax.back.BackDataKey"></a></li>
+                            <li><span>(data_primitive) </span><a href="#com.zarbosoft.merman.syntax.back.BackDataPrimitive"></a></li>
+                            <li><span>(data_record) </span><a href="#com.zarbosoft.merman.syntax.back.BackDataRecord"></a></li>
+                            <li><span>(root_data_array) </span><a href="#com.zarbosoft.merman.syntax.back.BackDataRootArray"></a></li>
                             <li><span>(data_type) </span><a href="#com.zarbosoft.merman.syntax.back.BackDataType"></a></li>
+                            <li><span>(json_false) </span><a href="#com.zarbosoft.merman.syntax.back.BackJSONFalse"></a></li>
+                            <li><span>(json_float) </span><a href="#com.zarbosoft.merman.syntax.back.BackJSONFloat"></a></li>
+                            <li><span>(json_int) </span><a href="#com.zarbosoft.merman.syntax.back.BackJSONInt"></a></li>
+                            <li><span>(json_null) </span><a href="#com.zarbosoft.merman.syntax.back.BackJSONNull"></a></li>
+                            <li><span>(json_true) </span><a href="#com.zarbosoft.merman.syntax.back.BackJSONTrue"></a></li>
+                            <li><span>(primitive) </span><a href="#com.zarbosoft.merman.syntax.back.BackPrimitive"></a></li>
+                            <li><span>(record) </span><a href="#com.zarbosoft.merman.syntax.back.BackRecord"></a></li>
+                            <li><span>(type) </span><a href="#com.zarbosoft.merman.syntax.back.BackType"></a></li>
                         </ul></span></td>
             </tr>
             <tr>
@@ -2240,7 +2240,7 @@
         <p></p>
         <h4>field: elements</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span><p>List of:</p><span><p>Any of (specify type):</p>
@@ -2262,7 +2262,7 @@
         <p></p>
         <h4>field: value</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span>Any string</span></td>
@@ -2280,7 +2280,7 @@
         <p></p>
         <h4>field: name</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span>Any string</span></td>
@@ -2298,7 +2298,7 @@
         <p></p>
         <h4>field: invert</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td>
@@ -2318,7 +2318,7 @@
         </table>
         <h4>field: is</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><a href="#com.zarbosoft.merman.syntax.front.ConditionNode$Is"></a></td>
@@ -2345,7 +2345,7 @@
         <p></p>
         <h4>field: invert</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td>
@@ -2365,7 +2365,7 @@
         </table>
         <h4>field: is</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><a href="#com.zarbosoft.merman.syntax.front.ConditionValue$Is"></a></td>
@@ -2377,7 +2377,7 @@
         </table>
         <h4>field: middle</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span>Any string</span></td>
@@ -2404,14 +2404,14 @@
         <p></p>
         <h4>field: ellipsis</h4>
         <p>How to visualize the ellipsis.</p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span><p>Any of (specify type):</p>
                         <ul>
                             <li><span>(image) </span><a href="#com.zarbosoft.merman.syntax.symbol.SymbolImage"></a></li>
-                            <li><span>(text) </span><a href="#com.zarbosoft.merman.syntax.symbol.SymbolText"></a></li>
                             <li><span>(space) </span><a href="#com.zarbosoft.merman.syntax.symbol.SymbolSpace"></a></li>
+                            <li><span>(text) </span><a href="#com.zarbosoft.merman.syntax.symbol.SymbolText"></a></li>
                         </ul></span></td>
             </tr>
             <tr>
@@ -2421,7 +2421,7 @@
         </table>
         <h4>field: middle</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span>Any string</span></td>
@@ -2433,7 +2433,7 @@
         </table>
         <h4>field: prefix</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span><p>List of:</p><a href="#com.zarbosoft.merman.syntax.front.FrontSymbol"></a></span></td>
@@ -2445,7 +2445,7 @@
         </table>
         <h4>field: separator</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span><p>List of:</p><a href="#com.zarbosoft.merman.syntax.front.FrontSymbol"></a></span></td>
@@ -2457,7 +2457,7 @@
         </table>
         <h4>field: suffix</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span><p>List of:</p><a href="#com.zarbosoft.merman.syntax.front.FrontSymbol"></a></span></td>
@@ -2469,7 +2469,7 @@
         </table>
         <h4>field: tag_first</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td>
@@ -2489,7 +2489,7 @@
         </table>
         <h4>field: tag_last</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td>
@@ -2509,7 +2509,7 @@
         </table>
         <h4>field: tags</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span><p>Set of:</p><span>Any string</span></span></td>
@@ -2527,14 +2527,14 @@
         <p></p>
         <h4>field: ellipsis</h4>
         <p>How to visualize the ellipsis.</p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span><p>Any of (specify type):</p>
                         <ul>
                             <li><span>(image) </span><a href="#com.zarbosoft.merman.syntax.symbol.SymbolImage"></a></li>
-                            <li><span>(text) </span><a href="#com.zarbosoft.merman.syntax.symbol.SymbolText"></a></li>
                             <li><span>(space) </span><a href="#com.zarbosoft.merman.syntax.symbol.SymbolSpace"></a></li>
+                            <li><span>(text) </span><a href="#com.zarbosoft.merman.syntax.symbol.SymbolText"></a></li>
                         </ul></span></td>
             </tr>
             <tr>
@@ -2544,13 +2544,13 @@
         </table>
         <h4>field: hotkeys</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span><p>Nested:</p><span><p>Any of (specify type):</p>
                             <ul>
-                                <li><span>(key) </span><a href="#com.zarbosoft.merman.modules.hotkeys.grammar.Terminal"></a></li>
                                 <li><span>(seq) </span><a href="#com.zarbosoft.merman.modules.hotkeys.grammar.Sequence"></a></li>
+                                <li><span>(key) </span><a href="#com.zarbosoft.merman.modules.hotkeys.grammar.Terminal"></a></li>
                                 <li><span>(or) </span><a href="#com.zarbosoft.merman.modules.hotkeys.grammar.Union"></a></li>
                             </ul></span></span></td>
             </tr>
@@ -2561,7 +2561,7 @@
         </table>
         <h4>field: middle</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span>Any string</span></td>
@@ -2573,7 +2573,7 @@
         </table>
         <h4>field: tags</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span><p>Set of:</p><span>Any string</span></span></td>
@@ -2591,13 +2591,13 @@
         <p></p>
         <h4>field: hotkeys</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span><p>Nested:</p><span><p>Any of (specify type):</p>
                             <ul>
-                                <li><span>(key) </span><a href="#com.zarbosoft.merman.modules.hotkeys.grammar.Terminal"></a></li>
                                 <li><span>(seq) </span><a href="#com.zarbosoft.merman.modules.hotkeys.grammar.Sequence"></a></li>
+                                <li><span>(key) </span><a href="#com.zarbosoft.merman.modules.hotkeys.grammar.Terminal"></a></li>
                                 <li><span>(or) </span><a href="#com.zarbosoft.merman.modules.hotkeys.grammar.Union"></a></li>
                             </ul></span></span></td>
             </tr>
@@ -2608,7 +2608,7 @@
         </table>
         <h4>field: middle</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span>Any string</span></td>
@@ -2620,7 +2620,7 @@
         </table>
         <h4>field: tags</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span><p>Set of:</p><span>Any string</span></span></td>
@@ -2632,7 +2632,7 @@
         </table>
         <h4>field: tags</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span><p>Set of:</p><span>Any string</span></span></td>
@@ -2650,14 +2650,14 @@
         <p></p>
         <h4>field: ellipsis</h4>
         <p>How to visualize the ellipsis.</p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span><p>Any of (specify type):</p>
                         <ul>
                             <li><span>(image) </span><a href="#com.zarbosoft.merman.syntax.symbol.SymbolImage"></a></li>
-                            <li><span>(text) </span><a href="#com.zarbosoft.merman.syntax.symbol.SymbolText"></a></li>
                             <li><span>(space) </span><a href="#com.zarbosoft.merman.syntax.symbol.SymbolSpace"></a></li>
+                            <li><span>(text) </span><a href="#com.zarbosoft.merman.syntax.symbol.SymbolText"></a></li>
                         </ul></span></td>
             </tr>
             <tr>
@@ -2667,7 +2667,7 @@
         </table>
         <h4>field: prefix</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span><p>List of:</p><a href="#com.zarbosoft.merman.syntax.front.FrontSymbol"></a></span></td>
@@ -2679,7 +2679,7 @@
         </table>
         <h4>field: separator</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span><p>List of:</p><a href="#com.zarbosoft.merman.syntax.front.FrontSymbol"></a></span></td>
@@ -2691,7 +2691,7 @@
         </table>
         <h4>field: suffix</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span><p>List of:</p><a href="#com.zarbosoft.merman.syntax.front.FrontSymbol"></a></span></td>
@@ -2703,7 +2703,7 @@
         </table>
         <h4>field: tag_first</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td>
@@ -2723,7 +2723,7 @@
         </table>
         <h4>field: tag_last</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td>
@@ -2743,7 +2743,7 @@
         </table>
         <h4>field: tags</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span><p>Set of:</p><span>Any string</span></span></td>
@@ -2761,13 +2761,13 @@
         <p></p>
         <h4>field: condition</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span><p>Any of (specify type):</p>
                         <ul>
-                            <li><span>(value) </span><a href="#com.zarbosoft.merman.syntax.front.ConditionValue"></a></li>
                             <li><span>(precedential) </span><a href="#com.zarbosoft.merman.syntax.front.ConditionNode"></a></li>
+                            <li><span>(value) </span><a href="#com.zarbosoft.merman.syntax.front.ConditionValue"></a></li>
                         </ul></span></td>
             </tr>
             <tr>
@@ -2777,7 +2777,7 @@
         </table>
         <h4>field: gap_key</h4>
         <p>Use this string as a key for matching the atom when filling a gap. A text symbol by default uses the shown text.</p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span>Any string</span></td>
@@ -2793,7 +2793,7 @@
         </table>
         <h4>field: tags</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span><p>Set of:</p><span>Any string</span></span></td>
@@ -2805,14 +2805,14 @@
         </table>
         <h4>field: type</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span><p>Any of (specify type):</p>
                         <ul>
                             <li><span>(image) </span><a href="#com.zarbosoft.merman.syntax.symbol.SymbolImage"></a></li>
-                            <li><span>(text) </span><a href="#com.zarbosoft.merman.syntax.symbol.SymbolText"></a></li>
                             <li><span>(space) </span><a href="#com.zarbosoft.merman.syntax.symbol.SymbolSpace"></a></li>
+                            <li><span>(text) </span><a href="#com.zarbosoft.merman.syntax.symbol.SymbolText"></a></li>
                         </ul></span></td>
             </tr>
             <tr>
@@ -2828,7 +2828,7 @@
         <p></p>
         <h4>field: type</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span>Any string</span></td>
@@ -2846,7 +2846,7 @@
         <p></p>
         <h4>field: type</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span>Any string</span></td>
@@ -2864,20 +2864,20 @@
         <p></p>
         <h4>field: pattern</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span><p>Any of (specify type):</p>
                         <ul>
-                            <li><span>(rep1) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.Repeat1"></a></li>
-                            <li><span>(digits) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.Digits"></a></li>
-                            <li><span>(maybe) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.Maybe"></a></li>
-                            <li><span>(string) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.PatternString"></a></li>
-                            <li><span>(seq) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.PatternSequence"></a></li>
-                            <li><span>(letters) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.Letters"></a></li>
                             <li><span>(any) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.Any"></a></li>
-                            <li><span>(rep0) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.Repeat0"></a></li>
+                            <li><span>(digits) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.Digits"></a></li>
+                            <li><span>(letters) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.Letters"></a></li>
+                            <li><span>(maybe) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.Maybe"></a></li>
+                            <li><span>(seq) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.PatternSequence"></a></li>
+                            <li><span>(string) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.PatternString"></a></li>
                             <li><span>(union) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.PatternUnion"></a></li>
+                            <li><span>(rep0) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.Repeat0"></a></li>
+                            <li><span>(rep1) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.Repeat1"></a></li>
                         </ul></span></td>
             </tr>
             <tr>
@@ -2893,7 +2893,7 @@
         <p></p>
         <h4>field: type</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span>Any string</span></td>
@@ -2932,20 +2932,20 @@
         <p></p>
         <h4>field: pattern</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span><p>Any of (specify type):</p>
                         <ul>
-                            <li><span>(rep1) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.Repeat1"></a></li>
-                            <li><span>(digits) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.Digits"></a></li>
-                            <li><span>(maybe) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.Maybe"></a></li>
-                            <li><span>(string) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.PatternString"></a></li>
-                            <li><span>(seq) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.PatternSequence"></a></li>
-                            <li><span>(letters) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.Letters"></a></li>
                             <li><span>(any) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.Any"></a></li>
-                            <li><span>(rep0) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.Repeat0"></a></li>
+                            <li><span>(digits) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.Digits"></a></li>
+                            <li><span>(letters) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.Letters"></a></li>
+                            <li><span>(maybe) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.Maybe"></a></li>
+                            <li><span>(seq) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.PatternSequence"></a></li>
+                            <li><span>(string) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.PatternString"></a></li>
                             <li><span>(union) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.PatternUnion"></a></li>
+                            <li><span>(rep0) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.Repeat0"></a></li>
+                            <li><span>(rep1) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.Repeat1"></a></li>
                         </ul></span></td>
             </tr>
             <tr>
@@ -2961,20 +2961,20 @@
         <p></p>
         <h4>field: children</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span><p>List of:</p><span><p>Any of (specify type):</p>
                             <ul>
-                                <li><span>(rep1) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.Repeat1"></a></li>
-                                <li><span>(digits) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.Digits"></a></li>
-                                <li><span>(maybe) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.Maybe"></a></li>
-                                <li><span>(string) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.PatternString"></a></li>
-                                <li><span>(seq) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.PatternSequence"></a></li>
-                                <li><span>(letters) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.Letters"></a></li>
                                 <li><span>(any) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.Any"></a></li>
-                                <li><span>(rep0) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.Repeat0"></a></li>
+                                <li><span>(digits) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.Digits"></a></li>
+                                <li><span>(letters) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.Letters"></a></li>
+                                <li><span>(maybe) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.Maybe"></a></li>
+                                <li><span>(seq) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.PatternSequence"></a></li>
+                                <li><span>(string) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.PatternString"></a></li>
                                 <li><span>(union) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.PatternUnion"></a></li>
+                                <li><span>(rep0) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.Repeat0"></a></li>
+                                <li><span>(rep1) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.Repeat1"></a></li>
                             </ul></span></span></td>
             </tr>
             <tr>
@@ -2990,7 +2990,7 @@
         <p></p>
         <h4>field: string</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span>Any string</span></td>
@@ -3008,20 +3008,20 @@
         <p></p>
         <h4>field: children</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span><p>List of:</p><span><p>Any of (specify type):</p>
                             <ul>
-                                <li><span>(rep1) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.Repeat1"></a></li>
-                                <li><span>(digits) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.Digits"></a></li>
-                                <li><span>(maybe) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.Maybe"></a></li>
-                                <li><span>(string) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.PatternString"></a></li>
-                                <li><span>(seq) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.PatternSequence"></a></li>
-                                <li><span>(letters) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.Letters"></a></li>
                                 <li><span>(any) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.Any"></a></li>
-                                <li><span>(rep0) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.Repeat0"></a></li>
+                                <li><span>(digits) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.Digits"></a></li>
+                                <li><span>(letters) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.Letters"></a></li>
+                                <li><span>(maybe) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.Maybe"></a></li>
+                                <li><span>(seq) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.PatternSequence"></a></li>
+                                <li><span>(string) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.PatternString"></a></li>
                                 <li><span>(union) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.PatternUnion"></a></li>
+                                <li><span>(rep0) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.Repeat0"></a></li>
+                                <li><span>(rep1) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.Repeat1"></a></li>
                             </ul></span></span></td>
             </tr>
             <tr>
@@ -3037,20 +3037,20 @@
         <p></p>
         <h4>field: pattern</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span><p>Any of (specify type):</p>
                         <ul>
-                            <li><span>(rep1) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.Repeat1"></a></li>
-                            <li><span>(digits) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.Digits"></a></li>
-                            <li><span>(maybe) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.Maybe"></a></li>
-                            <li><span>(string) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.PatternString"></a></li>
-                            <li><span>(seq) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.PatternSequence"></a></li>
-                            <li><span>(letters) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.Letters"></a></li>
                             <li><span>(any) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.Any"></a></li>
-                            <li><span>(rep0) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.Repeat0"></a></li>
+                            <li><span>(digits) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.Digits"></a></li>
+                            <li><span>(letters) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.Letters"></a></li>
+                            <li><span>(maybe) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.Maybe"></a></li>
+                            <li><span>(seq) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.PatternSequence"></a></li>
+                            <li><span>(string) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.PatternString"></a></li>
                             <li><span>(union) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.PatternUnion"></a></li>
+                            <li><span>(rep0) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.Repeat0"></a></li>
+                            <li><span>(rep1) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.Repeat1"></a></li>
                         </ul></span></td>
             </tr>
             <tr>
@@ -3066,20 +3066,20 @@
         <p></p>
         <h4>field: pattern</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span><p>Any of (specify type):</p>
                         <ul>
-                            <li><span>(rep1) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.Repeat1"></a></li>
-                            <li><span>(digits) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.Digits"></a></li>
-                            <li><span>(maybe) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.Maybe"></a></li>
-                            <li><span>(string) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.PatternString"></a></li>
-                            <li><span>(seq) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.PatternSequence"></a></li>
-                            <li><span>(letters) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.Letters"></a></li>
                             <li><span>(any) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.Any"></a></li>
-                            <li><span>(rep0) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.Repeat0"></a></li>
+                            <li><span>(digits) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.Digits"></a></li>
+                            <li><span>(letters) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.Letters"></a></li>
+                            <li><span>(maybe) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.Maybe"></a></li>
+                            <li><span>(seq) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.PatternSequence"></a></li>
+                            <li><span>(string) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.PatternString"></a></li>
                             <li><span>(union) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.PatternUnion"></a></li>
+                            <li><span>(rep0) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.Repeat0"></a></li>
+                            <li><span>(rep1) </span><a href="#com.zarbosoft.merman.syntax.middle.primitive.Repeat1"></a></li>
                         </ul></span></td>
             </tr>
             <tr>
@@ -3095,7 +3095,7 @@
         <p></p>
         <h4>field: fill</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td>
@@ -3111,13 +3111,13 @@
         </table>
         <h4>field: fill_color</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span><p>Any of (specify type):</p>
                         <ul>
-                            <li><span>(rgba) </span><a href="#com.zarbosoft.merman.syntax.style.ModelColor$RGBA"></a></li>
                             <li><span>(rgb) </span><a href="#com.zarbosoft.merman.syntax.style.ModelColor$RGB"></a></li>
+                            <li><span>(rgba) </span><a href="#com.zarbosoft.merman.syntax.style.ModelColor$RGBA"></a></li>
                         </ul></span></td>
             </tr>
             <tr>
@@ -3127,7 +3127,7 @@
         </table>
         <h4>field: line</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td>
@@ -3143,13 +3143,13 @@
         </table>
         <h4>field: line_color</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span><p>Any of (specify type):</p>
                         <ul>
-                            <li><span>(rgba) </span><a href="#com.zarbosoft.merman.syntax.style.ModelColor$RGBA"></a></li>
                             <li><span>(rgb) </span><a href="#com.zarbosoft.merman.syntax.style.ModelColor$RGB"></a></li>
+                            <li><span>(rgba) </span><a href="#com.zarbosoft.merman.syntax.style.ModelColor$RGBA"></a></li>
                         </ul></span></td>
             </tr>
             <tr>
@@ -3159,7 +3159,7 @@
         </table>
         <h4>field: line_thickness</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span>Any decimal value</span></td>
@@ -3171,7 +3171,7 @@
         </table>
         <h4>field: pad</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span>Any integer</span></td>
@@ -3183,7 +3183,7 @@
         </table>
         <h4>field: round_end</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td>
@@ -3199,7 +3199,7 @@
         </table>
         <h4>field: round_outer_edges</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td>
@@ -3215,7 +3215,7 @@
         </table>
         <h4>field: round_radius</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span>Any integer</span></td>
@@ -3227,7 +3227,7 @@
         </table>
         <h4>field: round_start</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td>
@@ -3249,7 +3249,7 @@
         <p></p>
         <h4>field: b</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span>Any decimal value</span></td>
@@ -3261,7 +3261,7 @@
         </table>
         <h4>field: g</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span>Any decimal value</span></td>
@@ -3273,7 +3273,7 @@
         </table>
         <h4>field: r</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span>Any decimal value</span></td>
@@ -3291,7 +3291,7 @@
         <p></p>
         <h4>field: a</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span>Any decimal value</span></td>
@@ -3303,7 +3303,7 @@
         </table>
         <h4>field: b</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span>Any decimal value</span></td>
@@ -3315,7 +3315,7 @@
         </table>
         <h4>field: g</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span>Any decimal value</span></td>
@@ -3327,7 +3327,7 @@
         </table>
         <h4>field: r</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span>Any decimal value</span></td>
@@ -3345,7 +3345,7 @@
         <p></p>
         <h4>field: fill</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td>
@@ -3361,13 +3361,13 @@
         </table>
         <h4>field: fill_color</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span><p>Any of (specify type):</p>
                         <ul>
-                            <li><span>(rgba) </span><a href="#com.zarbosoft.merman.syntax.style.ModelColor$RGBA"></a></li>
                             <li><span>(rgb) </span><a href="#com.zarbosoft.merman.syntax.style.ModelColor$RGB"></a></li>
+                            <li><span>(rgba) </span><a href="#com.zarbosoft.merman.syntax.style.ModelColor$RGBA"></a></li>
                         </ul></span></td>
             </tr>
             <tr>
@@ -3377,7 +3377,7 @@
         </table>
         <h4>field: line</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td>
@@ -3393,13 +3393,13 @@
         </table>
         <h4>field: line_color</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span><p>Any of (specify type):</p>
                         <ul>
-                            <li><span>(rgba) </span><a href="#com.zarbosoft.merman.syntax.style.ModelColor$RGBA"></a></li>
                             <li><span>(rgb) </span><a href="#com.zarbosoft.merman.syntax.style.ModelColor$RGB"></a></li>
+                            <li><span>(rgba) </span><a href="#com.zarbosoft.merman.syntax.style.ModelColor$RGBA"></a></li>
                         </ul></span></td>
             </tr>
             <tr>
@@ -3409,7 +3409,7 @@
         </table>
         <h4>field: line_thickness</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span>Any decimal value</span></td>
@@ -3421,7 +3421,7 @@
         </table>
         <h4>field: pad</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span>Any integer</span></td>
@@ -3433,7 +3433,7 @@
         </table>
         <h4>field: round_concave</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td>
@@ -3449,7 +3449,7 @@
         </table>
         <h4>field: round_end</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td>
@@ -3465,7 +3465,7 @@
         </table>
         <h4>field: round_inner_edges</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td>
@@ -3481,7 +3481,7 @@
         </table>
         <h4>field: round_outer_edges</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td>
@@ -3497,7 +3497,7 @@
         </table>
         <h4>field: round_radius</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span>Any integer</span></td>
@@ -3509,7 +3509,7 @@
         </table>
         <h4>field: round_start</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td>
@@ -3531,7 +3531,7 @@
         <p></p>
         <h4>field: align</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span>Any string</span></td>
@@ -3543,7 +3543,7 @@
         </table>
         <h4>field: box</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><a href="#com.zarbosoft.merman.syntax.style.BoxStyle"></a></td>
@@ -3555,13 +3555,13 @@
         </table>
         <h4>field: color</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span><p>Any of (specify type):</p>
                         <ul>
-                            <li><span>(rgba) </span><a href="#com.zarbosoft.merman.syntax.style.ModelColor$RGBA"></a></li>
                             <li><span>(rgb) </span><a href="#com.zarbosoft.merman.syntax.style.ModelColor$RGB"></a></li>
+                            <li><span>(rgba) </span><a href="#com.zarbosoft.merman.syntax.style.ModelColor$RGBA"></a></li>
                         </ul></span></td>
             </tr>
             <tr>
@@ -3571,7 +3571,7 @@
         </table>
         <h4>field: converse</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span>Any integer</span></td>
@@ -3583,7 +3583,7 @@
         </table>
         <h4>field: font</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span>Any string</span></td>
@@ -3595,7 +3595,7 @@
         </table>
         <h4>field: font_size</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span>Any integer</span></td>
@@ -3607,7 +3607,7 @@
         </table>
         <h4>field: image</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span>Any string</span></td>
@@ -3619,7 +3619,7 @@
         </table>
         <h4>field: obbox</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><a href="#com.zarbosoft.merman.syntax.style.ObboxStyle"></a></td>
@@ -3631,7 +3631,7 @@
         </table>
         <h4>field: rotate</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span>Any integer</span></td>
@@ -3643,7 +3643,7 @@
         </table>
         <h4>field: space</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span>Any integer</span></td>
@@ -3655,7 +3655,7 @@
         </table>
         <h4>field: space_after</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span>Any integer</span></td>
@@ -3667,7 +3667,7 @@
         </table>
         <h4>field: space_before</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span>Any integer</span></td>
@@ -3679,7 +3679,7 @@
         </table>
         <h4>field: space_transverse_after</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span>Any integer</span></td>
@@ -3691,7 +3691,7 @@
         </table>
         <h4>field: space_transverse_before</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span>Any integer</span></td>
@@ -3703,7 +3703,7 @@
         </table>
         <h4>field: split</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td>
@@ -3719,7 +3719,7 @@
         </table>
         <h4>field: transverse</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span>Any integer</span></td>
@@ -3731,16 +3731,16 @@
         </table>
         <h4>field: with</h4>
         <p>These tags must be present.</p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span><p>Set of:</p><span><p>Any of (specify type):</p>
                             <ul>
-                                <li><span>(global) </span><a href="#com.zarbosoft.merman.editor.visual.tags.GlobalTag"></a></li>
                                 <li><span>(free) </span><a href="#com.zarbosoft.merman.editor.visual.tags.FreeTag"></a></li>
+                                <li><span>(global) </span><a href="#com.zarbosoft.merman.editor.visual.tags.GlobalTag"></a></li>
                                 <li><span>(part) </span><a href="#com.zarbosoft.merman.editor.visual.tags.PartTag"></a></li>
-                                <li><span>(type) </span><a href="#com.zarbosoft.merman.editor.visual.tags.TypeTag"></a></li>
                                 <li><span>(state) </span><a href="#com.zarbosoft.merman.editor.visual.tags.StateTag"></a></li>
+                                <li><span>(type) </span><a href="#com.zarbosoft.merman.editor.visual.tags.TypeTag"></a></li>
                             </ul></span></span></td>
             </tr>
             <tr>
@@ -3750,16 +3750,16 @@
         </table>
         <h4>field: without</h4>
         <p>A style will apply to a brick if both the brick and the global tags contain none of these.</p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span><p>Set of:</p><span><p>Any of (specify type):</p>
                             <ul>
-                                <li><span>(global) </span><a href="#com.zarbosoft.merman.editor.visual.tags.GlobalTag"></a></li>
                                 <li><span>(free) </span><a href="#com.zarbosoft.merman.editor.visual.tags.FreeTag"></a></li>
+                                <li><span>(global) </span><a href="#com.zarbosoft.merman.editor.visual.tags.GlobalTag"></a></li>
                                 <li><span>(part) </span><a href="#com.zarbosoft.merman.editor.visual.tags.PartTag"></a></li>
-                                <li><span>(type) </span><a href="#com.zarbosoft.merman.editor.visual.tags.TypeTag"></a></li>
                                 <li><span>(state) </span><a href="#com.zarbosoft.merman.editor.visual.tags.StateTag"></a></li>
+                                <li><span>(type) </span><a href="#com.zarbosoft.merman.editor.visual.tags.TypeTag"></a></li>
                             </ul></span></span></td>
             </tr>
             <tr>
@@ -3789,7 +3789,7 @@
         <p></p>
         <h4>field: text</h4>
         <p></p>
-        <table width="100%">
+        <table>
             <tr>
                 <td>Values</td>
                 <td><span>Any string</span></td>
