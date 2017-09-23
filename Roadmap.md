@@ -13,12 +13,18 @@ In no particular order.
 
 In no particular order.
 
+- Primitive search
 - Lua functionality improvements
   - Editing
   - Walking the document
   - Selection
   - Environment stats (path, ports)
   - HTTP get/post
+- Disable the hover clear after clicking/update it
+- Fix pasting multiple elements in array
+- Don't reset scroll when saving
+- Fix modification indicator remaining after undoing then redoing after save
+- Trigger gap fill when pasting text.
 - Reduce maintained bricks to +- 1 screen distance away
 - Reduce duplicate code between gap types
 - Reduce duplicate code in array create default

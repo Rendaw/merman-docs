@@ -172,9 +172,6 @@
         <a href="#com.zarbosoft.merman.syntax.front.FrontDataPrimitive">FrontDataPrimitive</a>
     </div>
     <div>
-        <a href="#com.zarbosoft.merman.syntax.front.FrontDataRootArray">FrontDataRootArray</a>
-    </div>
-    <div>
         <a href="#com.zarbosoft.merman.syntax.front.FrontSymbol">FrontSymbol</a>
     </div>
     <div>

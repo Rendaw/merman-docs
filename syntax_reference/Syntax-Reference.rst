@@ -110,9 +110,9 @@
     <div>
         <a name="com.zarbosoft.merman.modules.HoverType"></a>
         <h2>HoverType</h2>
-        <p></p>
+        <p>Show information about the atom hovered by the mouse.</p>
         <h4>field: node</h4>
-        <p>Include the type of the atom.</p>
+        <p>Display the type of the atom.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -132,7 +132,7 @@
             </tr>
         </table>
         <h4>field: part</h4>
-        <p>Include the type of the atom part.</p>
+        <p>Display the type of the atom part.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -157,7 +157,7 @@
     <div>
         <a name="com.zarbosoft.merman.modules.Indicators"></a>
         <h2>Indicators</h2>
-        <p></p>
+        <p>Show symbols in the gutter based on tags.</p>
         <h4>field: converse_padding</h4>
         <p>Separation between the symbol and the converse edge of the screen.</p>
         <table>
@@ -248,7 +248,7 @@
     <div>
         <a name="com.zarbosoft.merman.modules.Indicators$Indicator"></a>
         <h2>Indicators$Indicator</h2>
-        <p></p>
+        <p>An indicator is a single symbol that is shown or hidden based on active tags.</p>
         <h4>field: id</h4>
         <p>The symbol will have this type tag when shown.</p>
         <table>
@@ -303,7 +303,7 @@
     <div>
         <a name="com.zarbosoft.merman.modules.LuaActions"></a>
         <h2>LuaActions</h2>
-        <p></p>
+        <p>Use Lua functions as actions.</p>
         <h4>field: actions</h4>
         <p>A mapping of action names to Lua functions. Each function takes a single <pre>context</pre> argument and returns a boolean, true if the action modified the application state. <pre>context</pre> is an object with the following functions: <pre>act</pre>. <pre>act</pre> takes a string, the name of another action, and runs it, and returns true if the action modified the application state.</p>
         <table>
@@ -322,7 +322,7 @@
     <div>
         <a name="com.zarbosoft.merman.modules.Modes"></a>
         <h2>Modes</h2>
-        <p></p>
+        <p>Activate and deactivate global mode tags via actions.</p>
         <h4>field: states</h4>
         <p></p>
         <table>
@@ -341,9 +341,9 @@
     <div>
         <a name="com.zarbosoft.merman.modules.SelectionType"></a>
         <h2>SelectionType</h2>
-        <p></p>
+        <p>Show information about the atom the cursor's in</p>
         <h4>field: format</h4>
-        <p></p>
+        <p>The format of the text to display in the banner.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -360,7 +360,7 @@
     <div>
         <a name="com.zarbosoft.merman.modules.hotkeys.HotkeyRule"></a>
         <h2>HotkeyRule</h2>
-        <p></p>
+        <p>Hotkey definitions that are enabled based on tags.</p>
         <h4>field: free_typing</h4>
         <p>Text keys that don't match a hotkey are passed to the selected primitive.</p>
         <table>
@@ -442,7 +442,7 @@
     <div>
         <a name="com.zarbosoft.merman.modules.hotkeys.Hotkeys"></a>
         <h2>Hotkeys</h2>
-        <p></p>
+        <p>Trigger actions with keyboard and mouse button presses.</p>
         <h4>field: rules</h4>
         <p>A list of hotkey rules.</p>
         <table>
@@ -481,7 +481,7 @@
     <div>
         <a name="com.zarbosoft.merman.modules.hotkeys.Key"></a>
         <h2>Key</h2>
-        <p></p>
+        <p>Any type of binary input.</p>
         <ul>
             <li><code>mouse1</code><span></span></li>
             <li><code>mouse2</code><span></span></li>
@@ -719,7 +719,7 @@
     <div>
         <a name="com.zarbosoft.merman.modules.hotkeys.grammar.Sequence"></a>
         <h2>Sequence</h2>
-        <p></p>
+        <p>Match each subpattern in order.</p>
         <h4>field: nodes</h4>
         <p>The list of rules to match in sequence.</p>
         <table>
@@ -743,7 +743,7 @@
     <div>
         <a name="com.zarbosoft.merman.modules.hotkeys.grammar.Terminal"></a>
         <h2>Terminal</h2>
-        <p></p>
+        <p>Match a single key.</p>
         <h4>field: key</h4>
         <p>The input that is being pressed or released.</p>
         <table>
@@ -794,7 +794,7 @@
     <div>
         <a name="com.zarbosoft.merman.modules.hotkeys.grammar.Union"></a>
         <h2>Union</h2>
-        <p></p>
+        <p>Match any of the subpatterns.</p>
         <h4>field: nodes</h4>
         <p>All rules that may match.</p>
         <table>
@@ -818,9 +818,9 @@
     <div>
         <a name="com.zarbosoft.merman.syntax.FreeAtomType"></a>
         <h2>FreeAtomType</h2>
-        <p></p>
+        <p>A general syntax defined atom type.</p>
         <h4>field: alignments</h4>
-        <p></p>
+        <p>Create alignments in the atom with the mapped ids.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -837,7 +837,7 @@
             </tr>
         </table>
         <h4>field: associate_forward</h4>
-        <p></p>
+        <p>When filling a suffix or prefix gap, the resultant atom will be raised up the tree based on its associativity. For example, suppose in the document <pre>a + b</pre> you type <pre>+ c</pre>. If <pre>+</pre> is back associative, the resultant tree will be equivalent to <pre>(a + b) + c</pre>. If <pre>+</pre> is front associative, the resultant tree will be equivalent to <pre>a + (b + c)</pre>. This is a translation of mathematical operator associativity. Associativity only applies to atoms of the same <pre>precedence</pre>.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -930,7 +930,6 @@
                                 <li><span>(array) </span><a href="#com.zarbosoft.merman.syntax.front.FrontDataArray">FrontDataArray</a></li>
                                 <li><span>(atom) </span><a href="#com.zarbosoft.merman.syntax.front.FrontDataAtom">FrontDataAtom</a></li>
                                 <li><span>(primitive) </span><a href="#com.zarbosoft.merman.syntax.front.FrontDataPrimitive">FrontDataPrimitive</a></li>
-                                <li><span>(com.zarbosoft.merman.syntax.front.FrontDataRootArray) </span><a href="#com.zarbosoft.merman.syntax.front.FrontDataRootArray">FrontDataRootArray</a></li>
                                 <li><span>(symbol) </span><a href="#com.zarbosoft.merman.syntax.front.FrontSymbol">FrontSymbol</a></li>
                             </ul></span></span></td>
             </tr>
@@ -940,7 +939,7 @@
             </tr>
         </table>
         <h4>field: id</h4>
-        <p></p>
+        <p>The id of the atom type. This must be unique among atom types and groups.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -952,7 +951,7 @@
             </tr>
         </table>
         <h4>field: middle</h4>
-        <p></p>
+        <p>The editable data this atom contains.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -970,7 +969,7 @@
             </tr>
         </table>
         <h4>field: name</h4>
-        <p></p>
+        <p>A name for human consumption.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -998,7 +997,7 @@
             </tr>
         </table>
         <h4>field: tags</h4>
-        <p></p>
+        <p>Tags for this atom.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -1015,9 +1014,9 @@
     <div>
         <a name="com.zarbosoft.merman.syntax.GapAtomType"></a>
         <h2>GapAtomType</h2>
-        <p></p>
+        <p>A gap.</p>
         <h4>field: prefix</h4>
-        <p></p>
+        <p>Front parts to add before the gap text.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -1029,7 +1028,7 @@
             </tr>
         </table>
         <h4>field: suffix</h4>
-        <p></p>
+        <p>Front parts to add after the gap text.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -1041,7 +1040,7 @@
             </tr>
         </table>
         <h4>field: tags</h4>
-        <p></p>
+        <p>Add <pre>free</pre> tags with these values.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -1058,7 +1057,7 @@
     <div>
         <a name="com.zarbosoft.merman.syntax.Padding"></a>
         <h2>Padding</h2>
-        <p>Padding around source content (not banner, details, indicators, etc).</p>
+        <p>Padding around source content (not including banner, details, indicators, etc).</p>
         <h4>field: converse_end</h4>
         <p>Pad the converse end by this many pixels.</p>
         <table>
@@ -1129,9 +1128,9 @@
     <div>
         <a name="com.zarbosoft.merman.syntax.PrefixGapAtomType"></a>
         <h2>PrefixGapAtomType</h2>
-        <p></p>
+        <p>A gap that wraps a child atom. Fills to an atom that prefixes the child atom.</p>
         <h4>field: infix</h4>
-        <p></p>
+        <p>Front parts to add between the gap text and child atom.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -1143,7 +1142,7 @@
             </tr>
         </table>
         <h4>field: prefix</h4>
-        <p></p>
+        <p>Front parts to add before the gap text.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -1155,7 +1154,7 @@
             </tr>
         </table>
         <h4>field: suffix</h4>
-        <p></p>
+        <p>Front parts to add after the child atom.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -1167,7 +1166,7 @@
             </tr>
         </table>
         <h4>field: tags</h4>
-        <p></p>
+        <p>Add <pre>free</pre> tags with these values.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -1184,9 +1183,9 @@
     <div>
         <a name="com.zarbosoft.merman.syntax.RootAtomType"></a>
         <h2>RootAtomType</h2>
-        <p></p>
+        <p>The type of the root atom. In luxem documents, the root atom itself is outside the document, but the array (or whatever values it holds) become the document's root.</p>
         <h4>field: alignments</h4>
-        <p></p>
+        <p>See FreeAtomType.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -1203,7 +1202,7 @@
             </tr>
         </table>
         <h4>field: back</h4>
-        <p></p>
+        <p>See FreeAtomType.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -1235,7 +1234,7 @@
             </tr>
         </table>
         <h4>field: front</h4>
-        <p></p>
+        <p>See FreeAtomType.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -1244,7 +1243,6 @@
                                 <li><span>(array) </span><a href="#com.zarbosoft.merman.syntax.front.FrontDataArray">FrontDataArray</a></li>
                                 <li><span>(atom) </span><a href="#com.zarbosoft.merman.syntax.front.FrontDataAtom">FrontDataAtom</a></li>
                                 <li><span>(primitive) </span><a href="#com.zarbosoft.merman.syntax.front.FrontDataPrimitive">FrontDataPrimitive</a></li>
-                                <li><span>(com.zarbosoft.merman.syntax.front.FrontDataRootArray) </span><a href="#com.zarbosoft.merman.syntax.front.FrontDataRootArray">FrontDataRootArray</a></li>
                                 <li><span>(symbol) </span><a href="#com.zarbosoft.merman.syntax.front.FrontSymbol">FrontSymbol</a></li>
                             </ul></span></span></td>
             </tr>
@@ -1254,7 +1252,7 @@
             </tr>
         </table>
         <h4>field: middle</h4>
-        <p></p>
+        <p>See FreeAtomType.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -1272,7 +1270,7 @@
             </tr>
         </table>
         <h4>field: tags</h4>
-        <p></p>
+        <p>See FreeAtomType.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -1289,9 +1287,9 @@
     <div>
         <a name="com.zarbosoft.merman.syntax.SuffixGapAtomType"></a>
         <h2>SuffixGapAtomType</h2>
-        <p></p>
+        <p>A gap that wraps a child atom. Fills to an atom that suffixes the child atom.</p>
         <h4>field: infix</h4>
-        <p></p>
+        <p>Front parts to add between the gap text and child atom.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -1303,7 +1301,7 @@
             </tr>
         </table>
         <h4>field: prefix</h4>
-        <p></p>
+        <p>Front parts to add before the child atom.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -1315,7 +1313,7 @@
             </tr>
         </table>
         <h4>field: suffix</h4>
-        <p></p>
+        <p>Front parts to add after the gap text.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -1327,7 +1325,7 @@
             </tr>
         </table>
         <h4>field: tags</h4>
-        <p></p>
+        <p>Add <pre>free</pre> tags with these values.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -1344,9 +1342,9 @@
     <div>
         <a name="com.zarbosoft.merman.syntax.Syntax"></a>
         <h2>Syntax</h2>
-        <p></p>
+        <p>A syntax describes the de/serialization, interaction, and display of a document. A document is a syntax tree encoded as luxem or JSON. The syntax breaks the tree up into atoms which are the basis for interaction and display.<br><br>A merman syntax file is a Lua script that returns a table describing the syntax. When you open a source file in merman, it automatically loads the corresponding syntax file from <pre>~/.config/merman/syntaxes</pre> (<pre>~/Library/Preferences/merman/syntaxes</pre> on Mac, something like <pre>c:UsersUserAppDatamermansyntaxes</pre> on Windows - <pre>syntax_luxem.lua</pre> is placed there the first time you run merman so you can search for that) based on the source file extension.</p>
         <h4>field: animate_course_placement</h4>
-        <p></p>
+        <p>Slide courses into position.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -1366,7 +1364,7 @@
             </tr>
         </table>
         <h4>field: animate_details</h4>
-        <p></p>
+        <p>Slide the contents of the details pane when it changes.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -1603,7 +1601,7 @@
             </tr>
         </table>
         <h4>field: pretty_save</h4>
-        <p></p>
+        <p>Add spaces to make human reading of the source easier.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -1651,7 +1649,7 @@
             </tr>
         </table>
         <h4>field: scroll_alot_factor</h4>
-        <p></p>
+        <p>The percentage of the screen transverse span to jump when scrolling alot.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -1667,7 +1665,7 @@
             </tr>
         </table>
         <h4>field: scroll_factor</h4>
-        <p></p>
+        <p>The percentage of the screen transverse span to jump when scrolling.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -1683,7 +1681,7 @@
             </tr>
         </table>
         <h4>field: start_windowed</h4>
-        <p></p>
+        <p>When opening a document, immediately restrict the window to the tree that starts at the root atom.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -1703,7 +1701,7 @@
             </tr>
         </table>
         <h4>field: styles</h4>
-        <p></p>
+        <p>Styles control how bricks and other visual elements (selection, hover, banner, details, indicators, etc) are displayed. When a visual element is styled, each style's tags are compared to the brick's tags in turn. A composite style is built by merging the properties of each matching style, with later matching style properties overriding earlier properties.<br><br>Each brick assumes a number of tags from their corresponding front parts, atom types, and any global tags. Selection and hover visuals assume the tags of the relevant front part and any global tags. The banner assumes the <pre>part</pre> tag <pre>banner</pre> and any global tags. The details assume the <pre>part</pre> tag <pre>details</pre> and any global tags. In addition to the details tag, if the details contain a selection, the choices additionally assume <pre>part</pre> tag <pre>details_choice</pre> and the selection assumes <pre>part</pre> tag <pre>details_selection</pre>.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -1743,7 +1741,7 @@
             </tr>
         </table>
         <h4>field: type</h4>
-        <p></p>
+        <p>The encoding of source files with this syntax.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -1776,7 +1774,7 @@
     <div>
         <a name="com.zarbosoft.merman.syntax.Syntax$BackType"></a>
         <h2>Syntax$BackType</h2>
-        <p></p>
+        <p>The encoding of source files.</p>
         <ul>
             <li><code>luxem</code><span>Back parts and source files are in luxem format.</span></li>
             <li><code>json</code><span>Back parts and source files are in JSON format.</span></li>
@@ -1787,7 +1785,7 @@
     <div>
         <a name="com.zarbosoft.merman.syntax.Syntax$Direction"></a>
         <h2>Syntax$Direction</h2>
-        <p></p>
+        <p>A direction of text flow.</p>
         <ul>
             <li><code>up</code><span></span></li>
             <li><code>down</code><span></span></li>
@@ -1800,9 +1798,9 @@
     <div>
         <a name="com.zarbosoft.merman.syntax.alignments.AbsoluteAlignmentDefinition"></a>
         <h2>AbsoluteAlignmentDefinition</h2>
-        <p></p>
+        <p>Aligns bricks a fixed offset from the converse start of the screen.</p>
         <h4>field: offset</h4>
-        <p></p>
+        <p>Offset in pixels.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -1819,7 +1817,7 @@
     <div>
         <a name="com.zarbosoft.merman.syntax.alignments.ConcensusAlignmentDefinition"></a>
         <h2>ConcensusAlignmentDefinition</h2>
-        <p></p>
+        <p>Aligns all bricks with the brick with the rightmost converse start.</p>
         <p>This type has no fields.</p>
     </div>
     <br></br>
@@ -1827,9 +1825,9 @@
     <div>
         <a name="com.zarbosoft.merman.syntax.alignments.RelativeAlignmentDefinition"></a>
         <h2>RelativeAlignmentDefinition</h2>
-        <p></p>
+        <p>Aligns bricks with an offset relative to another alignment.</p>
         <h4>field: base</h4>
-        <p></p>
+        <p>The id of the base alignment.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -1841,7 +1839,7 @@
             </tr>
         </table>
         <h4>field: offset</h4>
-        <p></p>
+        <p>The difference between this alignment and this base in pixels.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -1858,9 +1856,9 @@
     <div>
         <a name="com.zarbosoft.merman.syntax.back.BackArray"></a>
         <h2>BackArray</h2>
-        <p></p>
+        <p>A fixed array.</p>
         <h4>field: elements</h4>
-        <p></p>
+        <p>This sequence of elements will appear in the source file.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -1891,27 +1889,15 @@
                 <td><b>yes</b></td>
             </tr>
         </table>
-        <h4>field: name</h4>
-        <p></p>
-        <table>
-            <tr>
-                <td>Values</td>
-                <td><span>Any string</span></td>
-            </tr>
-            <tr>
-                <td>Required</td>
-                <td><b>yes</b></td>
-            </tr>
-        </table>
     </div>
     <br></br>
     <br></br>
     <div>
         <a name="com.zarbosoft.merman.syntax.back.BackDataArray"></a>
         <h2>BackDataArray</h2>
-        <p></p>
+        <p>An editable value.</p>
         <h4>field: middle</h4>
-        <p></p>
+        <p>Read the array into or write from the middle array with this id.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -1928,9 +1914,9 @@
     <div>
         <a name="com.zarbosoft.merman.syntax.back.BackDataAtom"></a>
         <h2>BackDataAtom</h2>
-        <p></p>
+        <p>An editable value.</p>
         <h4>field: middle</h4>
-        <p></p>
+        <p>Read the child atom into or write from the middle atom with this id.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -1947,9 +1933,9 @@
     <div>
         <a name="com.zarbosoft.merman.syntax.back.BackDataJSONFloat"></a>
         <h2>BackDataJSONFloat</h2>
-        <p></p>
+        <p>An editable value. Only valid with a JSON back type.</p>
         <h4>field: middle</h4>
-        <p></p>
+        <p>The id of the corresponding middle part.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -1966,9 +1952,9 @@
     <div>
         <a name="com.zarbosoft.merman.syntax.back.BackDataJSONInt"></a>
         <h2>BackDataJSONInt</h2>
-        <p></p>
+        <p>An editable value. Only valid with a JSON back type.</p>
         <h4>field: middle</h4>
-        <p></p>
+        <p>The id of the corresponding middle part.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -1985,9 +1971,9 @@
     <div>
         <a name="com.zarbosoft.merman.syntax.back.BackDataKey"></a>
         <h2>BackDataKey</h2>
-        <p></p>
+        <p>A key in an array.</p>
         <h4>field: middle</h4>
-        <p></p>
+        <p>Read the key into or write from the middle primitive with this id.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -2006,7 +1992,7 @@
         <h2>BackDataPrimitive</h2>
         <p></p>
         <h4>field: middle</h4>
-        <p></p>
+        <p>Read the primitive into or write from the middle primitive with this id.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -2023,9 +2009,9 @@
     <div>
         <a name="com.zarbosoft.merman.syntax.back.BackDataRecord"></a>
         <h2>BackDataRecord</h2>
-        <p></p>
+        <p>An editable record.</p>
         <h4>field: middle</h4>
-        <p></p>
+        <p>Read the record into or write from the middle array with this id.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -2042,9 +2028,9 @@
     <div>
         <a name="com.zarbosoft.merman.syntax.back.BackDataRootArray"></a>
         <h2>BackDataRootArray</h2>
-        <p></p>
+        <p>An editable value. De/serializes an array in luxem that has no begin <pre>[</pre> and end <pre>]</pre>. This may only be used in the root atom type.</p>
         <h4>field: middle</h4>
-        <p></p>
+        <p>The id of the corresponding middle part.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -2061,9 +2047,9 @@
     <div>
         <a name="com.zarbosoft.merman.syntax.back.BackDataType"></a>
         <h2>BackDataType</h2>
-        <p></p>
+        <p>An editable luxem type.</p>
         <h4>field: type</h4>
-        <p></p>
+        <p>Read the type into or write from the middle primitive with this id.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -2112,7 +2098,7 @@
     <div>
         <a name="com.zarbosoft.merman.syntax.back.BackJSONFalse"></a>
         <h2>BackJSONFalse</h2>
-        <p></p>
+        <p>A fixed value. Only valid with a JSON back type.</p>
         <p>This type has no fields.</p>
     </div>
     <br></br>
@@ -2120,7 +2106,7 @@
     <div>
         <a name="com.zarbosoft.merman.syntax.back.BackJSONFloat"></a>
         <h2>BackJSONFloat</h2>
-        <p></p>
+        <p>A fixed value. Only valid with a JSON back type.</p>
         <h4>field: value</h4>
         <p></p>
         <table>
@@ -2139,7 +2125,7 @@
     <div>
         <a name="com.zarbosoft.merman.syntax.back.BackJSONInt"></a>
         <h2>BackJSONInt</h2>
-        <p></p>
+        <p>A fixed value. Only valid with a JSON back type.</p>
         <h4>field: value</h4>
         <p></p>
         <table>
@@ -2158,7 +2144,7 @@
     <div>
         <a name="com.zarbosoft.merman.syntax.back.BackJSONNull"></a>
         <h2>BackJSONNull</h2>
-        <p></p>
+        <p>A fixed value. Only valid with a JSON back type.</p>
         <p>This type has no fields.</p>
     </div>
     <br></br>
@@ -2166,7 +2152,7 @@
     <div>
         <a name="com.zarbosoft.merman.syntax.back.BackJSONTrue"></a>
         <h2>BackJSONTrue</h2>
-        <p></p>
+        <p>A fixed value. Only valid with a JSON back type.</p>
         <p>This type has no fields.</p>
     </div>
     <br></br>
@@ -2174,7 +2160,7 @@
     <div>
         <a name="com.zarbosoft.merman.syntax.back.BackPrimitive"></a>
         <h2>BackPrimitive</h2>
-        <p></p>
+        <p>A fixed value.</p>
         <h4>field: value</h4>
         <p></p>
         <table>
@@ -2193,7 +2179,7 @@
     <div>
         <a name="com.zarbosoft.merman.syntax.back.BackRecord"></a>
         <h2>BackRecord</h2>
-        <p></p>
+        <p>A fixed record.</p>
         <h4>field: pairs</h4>
         <p></p>
         <table>
@@ -2232,9 +2218,9 @@
     <div>
         <a name="com.zarbosoft.merman.syntax.back.BackType"></a>
         <h2>BackType</h2>
-        <p></p>
+        <p>A fixed luxem type.</p>
         <h4>field: type</h4>
-        <p></p>
+        <p>The type string.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -2283,7 +2269,7 @@
     <div>
         <a name="com.zarbosoft.merman.syntax.format.Format"></a>
         <h2>Format</h2>
-        <p></p>
+        <p>Formats a string which is the concatenation of all elements.</p>
         <h4>field: elements</h4>
         <p></p>
         <table>
@@ -2306,7 +2292,7 @@
     <div>
         <a name="com.zarbosoft.merman.syntax.format.Literal"></a>
         <h2>Literal</h2>
-        <p></p>
+        <p>Fixed text.</p>
         <h4>field: value</h4>
         <p></p>
         <table>
@@ -2325,7 +2311,7 @@
     <div>
         <a name="com.zarbosoft.merman.syntax.format.Reference"></a>
         <h2>Reference</h2>
-        <p></p>
+        <p>Text provided dynamically. Reference names depend on context - look at specific usages for valid names.</p>
         <h4>field: name</h4>
         <p></p>
         <table>
@@ -2344,9 +2330,9 @@
     <div>
         <a name="com.zarbosoft.merman.syntax.front.ConditionNode"></a>
         <h2>ConditionNode</h2>
-        <p></p>
+        <p>Show or hide a front part based on properties of the atom.</p>
         <h4>field: invert</h4>
-        <p></p>
+        <p>Invert <pre>is</pre>.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -2366,7 +2352,7 @@
             </tr>
         </table>
         <h4>field: is</h4>
-        <p></p>
+        <p>The condition in which to show this front item.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -2383,9 +2369,9 @@
     <div>
         <a name="com.zarbosoft.merman.syntax.front.ConditionNode$Is"></a>
         <h2>ConditionNode$Is</h2>
-        <p></p>
+        <p>The property of the atom.</p>
         <ul>
-            <li><code>precedent</code><span>Show if the atom is precedent relative to its parent.</span></li>
+            <li><code>precedent</code><span>The atom is precedent relative to its parent.</span></li>
         </ul>
     </div>
     <br></br>
@@ -2393,9 +2379,9 @@
     <div>
         <a name="com.zarbosoft.merman.syntax.front.ConditionValue"></a>
         <h2>ConditionValue</h2>
-        <p></p>
+        <p>Show or hide a front part based on properties of a value within an atom.</p>
         <h4>field: invert</h4>
-        <p></p>
+        <p>Invert <pre>is</pre>.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -2415,7 +2401,7 @@
             </tr>
         </table>
         <h4>field: is</h4>
-        <p></p>
+        <p>The condition in which to show this front item.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -2427,7 +2413,7 @@
             </tr>
         </table>
         <h4>field: middle</h4>
-        <p></p>
+        <p>The id of the middle part that the condition is based on.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -2444,9 +2430,9 @@
     <div>
         <a name="com.zarbosoft.merman.syntax.front.ConditionValue$Is"></a>
         <h2>ConditionValue$Is</h2>
-        <p></p>
+        <p>The property of the value.</p>
         <ul>
-            <li><code>empty</code><span>Show if the value is empty.</span></li>
+            <li><code>empty</code><span>The value is empty.</span></li>
         </ul>
     </div>
     <br></br>
@@ -2454,7 +2440,7 @@
     <div>
         <a name="com.zarbosoft.merman.syntax.front.FrontDataArray"></a>
         <h2>FrontDataArray</h2>
-        <p></p>
+        <p>Display an array of child atoms.</p>
         <h4>field: ellipsis</h4>
         <p>How to visualize the ellipsis.</p>
         <table>
@@ -2473,7 +2459,7 @@
             </tr>
         </table>
         <h4>field: middle</h4>
-        <p></p>
+        <p>The id of the corresponding middle part.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -2485,7 +2471,7 @@
             </tr>
         </table>
         <h4>field: prefix</h4>
-        <p></p>
+        <p>What to display before every element in the array.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -2497,7 +2483,7 @@
             </tr>
         </table>
         <h4>field: separator</h4>
-        <p></p>
+        <p>What to display between every two elements in the array.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -2509,7 +2495,7 @@
             </tr>
         </table>
         <h4>field: suffix</h4>
-        <p></p>
+        <p>What to display after every element in the array.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -2521,7 +2507,7 @@
             </tr>
         </table>
         <h4>field: tag_first</h4>
-        <p></p>
+        <p>Add the <pre>part</pre> tag with value <pre>first</pre> to the first element.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -2541,7 +2527,7 @@
             </tr>
         </table>
         <h4>field: tag_last</h4>
-        <p></p>
+        <p>Add the <pre>part</pre> tag with value <pre>last</pre> to the last element.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -2561,7 +2547,7 @@
             </tr>
         </table>
         <h4>field: tags</h4>
-        <p></p>
+        <p>Add <pre>free</pre> tags with these values.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -2578,7 +2564,7 @@
     <div>
         <a name="com.zarbosoft.merman.syntax.front.FrontDataAtom"></a>
         <h2>FrontDataAtom</h2>
-        <p></p>
+        <p>Display a child atom.</p>
         <h4>field: ellipsis</h4>
         <p>How to visualize the ellipsis.</p>
         <table>
@@ -2596,25 +2582,8 @@
                 <td><span>no</span></td>
             </tr>
         </table>
-        <h4>field: hotkeys</h4>
-        <p></p>
-        <table>
-            <tr>
-                <td>Values</td>
-                <td><span><p>Nested:</p><span><p>Any of (specify type):</p>
-                            <ul>
-                                <li><span>(seq) </span><a href="#com.zarbosoft.merman.modules.hotkeys.grammar.Sequence">Sequence</a></li>
-                                <li><span>(key) </span><a href="#com.zarbosoft.merman.modules.hotkeys.grammar.Terminal">Terminal</a></li>
-                                <li><span>(or) </span><a href="#com.zarbosoft.merman.modules.hotkeys.grammar.Union">Union</a></li>
-                            </ul></span></span></td>
-            </tr>
-            <tr>
-                <td>Required</td>
-                <td><span>no</span></td>
-            </tr>
-        </table>
         <h4>field: middle</h4>
-        <p></p>
+        <p>The id of the corresponding middle part.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -2626,7 +2595,7 @@
             </tr>
         </table>
         <h4>field: tags</h4>
-        <p></p>
+        <p>Tags for this front part. These are only used as context when the selection is in this part.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -2643,26 +2612,9 @@
     <div>
         <a name="com.zarbosoft.merman.syntax.front.FrontDataPrimitive"></a>
         <h2>FrontDataPrimitive</h2>
-        <p></p>
-        <h4>field: hotkeys</h4>
-        <p></p>
-        <table>
-            <tr>
-                <td>Values</td>
-                <td><span><p>Nested:</p><span><p>Any of (specify type):</p>
-                            <ul>
-                                <li><span>(seq) </span><a href="#com.zarbosoft.merman.modules.hotkeys.grammar.Sequence">Sequence</a></li>
-                                <li><span>(key) </span><a href="#com.zarbosoft.merman.modules.hotkeys.grammar.Terminal">Terminal</a></li>
-                                <li><span>(or) </span><a href="#com.zarbosoft.merman.modules.hotkeys.grammar.Union">Union</a></li>
-                            </ul></span></span></td>
-            </tr>
-            <tr>
-                <td>Required</td>
-                <td><span>no</span></td>
-            </tr>
-        </table>
+        <p>Display text data.</p>
         <h4>field: middle</h4>
-        <p></p>
+        <p>The id of the corresponding middle part.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -2674,7 +2626,7 @@
             </tr>
         </table>
         <h4>field: tags</h4>
-        <p></p>
+        <p>Add <pre>free</pre> tags with these values.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -2686,119 +2638,7 @@
             </tr>
         </table>
         <h4>field: tags</h4>
-        <p></p>
-        <table>
-            <tr>
-                <td>Values</td>
-                <td><span><p>Set of:</p><span>Any string</span></span></td>
-            </tr>
-            <tr>
-                <td>Required</td>
-                <td><b>yes</b></td>
-            </tr>
-        </table>
-    </div>
-    <br></br>
-    <br></br>
-    <div>
-        <a name="com.zarbosoft.merman.syntax.front.FrontDataRootArray"></a>
-        <h2>FrontDataRootArray</h2>
-        <p></p>
-        <h4>field: ellipsis</h4>
-        <p>How to visualize the ellipsis.</p>
-        <table>
-            <tr>
-                <td>Values</td>
-                <td><span><p>Any of (specify type):</p>
-                        <ul>
-                            <li><span>(image) </span><a href="#com.zarbosoft.merman.syntax.symbol.SymbolImage">SymbolImage</a></li>
-                            <li><span>(space) </span><a href="#com.zarbosoft.merman.syntax.symbol.SymbolSpace">SymbolSpace</a></li>
-                            <li><span>(text) </span><a href="#com.zarbosoft.merman.syntax.symbol.SymbolText">SymbolText</a></li>
-                        </ul></span></td>
-            </tr>
-            <tr>
-                <td>Required</td>
-                <td><span>no</span></td>
-            </tr>
-        </table>
-        <h4>field: prefix</h4>
-        <p></p>
-        <table>
-            <tr>
-                <td>Values</td>
-                <td><span><p>List of:</p><a href="#com.zarbosoft.merman.syntax.front.FrontSymbol">FrontSymbol</a></span></td>
-            </tr>
-            <tr>
-                <td>Required</td>
-                <td><span>no</span></td>
-            </tr>
-        </table>
-        <h4>field: separator</h4>
-        <p></p>
-        <table>
-            <tr>
-                <td>Values</td>
-                <td><span><p>List of:</p><a href="#com.zarbosoft.merman.syntax.front.FrontSymbol">FrontSymbol</a></span></td>
-            </tr>
-            <tr>
-                <td>Required</td>
-                <td><span>no</span></td>
-            </tr>
-        </table>
-        <h4>field: suffix</h4>
-        <p></p>
-        <table>
-            <tr>
-                <td>Values</td>
-                <td><span><p>List of:</p><a href="#com.zarbosoft.merman.syntax.front.FrontSymbol">FrontSymbol</a></span></td>
-            </tr>
-            <tr>
-                <td>Required</td>
-                <td><span>no</span></td>
-            </tr>
-        </table>
-        <h4>field: tag_first</h4>
-        <p></p>
-        <table>
-            <tr>
-                <td>Values</td>
-                <td>
-                    <ul>
-                        <li><code>true</code></li>
-                        <li><code>false</code></li>
-                    </ul></td>
-            </tr>
-            <tr>
-                <td>Required</td>
-                <td><span>no</span></td>
-            </tr>
-            <tr>
-                <td>Default value</td>
-                <td><code>false</code></td>
-            </tr>
-        </table>
-        <h4>field: tag_last</h4>
-        <p></p>
-        <table>
-            <tr>
-                <td>Values</td>
-                <td>
-                    <ul>
-                        <li><code>true</code></li>
-                        <li><code>false</code></li>
-                    </ul></td>
-            </tr>
-            <tr>
-                <td>Required</td>
-                <td><span>no</span></td>
-            </tr>
-            <tr>
-                <td>Default value</td>
-                <td><code>false</code></td>
-            </tr>
-        </table>
-        <h4>field: tags</h4>
-        <p></p>
+        <p>Add <pre>free</pre> tags with these values.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -2815,9 +2655,9 @@
     <div>
         <a name="com.zarbosoft.merman.syntax.front.FrontSymbol"></a>
         <h2>FrontSymbol</h2>
-        <p></p>
+        <p>Display a fixed symbol (text, space, image).</p>
         <h4>field: condition</h4>
-        <p></p>
+        <p>Only display this front element when the condition is matched. A symbol's text will be used to match the atom type when filling a gap. This symbol will be ignored though if it has a condition which is off by default.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -2833,7 +2673,7 @@
             </tr>
         </table>
         <h4>field: gap_key</h4>
-        <p>Use this string as a key for matching the atom when filling a gap. A text symbol by default uses the shown text.</p>
+        <p>Use this string as a key for matching the atom when filling a gap. This is intended for symbols that do not contain text (image) but it may also be used to override the text in a text node.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -2849,7 +2689,7 @@
             </tr>
         </table>
         <h4>field: tags</h4>
-        <p></p>
+        <p>Add these tags to the symbol's brick.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -2861,7 +2701,7 @@
             </tr>
         </table>
         <h4>field: type</h4>
-        <p></p>
+        <p>The type of symbol.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -2885,7 +2725,7 @@
         <h2>MiddleArray</h2>
         <p></p>
         <h4>field: type</h4>
-        <p></p>
+        <p>The id of the type of each atom.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -2904,7 +2744,7 @@
         <h2>MiddleAtom</h2>
         <p></p>
         <h4>field: type</h4>
-        <p></p>
+        <p>The id of the type of the child atom.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -2923,7 +2763,7 @@
         <h2>MiddlePrimitive</h2>
         <p></p>
         <h4>field: pattern</h4>
-        <p></p>
+        <p>This defines the pattern that the text of the primitive takes. Note that if specified, the pattern will be checked every time the primitive is modified. On long primitives this can be very slow.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -2951,9 +2791,9 @@
     <div>
         <a name="com.zarbosoft.merman.syntax.middle.MiddleRecord"></a>
         <h2>MiddleRecord</h2>
-        <p></p>
+        <p>A record is effectively an array with elements that have record keys.</p>
         <h4>field: type</h4>
-        <p></p>
+        <p>The id of the type of the record elements.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -2970,7 +2810,7 @@
     <div>
         <a name="com.zarbosoft.merman.syntax.middle.primitive.Any"></a>
         <h2>Any</h2>
-        <p></p>
+        <p>Match any single character.</p>
         <p>This type has no fields.</p>
     </div>
     <br></br>
@@ -2978,7 +2818,7 @@
     <div>
         <a name="com.zarbosoft.merman.syntax.middle.primitive.Digits"></a>
         <h2>Digits</h2>
-        <p></p>
+        <p>Match any digit (0-9)</p>
         <p>This type has no fields.</p>
     </div>
     <br></br>
@@ -2986,7 +2826,7 @@
     <div>
         <a name="com.zarbosoft.merman.syntax.middle.primitive.Letters"></a>
         <h2>Letters</h2>
-        <p></p>
+        <p>Match any letter (a-z, A-Z)</p>
         <p>This type has no fields.</p>
     </div>
     <br></br>
@@ -2994,7 +2834,7 @@
     <div>
         <a name="com.zarbosoft.merman.syntax.middle.primitive.Maybe"></a>
         <h2>Maybe</h2>
-        <p></p>
+        <p>Match the subpattern 0 or 1 times.</p>
         <h4>field: pattern</h4>
         <p></p>
         <table>
@@ -3024,7 +2864,7 @@
     <div>
         <a name="com.zarbosoft.merman.syntax.middle.primitive.PatternSequence"></a>
         <h2>PatternSequence</h2>
-        <p></p>
+        <p>Match each subpattern in sequence.</p>
         <h4>field: children</h4>
         <p></p>
         <table>
@@ -3054,9 +2894,9 @@
     <div>
         <a name="com.zarbosoft.merman.syntax.middle.primitive.PatternString"></a>
         <h2>PatternString</h2>
-        <p></p>
+        <p>An easy way to construct a sequence of characters.</p>
         <h4>field: string</h4>
-        <p></p>
+        <p>The character sequence to match.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -3073,7 +2913,7 @@
     <div>
         <a name="com.zarbosoft.merman.syntax.middle.primitive.PatternUnion"></a>
         <h2>PatternUnion</h2>
-        <p></p>
+        <p>Match any one subpattern.</p>
         <h4>field: children</h4>
         <p></p>
         <table>
@@ -3103,7 +2943,7 @@
     <div>
         <a name="com.zarbosoft.merman.syntax.middle.primitive.Repeat0"></a>
         <h2>Repeat0</h2>
-        <p></p>
+        <p>Repeat the subpattern 0 or more times.</p>
         <h4>field: pattern</h4>
         <p></p>
         <table>
@@ -3133,7 +2973,7 @@
     <div>
         <a name="com.zarbosoft.merman.syntax.middle.primitive.Repeat1"></a>
         <h2>Repeat1</h2>
-        <p></p>
+        <p>Repeat the subpattern 1 or more times.</p>
         <h4>field: pattern</h4>
         <p></p>
         <table>
@@ -3163,9 +3003,9 @@
     <div>
         <a name="com.zarbosoft.merman.syntax.style.BoxStyle"></a>
         <h2>BoxStyle</h2>
-        <p></p>
+        <p>Properties if the style is applied to a box.</p>
         <h4>field: fill</h4>
-        <p></p>
+        <p>Fill the box.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -3181,7 +3021,7 @@
             </tr>
         </table>
         <h4>field: fill_color</h4>
-        <p></p>
+        <p>Color of the fill.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -3197,7 +3037,7 @@
             </tr>
         </table>
         <h4>field: line</h4>
-        <p></p>
+        <p>Outline the box.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -3213,7 +3053,7 @@
             </tr>
         </table>
         <h4>field: line_color</h4>
-        <p></p>
+        <p>Color of the outline.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -3229,7 +3069,7 @@
             </tr>
         </table>
         <h4>field: line_thickness</h4>
-        <p></p>
+        <p>Thickness of the outline in pixels.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -3241,7 +3081,7 @@
             </tr>
         </table>
         <h4>field: pad</h4>
-        <p></p>
+        <p>Distance fron the contents to the edge of the box in pixels.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -3253,7 +3093,7 @@
             </tr>
         </table>
         <h4>field: round_end</h4>
-        <p></p>
+        <p>Round the end corner.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -3269,7 +3109,7 @@
             </tr>
         </table>
         <h4>field: round_outer_edges</h4>
-        <p></p>
+        <p>Round the outer corners.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -3285,7 +3125,7 @@
             </tr>
         </table>
         <h4>field: round_radius</h4>
-        <p></p>
+        <p>Round each rounded corner by this radius.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -3297,7 +3137,7 @@
             </tr>
         </table>
         <h4>field: round_start</h4>
-        <p></p>
+        <p>Round the start corner.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -3318,9 +3158,9 @@
     <div>
         <a name="com.zarbosoft.merman.syntax.style.ModelColor$RGB"></a>
         <h2>ModelColor$RGB</h2>
-        <p></p>
+        <p>An RGB color. Values are between 0 and 1, inclusive, with 1 being maximum intensity.</p>
         <h4>field: b</h4>
-        <p></p>
+        <p>Blue</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -3332,7 +3172,7 @@
             </tr>
         </table>
         <h4>field: g</h4>
-        <p></p>
+        <p>Green</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -3344,7 +3184,7 @@
             </tr>
         </table>
         <h4>field: r</h4>
-        <p></p>
+        <p>Red</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -3361,9 +3201,9 @@
     <div>
         <a name="com.zarbosoft.merman.syntax.style.ModelColor$RGBA"></a>
         <h2>ModelColor$RGBA</h2>
-        <p></p>
+        <p>An RGB color with alpha. Values are between 0 and 1, inclusive, with 1 being maximum intensity.</p>
         <h4>field: a</h4>
-        <p></p>
+        <p>Alpha. 1 is opaque, 0 is transparent.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -3375,7 +3215,7 @@
             </tr>
         </table>
         <h4>field: b</h4>
-        <p></p>
+        <p>Blue</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -3387,7 +3227,7 @@
             </tr>
         </table>
         <h4>field: g</h4>
-        <p></p>
+        <p>Green</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -3399,7 +3239,7 @@
             </tr>
         </table>
         <h4>field: r</h4>
-        <p></p>
+        <p>Red</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -3416,9 +3256,9 @@
     <div>
         <a name="com.zarbosoft.merman.syntax.style.ObboxStyle"></a>
         <h2>ObboxStyle</h2>
-        <p></p>
+        <p>Properties if the style is applied to an obbox (a disjoint box that may start and end on different lines).</p>
         <h4>field: fill</h4>
-        <p></p>
+        <p>Fill the obbox.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -3434,7 +3274,7 @@
             </tr>
         </table>
         <h4>field: fill_color</h4>
-        <p></p>
+        <p>Fill color.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -3450,7 +3290,7 @@
             </tr>
         </table>
         <h4>field: line</h4>
-        <p></p>
+        <p>Outline the obbox.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -3466,7 +3306,7 @@
             </tr>
         </table>
         <h4>field: line_color</h4>
-        <p></p>
+        <p>Color of the outline. Also used for the cursor when there is no selection.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -3482,7 +3322,7 @@
             </tr>
         </table>
         <h4>field: line_thickness</h4>
-        <p></p>
+        <p>Thickness of the outline in pixels. Also used for the cursor when there is no selection.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -3494,7 +3334,7 @@
             </tr>
         </table>
         <h4>field: pad</h4>
-        <p></p>
+        <p>Distance from the contents to the edge of the obbox in pixels.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -3506,7 +3346,7 @@
             </tr>
         </table>
         <h4>field: round_concave</h4>
-        <p></p>
+        <p>Round concave corners.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -3522,7 +3362,7 @@
             </tr>
         </table>
         <h4>field: round_end</h4>
-        <p></p>
+        <p>Round the end corner.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -3538,7 +3378,7 @@
             </tr>
         </table>
         <h4>field: round_inner_edges</h4>
-        <p></p>
+        <p>Round the inner corners.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -3554,7 +3394,7 @@
             </tr>
         </table>
         <h4>field: round_outer_edges</h4>
-        <p></p>
+        <p>Round the outer corners.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -3570,7 +3410,7 @@
             </tr>
         </table>
         <h4>field: round_radius</h4>
-        <p></p>
+        <p>Round each rounded corner by this radius.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -3582,7 +3422,7 @@
             </tr>
         </table>
         <h4>field: round_start</h4>
-        <p></p>
+        <p>Round the start corner.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -3603,9 +3443,9 @@
     <div>
         <a name="com.zarbosoft.merman.syntax.style.Style"></a>
         <h2>Style</h2>
-        <p></p>
+        <p>All properties required to style a visual element.</p>
         <h4>field: align</h4>
-        <p></p>
+        <p>Align the converse start with the nearest alignment with this id. The alignment is sought starting at the element's parent and moving upwards to the root of the window/document.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -3617,7 +3457,7 @@
             </tr>
         </table>
         <h4>field: box</h4>
-        <p></p>
+        <p>This only applies to boxes.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -3629,7 +3469,7 @@
             </tr>
         </table>
         <h4>field: color</h4>
-        <p></p>
+        <p>This only applies to text.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -3644,20 +3484,8 @@
                 <td><span>no</span></td>
             </tr>
         </table>
-        <h4>field: converse</h4>
-        <p></p>
-        <table>
-            <tr>
-                <td>Values</td>
-                <td><span>Any integer</span></td>
-            </tr>
-            <tr>
-                <td>Required</td>
-                <td><span>no</span></td>
-            </tr>
-        </table>
         <h4>field: font</h4>
-        <p></p>
+        <p>The font family name (JavaFX). This only applies to text.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -3669,7 +3497,7 @@
             </tr>
         </table>
         <h4>field: font_size</h4>
-        <p></p>
+        <p>This only applies to text.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -3681,7 +3509,7 @@
             </tr>
         </table>
         <h4>field: image</h4>
-        <p></p>
+        <p>The filename of the image, either absolute or relative to the syntax directory. This only applies to image symbols.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -3693,7 +3521,7 @@
             </tr>
         </table>
         <h4>field: obbox</h4>
-        <p></p>
+        <p>This only applies to obboxes.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -3705,7 +3533,7 @@
             </tr>
         </table>
         <h4>field: rotate</h4>
-        <p></p>
+        <p>Rotation of the image, presumably in degrees.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -3717,7 +3545,7 @@
             </tr>
         </table>
         <h4>field: space</h4>
-        <p></p>
+        <p>The converse span of a space symbol.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -3729,7 +3557,7 @@
             </tr>
         </table>
         <h4>field: space_after</h4>
-        <p></p>
+        <p>Add a converse space of this many pixels after the element.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -3741,7 +3569,7 @@
             </tr>
         </table>
         <h4>field: space_before</h4>
-        <p></p>
+        <p>Add a converse space of this many pixels before the element.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -3753,7 +3581,7 @@
             </tr>
         </table>
         <h4>field: space_transverse_after</h4>
-        <p></p>
+        <p>Add a transverse space of this many pixels after the element.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -3765,7 +3593,7 @@
             </tr>
         </table>
         <h4>field: space_transverse_before</h4>
-        <p></p>
+        <p>Add a transverse space of this many pixels before the element.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -3777,7 +3605,7 @@
             </tr>
         </table>
         <h4>field: split</h4>
-        <p></p>
+        <p>Start this element on the next line.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -3786,18 +3614,6 @@
                         <li><code>true</code></li>
                         <li><code>false</code></li>
                     </ul></td>
-            </tr>
-            <tr>
-                <td>Required</td>
-                <td><span>no</span></td>
-            </tr>
-        </table>
-        <h4>field: transverse</h4>
-        <p></p>
-        <table>
-            <tr>
-                <td>Values</td>
-                <td><span>Any integer</span></td>
             </tr>
             <tr>
                 <td>Required</td>
@@ -3856,7 +3672,7 @@
     <div>
         <a name="com.zarbosoft.merman.syntax.symbol.SymbolSpace"></a>
         <h2>SymbolSpace</h2>
-        <p></p>
+        <p>This symbol is not drawn, but can take up space.</p>
         <p>This type has no fields.</p>
     </div>
     <br></br>
@@ -3866,7 +3682,7 @@
         <h2>SymbolText</h2>
         <p></p>
         <h4>field: text</h4>
-        <p></p>
+        <p>The text to display in the brick.</p>
         <table>
             <tr>
                 <td>Values</td>
