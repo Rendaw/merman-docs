@@ -305,7 +305,7 @@
         <h2>LuaActions</h2>
         <p>Use Lua functions as actions.</p>
         <h4>field: actions</h4>
-        <p>A mapping of action names to Lua functions. Each function takes a single <pre>context</pre> argument and returns a boolean, true if the action modified the application state. <pre>context</pre> is an object with the following functions: <pre>act</pre>. <pre>act</pre> takes a string, the name of another action, and runs it, and returns true if the action modified the application state.</p>
+        <p>A mapping of action names to Lua functions. Each function takes a single <code>context</code> argument and returns a boolean, true if the action modified the application state. <code>context</code> is an object with the following functions: <code>act</code>. <code>act</code> takes a string, the name of another action, and runs it, and returns true if the action modified the application state.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -837,7 +837,7 @@
             </tr>
         </table>
         <h4>field: associate_forward</h4>
-        <p>When filling a suffix or prefix gap, the resultant atom will be raised up the tree based on its associativity. For example, suppose in the document <pre>a + b</pre> you type <pre>+ c</pre>. If <pre>+</pre> is back associative, the resultant tree will be equivalent to <pre>(a + b) + c</pre>. If <pre>+</pre> is front associative, the resultant tree will be equivalent to <pre>a + (b + c)</pre>. This is a translation of mathematical operator associativity. Associativity only applies to atoms of the same <pre>precedence</pre>.</p>
+        <p>When filling a suffix or prefix gap, the resultant atom will be raised up the tree based on its associativity. For example, suppose in the document <code>a + b</code> you type <code>+ c</code>. If <code>+</code> is back associative, the resultant tree will be equivalent to <code>(a + b) + c</code>. If <code>+</code> is front associative, the resultant tree will be equivalent to <code>a + (b + c)</code>. This is a translation of mathematical operator associativity. Associativity only applies to atoms of the same <code>precedence</code>.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -1040,7 +1040,7 @@
             </tr>
         </table>
         <h4>field: tags</h4>
-        <p>Add <pre>free</pre> tags with these values.</p>
+        <p>Add <code>free</code> tags with these values.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -1166,7 +1166,7 @@
             </tr>
         </table>
         <h4>field: tags</h4>
-        <p>Add <pre>free</pre> tags with these values.</p>
+        <p>Add <code>free</code> tags with these values.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -1325,7 +1325,7 @@
             </tr>
         </table>
         <h4>field: tags</h4>
-        <p>Add <pre>free</pre> tags with these values.</p>
+        <p>Add <code>free</code> tags with these values.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -1342,7 +1342,7 @@
     <div>
         <a name="com.zarbosoft.merman.syntax.Syntax"></a>
         <h2>Syntax</h2>
-        <p>A syntax describes the de/serialization, interaction, and display of a document. A document is a syntax tree encoded as luxem or JSON. The syntax breaks the tree up into atoms which are the basis for interaction and display.<br><br>A merman syntax file is a Lua script that returns a table describing the syntax. When you open a source file in merman, it automatically loads the corresponding syntax file from <pre>~/.config/merman/syntaxes</pre> (<pre>~/Library/Preferences/merman/syntaxes</pre> on Mac, something like <pre>c:UsersUserAppDatamermansyntaxes</pre> on Windows - <pre>syntax_luxem.lua</pre> is placed there the first time you run merman so you can search for that) based on the source file extension.</p>
+        <p>A syntax describes the de/serialization, interaction, and display of a document. A document is a syntax tree encoded as luxem or JSON. The syntax breaks the tree up into atoms which are the basis for interaction and display.<br><br>A merman syntax file is a Lua script that returns a table describing the syntax. When you open a source file in merman, it automatically loads the corresponding syntax file from <code>~/.config/merman/syntaxes</code> (<code>~/Library/Preferences/merman/syntaxes</code> on Mac, something like <code>c:UsersUserAppDatamermansyntaxes</code> on Windows - <code>syntax_luxem.lua</code> is placed there the first time you run merman so you can search for that) based on the source file extension.</p>
         <h4>field: animate_course_placement</h4>
         <p>Slide courses into position.</p>
         <table>
@@ -1701,7 +1701,7 @@
             </tr>
         </table>
         <h4>field: styles</h4>
-        <p>Styles control how bricks and other visual elements (selection, hover, banner, details, indicators, etc) are displayed. When a visual element is styled, each style's tags are compared to the brick's tags in turn. A composite style is built by merging the properties of each matching style, with later matching style properties overriding earlier properties.<br><br>Each brick assumes a number of tags from their corresponding front parts, atom types, and any global tags. Selection and hover visuals assume the tags of the relevant front part and any global tags. The banner assumes the <pre>part</pre> tag <pre>banner</pre> and any global tags. The details assume the <pre>part</pre> tag <pre>details</pre> and any global tags. In addition to the details tag, if the details contain a selection, the choices additionally assume <pre>part</pre> tag <pre>details_choice</pre> and the selection assumes <pre>part</pre> tag <pre>details_selection</pre>.</p>
+        <p>Styles control how bricks and other visual elements (selection, hover, banner, details, indicators, etc) are displayed. When a visual element is styled, each style's tags are compared to the brick's tags in turn. A composite style is built by merging the properties of each matching style, with later matching style properties overriding earlier properties.<br><br>Each brick assumes a number of tags from their corresponding front parts, atom types, and any global tags. Selection and hover visuals assume the tags of the relevant front part and any global tags. The banner assumes the <code>part</code> tag <code>banner</code> and any global tags. The details assume the <code>part</code> tag <code>details</code> and any global tags. In addition to the details tag, if the details contain a selection, the choices additionally assume <code>part</code> tag <code>details_choice</code> and the selection assumes <code>part</code> tag <code>details_selection</code>.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -2028,7 +2028,7 @@
     <div>
         <a name="com.zarbosoft.merman.syntax.back.BackDataRootArray"></a>
         <h2>BackDataRootArray</h2>
-        <p>An editable value. De/serializes an array in luxem that has no begin <pre>[</pre> and end <pre>]</pre>. This may only be used in the root atom type.</p>
+        <p>An editable value. De/serializes an array in luxem that has no begin <code>[</code> and end <code>]</code>. This may only be used in the root atom type.</p>
         <h4>field: middle</h4>
         <p>The id of the corresponding middle part.</p>
         <table>
@@ -2332,7 +2332,7 @@
         <h2>ConditionNode</h2>
         <p>Show or hide a front part based on properties of the atom.</p>
         <h4>field: invert</h4>
-        <p>Invert <pre>is</pre>.</p>
+        <p>Invert <code>is</code>.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -2381,7 +2381,7 @@
         <h2>ConditionValue</h2>
         <p>Show or hide a front part based on properties of a value within an atom.</p>
         <h4>field: invert</h4>
-        <p>Invert <pre>is</pre>.</p>
+        <p>Invert <code>is</code>.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -2507,7 +2507,7 @@
             </tr>
         </table>
         <h4>field: tag_first</h4>
-        <p>Add the <pre>part</pre> tag with value <pre>first</pre> to the first element.</p>
+        <p>Add the <code>part</code> tag with value <code>first</code> to the first element.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -2527,7 +2527,7 @@
             </tr>
         </table>
         <h4>field: tag_last</h4>
-        <p>Add the <pre>part</pre> tag with value <pre>last</pre> to the last element.</p>
+        <p>Add the <code>part</code> tag with value <code>last</code> to the last element.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -2547,7 +2547,7 @@
             </tr>
         </table>
         <h4>field: tags</h4>
-        <p>Add <pre>free</pre> tags with these values.</p>
+        <p>Add <code>free</code> tags with these values.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -2626,7 +2626,7 @@
             </tr>
         </table>
         <h4>field: tags</h4>
-        <p>Add <pre>free</pre> tags with these values.</p>
+        <p>Add <code>free</code> tags with these values.</p>
         <table>
             <tr>
                 <td>Values</td>
@@ -2638,7 +2638,7 @@
             </tr>
         </table>
         <h4>field: tags</h4>
-        <p>Add <pre>free</pre> tags with these values.</p>
+        <p>Add <code>free</code> tags with these values.</p>
         <table>
             <tr>
                 <td>Values</td>
